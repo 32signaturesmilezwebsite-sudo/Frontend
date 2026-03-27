@@ -93,7 +93,7 @@ const AdminDashboard = () => {
       <div className="dashboard-content container">
         <div className="stats-row fade-in">
           <div className="stat-card">
-            <div className="stat-icon"><Calendar color="var(--primary-green)" size={24} /></div>
+            <div className="stat-icon"><Calendar color="var(--primary-gold)" size={24} /></div>
             <div className="stat-info">
               <h3>{appointments.length}</h3>
               <p>Total Bookings</p>

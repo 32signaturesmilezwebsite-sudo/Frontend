@@ -61,7 +61,7 @@ const Header = () => {
           </div>
           
           <div className="mobile-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={30} color="#39ff14" /> : <Menu size={30} color="#39ff14" />}
+            {menuOpen ? <X size={30} color="#D4AF37" /> : <Menu size={30} color="#D4AF37" />}
           </div>
           
           <nav className={`desktop-navigation ${menuOpen ? 'mobile-active' : ''}`}>

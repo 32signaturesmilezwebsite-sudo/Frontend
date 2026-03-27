@@ -54,12 +54,12 @@ const Testimonials = () => {
               
               <div className="review-stars">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} fill="var(--primary-green)" color="var(--primary-green)" size={16} />
+                  <Star key={i} fill="var(--primary-gold)" color="var(--primary-gold)" size={16} />
                 ))}
               </div>
               
               <div className="review-body">
-                <Quote className="quote-icon" size={24} color="var(--primary-green)" opacity={0.3} />
+                <Quote className="quote-icon" size={24} color="var(--primary-gold)" opacity={0.3} />
                 <p>"{review.text}"</p>
               </div>
             </div>

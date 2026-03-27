@@ -16,7 +16,7 @@
   width: 100%;
   max-width: 420px;
   text-align: center;
-  border-top: 5px solid var(--primary-green);
+  border-top: 5px solid var(--primary-gold);
 }
 
 .icon-wrapper {
@@ -52,7 +52,7 @@
   background-color: #fcfcfc;
 }
 .admin-input:focus {
-  border-color: var(--primary-green);
+  border-color: var(--primary-gold);
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
   outline: none;
 }
@@ -81,7 +81,7 @@
   color: #666;
 }
 .return-link a:hover {
-  color: var(--primary-green);
+  color: var(--primary-gold);
 }
 
 /* Dashboard Styles */
@@ -107,7 +107,7 @@
   line-height: 1;
 }
 .header-brand span {
-  color: var(--primary-green);
+  color: var(--primary-gold);
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 600;

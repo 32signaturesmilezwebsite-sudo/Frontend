@@ -43,7 +43,7 @@ const BlogPost = () => {
         <section className="container blog-container">
           <div className="blog-main">
             <div className="post-header">
-              <span style={{color: 'var(--primary-green)', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase'}}>{new Date(blog.publishDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span style={{color: 'var(--primary-gold)', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase'}}>{new Date(blog.publishDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               {blog.thumbnail && (
                 <img src={blog.thumbnail.startsWith('http') ? blog.thumbnail : `${import.meta.env.VITE_API_URL}${blog.thumbnail}`} alt={blog.title} className="post-thumbnail" />
               )}

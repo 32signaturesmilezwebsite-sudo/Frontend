@@ -14,9 +14,18 @@ const Footer = () => {
         {/* Brand & Contact Column */}
         <div className="footer-col brand-col">
           <div className="footer-logo" onClick={scrollToTop} style={{cursor: 'pointer'}}>
-            <span className="brand-name">32 Signature</span>
-            <span className="brand-sub">Smilez</span>
-            <p className="brand-tagline">Dental • Skin • Hair</p>
+            <img 
+              src="/logo.png" 
+              alt="32 Signature Smilez"
+              style={{
+                height: '110px',
+                width: 'auto',
+                objectFit: 'contain',
+                marginBottom: '10px',
+                filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))'
+              }}
+            />
+            <p className="brand-tagline">Multispecialty Dental Clinic & Implant Centre</p>
           </div>
           
           <div className="contact-list">

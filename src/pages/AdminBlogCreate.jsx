@@ -126,7 +126,7 @@ const AdminBlogCreate = () => {
       <div className="dashboard-content container">
         <div className="fade-in">
           <div style={{ marginBottom: '20px' }}>
-            <Link to="/admin/blogs" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--primary-green)', textDecoration: 'none', fontWeight: '500' }}>
+            <Link to="/admin/blogs" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--primary-gold)', textDecoration: 'none', fontWeight: '500' }}>
               <ArrowLeft size={18} /> Back to Blogs
             </Link>
           </div>
@@ -165,8 +165,8 @@ const AdminBlogCreate = () => {
                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                      <label style={{
                         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                        width: '200px', height: '120px', border: '1px dashed var(--primary-green)', borderRadius: '8px',
-                        cursor: 'pointer', background: 'rgba(57,255,20,0.05)', color: 'var(--primary-green)'
+                        width: '200px', height: '120px', border: '1px dashed var(--primary-gold)', borderRadius: '8px',
+                        cursor: 'pointer', background: 'rgba(212, 175, 55,0.05)', color: 'var(--primary-gold)'
                      }}>
                         <ImageIcon size={30} style={{marginBottom: '10px'}} />
                         <span>Upload Image</span>

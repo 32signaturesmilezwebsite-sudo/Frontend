@@ -4,9 +4,11 @@
 
 /* Quick Action Ribbon */
 .quick-actions-ribbon {
-  background-color: var(--bg-card);
-  padding: 30px 0;
+  background-color: #FFFFFF;
+  padding: 24px 0;
+  border-top: 3px solid var(--primary-gold);
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(10, 25, 47, 0.06);
 }
 
 .actions-grid {
@@ -24,31 +26,32 @@
 }
 
 .action-icon {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 2px solid var(--primary-green);
+  border: 2px solid var(--primary-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #111;
+  background-color: rgba(212, 175, 55, 0.08);
   transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(57,255,20,0.1);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.15);
+  flex-shrink: 0;
 }
 .action-card:hover .action-icon {
-  background-color: var(--primary-green);
-  box-shadow: 0 0 15px var(--neon-glow);
+  background-color: var(--primary-gold);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
 }
 .action-card:hover .action-icon svg {
-  stroke: #000;
+  fill: #fff;
 }
 
 .action-content h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--primary-green);
-  margin-bottom: 8px;
-  text-shadow: 0 0 8px rgba(57,255,20,0.3);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy-blue);
+  margin-bottom: 6px;
+  text-shadow: none;
 }
 
 .btn-small {
@@ -91,9 +94,10 @@
 }
 
 .review-stats h3 {
-  font-size: 1.4rem;
-  color: var(--dark-brown);
+  font-size: 1.3rem;
+  color: var(--navy-blue);
   margin: 0;
+  font-weight: 700;
 }
 .review-stats h3 span {
   font-weight: 400;
@@ -105,7 +109,7 @@
   align-items: center;
   gap: 10px;
   font-size: 0.85rem;
-  color: var(--primary-green);
+  color: var(--primary-gold);
   font-weight: 600;
 }
 
@@ -117,10 +121,12 @@
 /* Main Banner Area */
 .hero-banner {
   background-color: var(--bg-dark);
-  min-height: 500px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
-  padding: 60px 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -130,6 +136,8 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 80px 40px;
 }
 
 .hero-text-area {
@@ -140,20 +148,20 @@
 .highlight-text {
   font-family: inherit;
   font-weight: 800;
-  color: var(--primary-green);
+  color: var(--primary-gold);
   font-size: 2.2rem;
   display: flex;
   align-items: center;
   gap: 15px;
-  text-shadow: 0 0 12px rgba(57,255,20,0.4);
+  text-shadow: 0 0 12px rgba(212,175,55,0.4);
 }
 .highlight-text::after {
   content: '';
   display: inline-block;
   width: 60px;
   height: 3px;
-  background-color: var(--primary-green);
-  box-shadow: 0 0 8px var(--primary-green);
+  background-color: var(--primary-gold);
+  box-shadow: 0 0 8px var(--primary-gold);
 }
 .hero-text-area h1 {
   font-size: 4rem;
@@ -165,14 +173,14 @@
 
 .hero-subtext {
   font-size: 1.6rem;
-  color: var(--primary-green);
+  color: var(--primary-gold);
   font-weight: 600;
   margin-bottom: 5px;
 }
 
 .hero-secondary {
   font-size: 2.5rem;
-  color: var(--primary-green);
+  color: var(--primary-gold);
   font-weight: 800;
   line-height: 1.2;
 }
@@ -193,7 +201,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(13,13,13,0.85) 0%, rgba(13,13,13,0.3) 45%, transparent 100%);
+  /* Navy blue shadow from left, fading to a lighter navy blue tint on the right — matches reference image */
+  background: linear-gradient(
+    90deg,
+    rgba(10, 25, 47, 0.92) 0%,
+    rgba(10, 25, 47, 0.70) 35%,
+    rgba(10, 25, 47, 0.30) 65%,
+    rgba(10, 25, 47, 0.10) 100%
+  );
   z-index: 2;
 }
 
@@ -241,13 +256,14 @@
     font-size: 1.8rem;
   }
   .hero-banner {
-    min-height: 400px;
-    padding: 40px 15px;
+    min-height: 100vh;
+    padding: 0;
   }
   .hero-banner-content {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    padding: 60px 20px;
   }
   .highlight-text {
     justify-content: center;

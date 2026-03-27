@@ -42,7 +42,7 @@ const AdminLogin = () => {
       <div className="login-card fade-in">
         <div className="login-header">
           <div className="icon-wrapper">
-            <Lock size={32} color="var(--primary-green)" />
+            <Lock size={32} color="var(--primary-gold)" />
           </div>
           <h2>Admin Portal</h2>
           <p>32 Signature Smilez</p>

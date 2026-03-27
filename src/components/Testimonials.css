@@ -1,6 +1,6 @@
 .testimonials-section {
   padding: 80px 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-main);
   position: relative;
 }
 
@@ -15,7 +15,7 @@
   background: rgba(20, 20, 20, 0.6);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
-  border-top: 3px solid var(--primary-green);
+  border-top: 3px solid var(--primary-gold);
   border-radius: 16px;
   padding: 30px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -25,8 +25,8 @@
 
 .review-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(57, 255, 20, 0.1);
-  border-color: rgba(57, 255, 20, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.3);
 }
 
 .review-header {
@@ -46,8 +46,8 @@
   width: 45px;
   height: 45px;
   background: #111;
-  border: 1px solid var(--primary-green);
-  color: var(--primary-green);
+  border: 1px solid var(--primary-gold);
+  color: var(--primary-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;

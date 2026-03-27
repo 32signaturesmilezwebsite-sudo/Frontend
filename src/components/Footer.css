@@ -1,8 +1,8 @@
 .refined-footer {
-  background-color: #0a0a0a;
+  background-color: var(--navy-blue);
   color: white;
   padding-top: 80px;
-  border-top: 2px solid var(--primary-green);
+  border-top: 2px solid var(--primary-gold);
 }
 
 .footer-container {
@@ -33,7 +33,7 @@
 .footer-logo .brand-sub {
   font-size: 1.8rem;
   font-weight: 300;
-  color: var(--primary-green);
+  color: var(--primary-gold);
   margin-left: 5px;
 }
 .footer-logo .brand-tagline {
@@ -62,7 +62,7 @@
 }
 
 .contact-item:hover {
-  color: var(--primary-green);
+  color: var(--primary-gold);
 }
 
 .wa-icon {
@@ -95,8 +95,8 @@
 }
 
 .social-circle:hover {
-  background-color: var(--primary-green);
-  border-color: var(--primary-green);
+  background-color: var(--primary-gold);
+  border-color: var(--primary-gold);
 }
 
 .footer-heading {
@@ -115,7 +115,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: var(--primary-green);
+  background-color: var(--primary-gold);
 }
 
 .footer-stats {
@@ -143,15 +143,15 @@
   justify-content: center;
 
   /* DARK GLASS BACKGROUND */
-  background: #111;
+  background: rgba(255,255,255,0.05);
 
   /* subtle border */
-  border: 1px solid rgba(57,255,20,0.2);
+  border: 1px solid rgba(212,175,55,0.2);
 
   /* soft glow */
-  box-shadow: 0 0 10px rgba(57,255,20,0.08);
+  box-shadow: 0 0 10px rgba(212,175,55,0.08);
 
-  color: var(--primary-green);
+  color: var(--primary-gold);
 
   flex-shrink: 0;
 }
@@ -181,11 +181,11 @@
 }
 
 .footer-links a:hover {
-  color: var(--primary-green);
+  color: var(--primary-gold);
 }
 
 .footer-bottom {
-  background-color: #070707;
+  background-color: var(--navy-blue-light);
   padding: 25px 0;
   border-top: 1px solid var(--border-color);
 }
@@ -217,7 +217,7 @@
 }
 
 .bottom-links a:hover {
-  color: var(--primary-green);
+  color: var(--primary-gold);
 }
 
 @media (max-width: 768px) {

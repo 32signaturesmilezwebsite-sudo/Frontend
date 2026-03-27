@@ -1,9 +1,9 @@
 .consultation-section {
-  background-color: #0a0a0a;
+  background-color: #F0F2F5;
   padding: 80px 0;
-  color: white;
+  color: var(--text-main);
   position: relative;
-  background-image: radial-gradient(rgba(57, 255, 20, 0.04) 2px, transparent 2px);
+  background-image: radial-gradient(rgba(10, 25, 47, 0.04) 2px, transparent 2px);
   background-size: 30px 30px;
 }
 
@@ -15,11 +15,11 @@
 .consultation-form-wrapper {
   width: 100%;
   max-width: 800px;
-  background-color: #111;
+  background-color: #FFFFFF;
   padding: 40px;
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
 .title-with-line {
@@ -37,7 +37,7 @@
   transform: translateY(-50%);
   width: 4px;
   height: 30px;
-  background-color: var(--primary-green);
+  background-color: var(--primary-gold);
 }
 
 .form-group {
@@ -48,19 +48,19 @@
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 10px;
-  color: #ddd;
+  color: var(--text-muted);
 }
 .form-group label span {
-  color: var(--primary-green);
+  color: var(--primary-gold);
 }
 
 .dark-input, .dark-select {
   width: 100%;
   padding: 14px 18px;
-  background-color: #0d0d0d;
-  border: 1px solid #2a2a2a;
+  background-color: #F8F9FA;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
-  color: white;
+  color: var(--text-main);
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -76,8 +76,8 @@
 
 .dark-input:focus, .dark-select:focus {
   outline: none;
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 2px rgba(57, 255, 20, 0.15);
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
 }
 
 .helper-text {
@@ -96,8 +96,8 @@
 
 .captcha-wrapper {
   display: flex;
-  background-color: #0d0d0d;
-  border: 1px solid #2a2a2a;
+  background-color: #F8F9FA;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -105,23 +105,23 @@
 .captcha-box {
   display: flex;
   align-items: center;
-  background-color: #141414;
+  background-color: #F0F2F5;
   padding: 0 15px;
-  border-left: 1px solid #2a2a2a;
+  border-left: 1px solid #E2E8F0;
 }
 .captcha-code {
   font-family: monospace;
   font-size: 1.2rem;
   letter-spacing: 3px;
-  color: white;
+  color: var(--navy-blue);
   margin-right: 15px;
-  background: #0a0a0a;
+  background: #E8ECF0;
   padding: 4px 8px;
   border-radius: 4px;
 }
 .refresh-btn {
   background: none;
-  color: white;
+  color: var(--navy-blue);
   font-size: 1.4rem;
 }
 
@@ -152,9 +152,9 @@
 }
 
 .status-message.success {
-  background-color: rgba(57, 255, 20, 0.15);
-  color: var(--primary-green);
-  border: 1px solid rgba(57, 255, 20, 0.3);
+  background-color: rgba(212, 175, 55, 0.15);
+  color: var(--primary-gold);
+  border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .status-message.error {
