@@ -5,18 +5,56 @@
 
 .site-header {
   width: 100%;
-  background: var(--navy-blue);
   position: fixed;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.8), 0 0 1px rgba(212,175,55,0.15);
-  transition: box-shadow 0.3s ease;
-  border-bottom: 1px solid rgba(212,175,55,0.12);
+  transition: box-shadow 0.4s ease, background 0.4s ease;
+
+  /* Neon Green Glassmorphism */
+  background: rgba(8, 8, 8, 0.72);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.7),
+    0 1px 0 rgba(0, 255, 136, 0.15) inset,
+    0 0 60px rgba(0, 255, 136, 0.04);
 }
 
-/* === SCROLLED STATE: collapse to compact nav only === */
+/* Animated neon shimmer line on top of header */
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 136, 0.15) 20%,
+    rgba(0, 255, 136, 0.8) 50%,
+    rgba(0, 255, 136, 0.15) 80%,
+    transparent 100%
+  );
+  animation: headerNeonSweep 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes headerNeonSweep {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* === SCROLLED STATE: compact glass with stronger glow === */
 .site-header.scrolled {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  background: rgba(5, 5, 5, 0.88);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.28);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.8),
+    0 0 80px rgba(0, 255, 136, 0.06);
 }
 
 .site-header.scrolled .top-bar,
@@ -38,11 +76,11 @@
 
 
 .top-bar {
-  background: var(--navy-blue-light);
+  background: rgba(0, 0, 0, 0.4);
   padding: 6px 0;
   font-size: 0.8rem;
   color: var(--text-muted);
-  border-bottom: 1px solid rgba(212,175,55,0.08);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.08);
 }
 
 .top-bar-inner {
@@ -64,10 +102,10 @@
 }
 
 .main-nav-wrapper {
-  background: var(--navy-blue);
+  background: transparent;
   position: relative;
-  border-bottom: 1px solid rgba(212,175,55,0.18);
-  box-shadow: 0 4px 20px rgba(212,175,55,0.05);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.04);
 }
 
 .main-nav {
