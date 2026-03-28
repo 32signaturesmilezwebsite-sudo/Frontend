@@ -143,9 +143,25 @@
   font-family: 'Poppins', sans-serif;
   font-size: 3.8rem;
   font-weight: 800;
-  background: linear-gradient(to right, #ffffff, #dbe6f6, #ffffff);
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #d4af37 20%,
+    #fff 40%,
+    #f1c75b 60%,
+    #fff 80%,
+    #d4af37 100%
+  );
+  background-size: 250% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
+  animation: heroTitleShine 4s linear infinite;
+}
+
+@keyframes heroTitleShine {
+  0%   { background-position: 0% center; }
+  100% { background-position: 250% center; }
 }
 
 .hero-subtext {
@@ -164,30 +180,84 @@
   margin-bottom: 20px;
 }
 
-/* BUTTON 🔥 FULL FIX */
+/* BUTTON — Premium Shimmer CTA */
 .btn-primary {
-  margin-top: 10px;
-  padding: 14px 30px;
-  font-size: 1rem;
-  border-radius: 30px;
+  margin-top: 16px;
+  padding: 16px 38px;
+  font-size: 1.05rem;
+  border-radius: 50px;
   width: fit-content;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 
-  background: linear-gradient(to right, #d4af37, #f1c75b);
-  color: #000;
+  background: linear-gradient(135deg, #c8960c, #d4af37, #f1c75b, #d4af37);
+  background-size: 250% 250%;
+  animation: btnGradientShift 3s ease infinite;
+  color: #0a1a2e;
   border: none;
-  font-weight: 600;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-  transition: all 0.3s ease;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow:
+    0 6px 20px rgba(212, 175, 55, 0.45),
+    0 0 0 1px rgba(255,255,255,0.15) inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Shimmer sweep overlay */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.45) 50%,
+    transparent 70%
+  );
+  animation: btnShimmer 2.5s ease-in-out infinite;
+}
+
+.btn-primary::after {
+  content: '→';
+  font-size: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 35px rgba(212, 175, 55, 0.65),
+    0 0 0 2px rgba(212,175,55,0.4);
+}
+
+.btn-primary:hover::after {
+  transform: translateX(4px);
 }
 
 .btn-primary:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
+}
+
+@keyframes btnGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes btnShimmer {
+  0%   { left: -75%; }
+  100% { left: 125%; }
 }
 
 /* SLIDESHOW */

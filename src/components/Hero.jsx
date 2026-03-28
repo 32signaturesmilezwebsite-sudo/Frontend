@@ -23,13 +23,6 @@ const Hero = () => {
   return (
     <section className="hero-section">
 
-      {/* Ribbon stays same */}
-      <div className="quick-actions-ribbon">
-        <div className="container actions-grid">
-          {/* KEEP YOUR EXISTING RIBBON CODE SAME */}
-        </div>
-      </div>
-
       {/* HERO */}
       <div className="hero-banner">
         <div className="hero-slideshow-container">

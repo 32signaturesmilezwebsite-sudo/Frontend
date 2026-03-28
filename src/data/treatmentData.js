@@ -5,68 +5,102 @@ export const treatments = {
   'tooth-filling': {
   title: 'Tooth Filling',
   subtitle: 'Restore damaged teeth with precision and care',
-  image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=500&q=80',
+  image: '/Tooth-filling.png',
 
-  intro: `Tooth fillings are a type of treatment used to replace tooth structure that has been lost due to decay or trauma.
+  intro: `Tooth fillings are a common dental procedure used to restore teeth damaged by decay, fractures, or wear.
 
-In a Tooth filling the decayed and damaged portion of the tooth is removed and a dental material is placed to prevent further damage and restore function and appearance. The replacement material may be made of porcelain, glass ionomer, composite resin, gold, or silver amalgam.`,
+During the procedure, the decayed or damaged portion of the tooth is carefully removed, and a suitable filling material is used to restore the tooth’s structure, strength, and appearance.
+
+Modern dentistry offers a variety of filling materials such as composite resin, glass ionomer, porcelain, gold, and amalgam, allowing both functional and aesthetic restoration.`,
 
   details: [
 
     {
-      heading: "Let's learn about the structure of the tooth:",
-      content: `A tooth consists of three layers:
-1. Enamel (hardest tissue)
-2. Dentine (less hard than enamel)
-3. Pulp (innermost layer, contains nerves and blood vessels)
+      heading: "Tooth Structure Explained:",
+      content: `1. Enamel – The outermost and hardest protective layer of the tooth
+2. Dentine – The middle layer that supports enamel and is more sensitive
+3. Pulp – The innermost soft tissue containing nerves and blood vessels
 
-If the decay just affects the first two layers of the tooth, filling or restorations can treat it.
-
-An RCT or Endodontic treatment is required in the event that the tooth decay extends to the third layer and results in pulp inflammation or infection.`
+4. If decay is limited to enamel and dentine → filling is sufficient
+5. If decay reaches pulp → Root Canal Treatment (RCT) is required
+6. Early detection helps preserve natural tooth structure`
     },
 
     {
-      heading: "Reasons you might need a Tooth Filling:",
-      content: `1. In the event of a cavity
-2. Fractured or cracked tooth
-3. Chipped tooth
-4. In the case of tiny holes in teeth
-5. Fillings for discolored teeth
-6. In cases of gradual tooth structure loss`
+      heading: "Signs You Need a Tooth Filling:",
+      content: `1. Visible holes or dark spots on teeth
+2. Tooth sensitivity to hot, cold, or sweet foods
+3. Pain while biting or chewing
+4. Chipped or broken tooth structure
+5. Food getting stuck frequently in a specific tooth
+6. Bad breath due to trapped decay
+7. Discoloration or staining of tooth surface`
     },
 
     {
-      heading: "Teeth Filling Materials:",
-      content: `1. Metal fillings:
-Materials for dental fillings include metals like gold and silver. These metal fillings are the strongest and endure for at least 20 years.
+      heading: "Types of Tooth Filling Materials:",
+      content: `1. Composite Fillings (Tooth-Colored)
+   • Matches natural tooth color
+   • Ideal for front teeth and visible areas
+   • Bonds directly to tooth structure
 
-2. Amalgam fillings:
-Amalgam fillings do not match the color of natural teeth. It lasts at least 10 to 15 years. For large cavities and back teeth, it is ideal.
+2. Amalgam Fillings (Silver)
+   • Very strong and durable
+   • Best for back teeth
+   • Cost-effective option
 
-3. Glass ionomer cement fillings:
-Glass ionomer cement is a tooth-colored dental filling material. It releases fluoride and prevents caries.
+3. Gold Fillings
+   • Extremely long-lasting (15–20 years)
+   • Highly durable and strong
+   • Premium option
 
-4. Composite fillings:
-Composite is a tooth-colored filling material. It is bonded and light cured. It matches natural teeth.
+4. Glass Ionomer Fillings
+   • Releases fluoride to prevent decay
+   • Suitable for children or small cavities
+   • Less durable than composite
 
-5. Porcelain fillings:
-Porcelain fillings are durable, stain-resistant, and ideal for cosmetic appearance.`
+5. Porcelain Fillings (Ceramic)
+   • Highly aesthetic and stain-resistant
+   • Durable and natural-looking
+   • Used for cosmetic restorations`
     },
 
     {
-      heading: "Tooth Filling Procedure:",
-      content: `1. We may perform one or two X-rays to determine the extent of tooth decay
-2. First, we will numb the tooth with a local anesthetic if necessary
-3. Next, the decayed area is removed
-4. A probe is inserted to check if decay is fully removed
-5. The cavity is cleaned of bacteria and debris
-6. Filling is placed and polished
-7. In tooth-colored fillings, material is applied in layers and hardened with light`
+      heading: "Step-by-Step Tooth Filling Procedure:",
+      content: `1. Dental Examination & X-ray
+   • Helps detect extent of decay
+
+2. Local Anesthesia
+   • Ensures painless treatment
+
+3. Removal of Decay
+   • Damaged part is cleaned using dental tools
+
+4. Cleaning & Disinfection
+   • Bacteria and debris are removed
+
+5. Filling Placement
+   • Material is applied in layers (for composite)
+
+6. Light Curing (for tooth-colored fillings)
+   • Special light hardens the material
+
+7. Shaping & Polishing
+   • Final adjustment for bite and smooth finish
+
+8. Final Check
+   • Ensures comfort and proper alignment`
     },
 
     {
-      heading: "Consequences of not getting a filling done:",
-      content: `If you ignore the cavity, the pulp cavity could become infected and very painful. Fillings won't be enough and you may require root canal treatment.`
+      heading: "What Happens If You Delay Filling?",
+      content: `1. Decay spreads deeper into the tooth
+2. Increased pain and sensitivity
+3. Infection reaching the pulp
+4. Need for Root Canal Treatment (RCT)
+5. Risk of tooth fracture or complete damage
+6. Higher treatment cost in future
+7. Possible tooth loss in severe cases`
     }
 
   ],
@@ -74,23 +108,23 @@ Porcelain fillings are durable, stain-resistant, and ideal for cosmetic appearan
   faqs: [
     {
       q: 'Is dental filling painful?',
-      a: 'No, dental fillings are not painful as the infection is limited to enamel and dentin.'
+      a: 'No, the procedure is painless due to local anesthesia. You may feel slight sensitivity after treatment.'
     },
     {
-      q: 'Is filling good for teeth?',
-      a: 'Yes, fillings restore damaged teeth and prevent further decay.'
+      q: 'How long does a filling last?',
+      a: 'Composite fillings last 5–10 years, while metal fillings can last 10–20 years.'
     },
     {
-      q: 'How long does a tooth filling last?',
-      a: 'Depending on material, fillings can last from 5 to 20 years.'
+      q: 'Can I eat after filling?',
+      a: 'Yes, but avoid hard or sticky food for a few hours, especially after composite fillings.'
     },
     {
-      q: 'What material is used for dental fillings?',
-      a: 'Common materials include composite resin, amalgam, gold, and porcelain.'
+      q: 'Is tooth filling safe?',
+      a: 'Yes, it is a safe and routine dental procedure used worldwide.'
     },
     {
-      q: 'What if the dental filling comes out?',
-      a: 'You should visit a dentist immediately to avoid further damage or infection.'
+      q: 'What if my filling falls out?',
+      a: 'Visit your dentist immediately to prevent further damage or infection.'
     }
   ]
 }

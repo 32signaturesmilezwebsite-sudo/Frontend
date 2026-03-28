@@ -16,8 +16,10 @@ const TreatmentPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = `${data.title} | 32 Signature Smilez`;
-  }, [slug, data.title]);
+    if (data) {
+      document.title = `${data.title} | 32 Signature Smilez`;
+    }
+  }, [slug, data]);
 
   if (!data) {
     return <h2 style={{ textAlign: "center" }}>Treatment not found</h2>;
@@ -44,69 +46,15 @@ const TreatmentPage = () => {
         {/* BODY */}
         <div className="treatment-body container">
 
+          {/* TOP SECTION */}
           <div className="treatment-main">
 
-            {/* LEFT */}
             <div className="treatment-content">
               <h2>What is {data.title}?</h2>
               <p className="treatment-intro">{data.intro}</p>
-
-              {/* DETAILS */}
-{data.details.map((section, i) => {
-  const lines = section.content.split('\n');
-
-  return (
-    <div key={i} className="detail-section">
-      <h3>{section.heading}</h3>
-
-      <div className="detail-text">
-        <ul>
-          {lines.map((line, j) => {
-            if (line.match(/^\d+\./)) {
-              return (
-                <li key={j}>
-                  {line.replace(/^\d+\.\s*/, '')}
-                </li>
-              );
-            }
-
-            if (line.trim() !== "") {
-              return <p key={j}>{line}</p>;
-            }
-
-            return null;
-          })}
-        </ul>
-      </div>
-    </div>
-  );
-})}
-
-              {/* CTA */}
-              <div className="treatment-cta">
-
-                <button
-                  className="btn-primary"
-                  onClick={() => setBookingOpen(true)}
-                >
-                  BOOK FREE APPOINTMENT 📅
-                </button>
-
-                <a
-                  href={MAPS_LINK}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-outline"
-                >
-                  VISIT CLINIC 📍
-                </a>
-
-              </div>
             </div>
 
-            {/* RIGHT */}
             <div className="treatment-image-col">
-
               <div className="treatment-img-card">
                 <img
                   src={data.image}
@@ -118,13 +66,81 @@ const TreatmentPage = () => {
                 />
               </div>
 
-              <div className="clinic-info-card">
-                <p>🏆 Expert team with decades of experience</p>
-                <p>🔬 Advanced dental technology</p>
-                <p>💚 Comfortable, painless procedures</p>
-              </div>
-
+              
             </div>
+          </div>
+
+          {/* DETAILS */}
+          <div className="details-grid">
+            {data.details.map((section, i) => {
+
+              let count = 0;
+              const lines = section.content.split('\n');
+
+              return (
+                <div key={i} className="detail-section">
+                  <h3>{section.heading}</h3>
+
+                  <div className="detail-text">
+                    {lines.map((line, j) => {
+
+                      const isNumbered = line.match(/^\d+\./);
+                      const clean = line.replace(/^\d+\.\s*/, '');
+                      const isSigns = section.heading.toLowerCase().includes("signs");
+
+                      if (isNumbered) {
+                        count++;
+
+                        const roman = ["i","ii","iii","iv","v","vi","vii","viii","ix","x"];
+                        const parts = clean.split('–');
+
+                        return (
+                          <div key={j} className="detail-item">
+                            <span className="number">
+                              {isSigns ? `${roman[count - 1]}.` : `${count}.`}
+                            </span>
+
+                            <span>
+                              <strong>{parts[0]}</strong>
+                              {parts[1] && <> – {parts[1]}</>}
+                            </span>
+                          </div>
+                        );
+                      }
+
+                      if (line.trim() !== "") {
+                        return (
+                          <p key={j} className="detail-full">
+                            {line}
+                          </p>
+                        );
+                      }
+
+                      return null;
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* CTA */}
+          <div className="treatment-cta">
+            <button
+              className="btn-primary"
+              onClick={() => setBookingOpen(true)}
+            >
+              BOOK FREE APPOINTMENT 📅
+            </button>
+
+            <a
+              href={MAPS_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-outline"
+            >
+              VISIT CLINIC 📍
+            </a>
           </div>
 
           {/* FAQ */}
