@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="header-spacer" style={{ height: '220px' }}></div>
+      <div className="header-spacer"></div>
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
         {/* Top Bar - Very small notification / social bar */}
         <div className="top-bar">
