@@ -78,16 +78,23 @@
   text-align: justify;
 }
 
-/* STATS (kept as-is if you add later) */
+/* STATS CARD — Glassmorphism Navy */
 .stats-container {
   display: flex;
-  background-color: rgba(212, 175, 55, 0.06);
-  border: 1px solid rgba(212, 175, 55,0.15);
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 35px;
   align-items: center;
   justify-content: space-between;
+  margin-top: 32px;
+  padding: 28px 32px;
+  border-radius: 18px;
+
+  /* Glassmorphism */
+  background: rgba(10, 25, 47, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
 }
 
 .stat-box {
@@ -96,16 +103,21 @@
 }
 
 .stat-box h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--primary-gold);
-  margin: 0 0 5px 0;
+  margin: 0 0 6px 0;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
 }
 
 .stat-box p {
   margin: 0;
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .divider-right {
@@ -118,9 +130,9 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  height: 60%;
+  height: 55%;
   width: 1px;
-  background-color: rgba(0,0,0,0.1);
+  background: linear-gradient(to bottom, transparent, rgba(212,175,55,0.35), transparent);
 }
 
 /* RESPONSIVE */
