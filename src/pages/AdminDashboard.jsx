@@ -84,6 +84,9 @@ const AdminDashboard = () => {
           <Link to="/admin/blogs" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
              Blogs
           </Link>
+          <Link to="/admin/gallery" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+             Clinic Gallery
+          </Link>
           <button onClick={logout} className="logout-btn">
             <LogOut size={18} /> Logout
           </button>

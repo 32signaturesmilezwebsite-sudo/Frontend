@@ -79,6 +79,9 @@ const AdminBlogList = () => {
           <Link to="/admin/dashboard" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
              Appointments
           </Link>
+          <Link to="/admin/gallery" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+             Clinic Gallery
+          </Link>
           <button onClick={logout} className="logout-btn">
             <LogOut size={18} /> Logout
           </button>

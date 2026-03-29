@@ -3,7 +3,7 @@ import './ClinicGallery.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const galleryImages = [
+const staticGalleryImages = [
   { id: 0, src: '/clinic-gallery/uploaded_media_0_1774511569819.jpg', alt: 'Clinic Interior 1', size: 'large' },
   { id: 1, src: '/clinic-gallery/uploaded_media_1_1774511569819.jpg', alt: 'Clinic Interior 2', size: 'medium' },
   { id: 2, src: '/clinic-gallery/uploaded_media_2_1774511569819.jpg', alt: 'Clinic Interior 3', size: 'medium' },
@@ -18,10 +18,38 @@ const galleryImages = [
 
 const ClinicGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [dynamicImages, setDynamicImages] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    const fetchGallery = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/gallery`);
+        if (res.ok) {
+          const data = await res.json();
+          // Map backend images to the required gallery object format
+          const formatted = data.map((img, index) => {
+            const sizes = ['large', 'medium', 'medium', 'wide', 'medium'];
+            return {
+              id: img._id,
+              src: img.imageUrl,
+              alt: `Clinic Image ${index + 1}`,
+              size: sizes[index % 5]
+            };
+          });
+          setDynamicImages(formatted);
+        }
+      } catch (err) {
+        console.error("Error fetching clinic gallery", err);
+      }
+    };
+    
+    fetchGallery();
   }, []);
+
+  const displayImages = dynamicImages.length > 0 ? dynamicImages : staticGalleryImages;
+
 
   const openLightbox = (img) => {
     setSelectedImage(img);
@@ -47,7 +75,7 @@ const ClinicGallery = () => {
 
         <section className="gallery-container">
           <div className="masonry-grid">
-            {galleryImages.map((image) => (
+            {displayImages.map((image) => (
               <div 
                 key={image.id} 
                 className={`gallery-item ${image.size}`}

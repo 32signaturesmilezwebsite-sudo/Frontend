@@ -43,13 +43,14 @@
   font-size: 2.8rem;
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(90deg, #ffffff 30%, #d4af37 60%, #f1c75b 80%, #ffffff 100%);
+  background: linear-gradient(90deg, #ffffff 30%, #00ff88 60%, #00ffcc 80%, #ffffff 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: heroTitleShine 5s linear infinite;
   position: relative;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 @keyframes heroTitleShine {
   from { background-position: 0% center; }
@@ -227,9 +228,11 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #c8960c, #d4af37, #f1c75b);
-  background-size: 200% auto;
-  color: #0a1220;
+  background: rgba(0, 255, 136, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00FF88;
   padding: 9px 20px;
   border-radius: 50px;
   font-weight: 700;
@@ -237,13 +240,15 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background-position 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .blog-read-more:hover {
-  background-position: right center;
+  background: rgba(0, 255, 136, 0.15);
+  border-color: rgba(0, 255, 136, 0.6);
   transform: translateX(3px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.25);
+  color: #00ffcc;
 }
 
 .blog-read-more-arrow {
@@ -309,18 +314,26 @@
 .search-btn {
   width: 100%;
   padding: 11px;
-  background: linear-gradient(135deg, #c8960c, #d4af37);
-  color: #0a1220;
-  border: none;
+  background: rgba(0, 255, 136, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00FF88;
   border-radius: 10px;
   font-weight: 700;
   font-size: 0.88rem;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: all 0.2s ease;
 }
-.search-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.search-btn:hover { 
+  background: rgba(0, 255, 136, 0.15);
+  border-color: rgba(0, 255, 136, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
+  color: #00ffcc;
+}
 
 .category-list {
   list-style: none;
@@ -417,10 +430,11 @@
 .consult-submit-btn {
   width: 100%;
   padding: 13px;
-  background: linear-gradient(135deg, #c8960c, #d4af37, #f1c75b, #d4af37);
-  background-size: 200% auto;
-  color: #0a1220;
-  border: none;
+  background: rgba(0, 255, 136, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00FF88;
   border-radius: 12px;
   font-weight: 800;
   font-size: 0.88rem;
@@ -428,15 +442,17 @@
   letter-spacing: 1px;
   cursor: pointer;
   margin-top: 4px;
-  transition: background-position 0.4s ease, transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .consult-submit-btn:hover {
-  background-position: right center;
+  background: rgba(0, 255, 136, 0.15);
+  border-color: rgba(0, 255, 136, 0.6);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.25);
+  color: #00ffcc;
 }
 
 .consult-submit-btn:disabled {

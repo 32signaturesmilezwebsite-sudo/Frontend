@@ -118,9 +118,17 @@ const AdminBlogCreate = () => {
           <h2>32 Signature Smilez</h2>
           <span>Admin Panel - Create Blog</span>
         </div>
-        <button onClick={logout} className="logout-btn">
-          <LogOut size={18} /> Logout
-        </button>
+        <div style={{display: 'flex', gap: '15px'}}>
+          <button onClick={() => navigate('/admin/blogs')} className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+            <ArrowLeft size={16} style={{marginRight: '6px'}} /> Back to Blogs
+          </button>
+          <Link to="/admin/gallery" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+             Clinic Gallery
+          </Link>
+          <button onClick={logout} className="logout-btn">
+            <LogOut size={18} /> Logout
+          </button>
+        </div>
       </header>
 
       <div className="dashboard-content container">

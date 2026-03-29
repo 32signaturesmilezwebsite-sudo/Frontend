@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingWidgets from '../components/FloatingWidgets';
+import BookingModal from '../components/BookingModal';
 import './AboutUs.css';
 
 const stats = [
@@ -29,6 +30,7 @@ const values = [
 ];
 
 const AboutUs = () => {
+  const [bookingOpen, setBookingOpen] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = 'About Us | 32 Signature Smilez';
@@ -37,6 +39,8 @@ const AboutUs = () => {
   return (
     <>
       <Header />
+      <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+
       <div className="about-page">
 
         {/* ── HERO ── */}
@@ -197,7 +201,7 @@ const AboutUs = () => {
             <h2>Your Perfect Smile Starts Here</h2>
             <p>Book a free consultation with our expert team and discover what's possible for your smile.</p>
             <div className="au-cta-btns">
-              <Link to="/" className="au-btn-primary">Book Free Consultation →</Link>
+              <button onClick={() => setBookingOpen(true)} className="au-btn-primary" style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>Book Free Consultation →</button>
               <a href="tel:+919856883519" className="au-btn-outline">📞 Call Now</a>
             </div>
           </div>
