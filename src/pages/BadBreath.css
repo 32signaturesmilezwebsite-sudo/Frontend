@@ -1,0 +1,834 @@
+/* BadBreath.css */
+
+.bb-wrapper {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* 1. HERO SECTION */
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
+.bb-hero {
+  position: relative;
+  padding: 160px 20px 140px;
+  text-align: center;
+  background-color: #fcfbf9;
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
+}
+
+/* Background */
+.bb-hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  pointer-events: none;
+
+  /* 🔥 animation */
+  opacity: 0;
+  transform: scale(1.05);
+  animation: heroBgFade 1.5s ease forwards;
+}
+
+@keyframes heroBgFade {
+  to {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+}
+
+/* Content */
+.bb-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.bb-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin: 0 auto 20px;
+
+  letter-spacing: 1px;
+  transition: letter-spacing 0.6s ease;
+}
+
+.bb-hero-content h1.animate-show {
+  letter-spacing: 2px;
+}
+
+/* Subtitle */
+.bb-hero-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Buttons */
+.bb-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ============================= */
+/* 🔥 SCROLL ANIMATION */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger */
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+/* ============================= */
+/* ✨ BUTTON MICRO INTERACTION */
+/* ============================= */
+
+.btn-solid-orange,
+.btn-outline-dark {
+  transition: all 0.3s ease;
+}
+
+.btn-solid-orange:hover,
+.btn-outline-dark:hover {
+  transform: translateY(-3px);
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .bb-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .bb-hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .bb-hero-buttons {
+    flex-direction: column;
+  }
+}
+
+/* 2. CENTERED TEXT */
+/* ============================= */
+/* CENTERED TEXT SECTION */
+/* ============================= */
+
+.bb-centered-text {
+  padding: 120px 20px; /* slightly increased */
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.bb-ct-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.bb-ct-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 40px;
+
+  letter-spacing: 1px;
+  transition: letter-spacing 0.6s ease;
+}
+
+.bb-ct-container h2.animate-show {
+  letter-spacing: 2px;
+}
+
+/* Paragraph */
+.bb-ct-container p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #4a5568;
+  margin-bottom: 22px;
+}
+
+/* Link */
+.txt-orange {
+  color: #c57b43;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* underline animation */
+.txt-orange::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #c57b43;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.txt-orange:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================= */
+/* 🔥 ANIMATIONS */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger */
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .bb-ct-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .bb-ct-container p {
+    font-size: 1.05rem;
+  }
+}
+/* 3. SAVE AND SMILE (DARK SPLIT RE-ENABLED) */
+/* ============================= */
+/* DARK SPLIT SECTION */
+/* ============================= */
+
+.bb-dark-split {
+  position: relative;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background */
+.bb-dark-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 1;
+
+  /* subtle zoom animation */
+  transform: scale(1.05);
+  animation: bgZoom 2s ease forwards;
+}
+
+@keyframes bgZoom {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Overlay */
+.bb-dark-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, rgba(33, 41, 33, 0.4), rgba(10, 15, 10, 0.9));
+  z-index: 2;
+}
+
+/* Layout */
+.bb-dark-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  gap: 60px;
+}
+
+/* ============================= */
+/* IMAGE FRAME */
+/* ============================= */
+
+.bb-ds-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame {
+  padding: 10px;
+  border: 2px solid rgba(197, 123, 67, 0.6);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease;
+}
+
+.image-frame:hover {
+  transform: translateY(-5px);
+}
+
+.dr-portrait-fixed {
+  width: 100%;
+  max-width: 420px;
+  height: 550px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+}
+/* ============================= */
+/* 🖼️ PREMIUM DOUBLE FRAME */
+/* ============================= */
+
+/* ============================= */
+/* 🖼️ PREMIUM GLASS FRAME (REFERENCE STYLE) */
+/* ============================= */
+
+.frame-outer {
+  position: relative;
+  width: 420px;
+  aspect-ratio: 1 / 1;
+
+  padding: 14px;
+  border-radius: 20px;
+
+  /* 🔥 GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+
+  /* 🔥 DEPTH */
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+}
+
+/* 🔥 INNER WHITE FRAME (MOST IMPORTANT) */
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+/* INNER CONTAINER */
+.frame-inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.dr-portrait-fixed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* ============================= */
+/* ✨ HOVER (LIKE REFERENCE) */
+/* ============================= */
+
+.frame-outer:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.25);
+}
+
+/* ============================= */
+/* 💡 SOFT OUTER GLOW */
+/* ============================= */
+
+.frame-outer::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 30px;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.12),
+    transparent 70%
+  );
+  z-index: -1;
+}
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.bb-ds-content {
+  flex: 1;
+}
+
+.bb-ds-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+
+  letter-spacing: 1px;
+  transition: letter-spacing 0.5s ease;
+}
+
+.bb-ds-content h2.animate-show {
+  letter-spacing: 2px;
+}
+
+.bb-ds-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e2e8f0;
+  max-width: 500px;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-left {
+  transform: translateX(-60px);
+}
+
+.animate-slide-right {
+  transform: translateX(60px);
+}
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translateX(0);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .bb-dark-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bb-ds-content p {
+    margin: 0 auto;
+  }
+
+  .dr-portrait-fixed {
+    height: auto;
+  }
+}
+
+/* 4 & 5. STANDARD SPLIT BLOCKS */
+.bg-cream {
+  background-color: #fbf7ee !important; 
+}
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bb-split-section {
+  padding: 100px 20px;
+}
+
+.bb-split-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bb-split-image {
+  flex: 1;
+}
+
+.bb-split-image img {
+  width: 100%;
+  height: 500px; /* Fixed robust styling */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.bb-split-content {
+  flex: 1;
+}
+
+.pr-large {
+  padding-right: 60px;
+}
+
+.bb-split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.bb-sub-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+.bb-split-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.bb-bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.bb-bullet-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.bb-cta-text {
+  margin-top: 40px;
+}
+
+.bb-split-btn {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .bb-hero-content h1 { font-size: 3rem; }
+  .bb-ct-container h2 { font-size: 2.8rem; }
+  .bb-split-container, .bb-dark-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .bb-dark-container {
+    flex-direction: column-reverse; /* Usually text on top on mobile, image below */
+  }
+  .bb-split-container.reverse-mobile {
+    flex-direction: column-reverse;
+  }
+  .pr-large {
+    padding-right: 0;
+  }
+  .bb-ds-content, .bb-split-content {
+    padding: 20px;
+  }
+  .bb-split-image img, .dr-portrait-fixed {
+    height: auto;
+    max-height: 500px;
+  }
+  .bb-ds-image {
+    padding-top: 0;
+  }
+  .bb-bullet-list {
+    text-align: left;
+    display: inline-block; /* Fixes left-align list bullets in centered flex */
+  }
+}
+/* ============================= */
+/* 🔥 SPLIT SECTION ANIMATIONS */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide directions */
+.animate-slide-left {
+  transform: translateX(-60px);
+}
+
+.animate-slide-right {
+  transform: translateX(60px);
+}
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translateX(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
+
+/* ============================= */
+/* ✨ IMAGE ENHANCEMENT */
+/* ============================= */
+
+.bb-split-image img {
+  transition: transform 0.6s ease;
+}
+
+.bb-split-image:hover img {
+  transform: scale(1.03);
+}
+
+/* ============================= */
+/* 💎 TEXT POLISH */
+/* ============================= */
+
+.bb-split-content h2 {
+  transition: letter-spacing 0.4s ease;
+}
+
+.bb-split-content h2.animate-show {
+  letter-spacing: 1px;
+}
+
+/* 6. REFRESHING DENTAL CARE HEXAGONS */
+/* ============================= */
+/* 🔷 REDEFINING SECTION */
+/* ============================= */
+
+.bb-redefining {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* Heading */
+.bb-redefining h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 70px;
+
+  letter-spacing: 1px;
+  transition: letter-spacing 0.5s ease;
+}
+
+.bb-redefining h2.animate-show {
+  letter-spacing: 2px;
+}
+
+/* Grid */
+.bb-ook-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================= */
+/* 🧩 HEX CARD */
+/* ============================= */
+
+.bb-ook-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 60px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  clip-path: polygon(
+    50% 0%, 
+    100% 15%, 
+    100% 85%, 
+    50% 100%, 
+    0% 85%, 
+    0% 15%
+  );
+
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* subtle hover */
+.bb-ook-card:hover {
+  transform: translateY(-6px);
+}
+
+/* soft glow */
+.bb-ook-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(197,123,67,0.12),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.bb-ook-card:hover::before {
+  opacity: 1;
+}
+
+/* ============================= */
+/* 🎯 ICON */
+/* ============================= */
+
+.hex-icon {
+  margin-bottom: 20px;
+  color: #c57b43;
+  transition: transform 0.3s ease;
+}
+
+.bb-ook-card:hover .hex-icon {
+  transform: scale(1.1);
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.bb-ook-card h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #c57b43;
+  margin-bottom: 12px;
+}
+
+.bb-ook-card p {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 260px;
+}
+
+/* ============================= */
+/* 🔥 ANIMATION */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+/* ============================= */
+/* 📱 RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .bb-redefining h2 {
+    font-size: 2.6rem;
+  }
+
+  .bb-ook-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bb-ook-card {
+    max-width: 400px;
+    width: 100%;
+  }
+}

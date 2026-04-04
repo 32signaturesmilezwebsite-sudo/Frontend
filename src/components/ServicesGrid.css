@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+.services-grid-section {
+  padding: 100px 0 120px;
+  background-color: #ffffff;
+}
+
+.services-grid-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 40px; /* generous vertical spacing between rows */
+  margin-bottom: 90px;
+}
+
+.service-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-panel-image {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Classic clean landscape frame */
+  background-color: #f7f6f4;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.service-panel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.service-panel:hover .service-panel-image img {
+  transform: scale(1.05); /* Smooth elegant zoom interacting */
+}
+
+.service-panel-content {
+  padding-right: 20px;
+}
+
+.service-panel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c57b43; /* Matches Earthy brown requested */
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.service-panel-desc {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.service-panel-link {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #c57b43;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.service-panel-link:hover {
+  text-decoration: underline;
+  color: #a15d2a;
+}
+
+.services-grid-action {
+  text-align: center;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .service-panel-title {
+    font-size: 1.6rem;
+  }
+}

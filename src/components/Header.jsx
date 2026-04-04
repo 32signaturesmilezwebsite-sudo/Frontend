@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MapPin, Phone, MessageCircle, Calendar, Menu, X } from 'lucide-react';
+import { MapPin, Phone, Mail, Calendar, Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
@@ -10,143 +10,175 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const handleNavClick = () => {
-    scrollToTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setMenuOpen(false);
   };
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => { document.body.style.overflow = 'auto'; };
+  }, [menuOpen]);
+
   return (
     <>
+      {/* Spacer to prevent content jump since header is fixed */}
       <div className="header-spacer"></div>
+      
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
-        {/* Top Bar - Very small notification / social bar */}
-        <div className="top-bar">
-        <div className="container top-bar-inner">
-          <p>✨ Agartala's Premiere Dental Clinic</p>
-          <div className="social-icons">
-            <a href="#" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/32SignatureSmilez" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="#" aria-label="X/Twitter">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.734-8.833L1.254 2.25H8.08l4.264 5.639 5.9-5.639zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/dr-deep-datta-46888928/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="#" aria-label="YouTube">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
+        <div className="container header-container">
+          {/* Logo */}
+          <div className="logo-container" onClick={handleNavClick}>
+            <Link to="/">
+              <img src="/logo.png" alt="32 Signature Smilez" className="brand-logo-img" />
+            </Link>
+          </div>
+
+          {/* Right Actions */}
+          <div className="header-actions">
+            <Link to="/contact" className="btn-request-appointment">Request Appointment</Link>
+            <button className="menu-toggle-btn" onClick={() => setMenuOpen(true)}>
+              <Menu size={36} color="#111111" strokeWidth={1.5} />
+            </button>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Main Navigation with Logo */}
-      <div className="main-nav-wrapper">
-        <div className="container main-nav">
-          <div className="logo-container" onClick={scrollToTop} style={{cursor:'pointer'}}>
-            <img src="/logo.png" alt="32 Signature Smilez" className="brand-logo-img" />
-          </div>
+      {/* Full Screen Mega Menu Overlay */}
+      <div className={`mega-menu-overlay ${menuOpen ? 'active' : ''}`}>
+        <div className="mega-menu-bg" style={{ backgroundImage: `url('/istockphoto-510081750-612x612.jpg')` }}></div>
+        <div className="mega-menu-content">
+          <button className="menu-close-btn" onClick={() => setMenuOpen(false)}>
+            <X size={40} color="#111111" strokeWidth={1} />
+          </button>
           
-          <div className="mobile-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={30} color="#D4AF37" /> : <Menu size={30} color="#D4AF37" />}
-          </div>
-          
-          <nav className={`desktop-navigation ${menuOpen ? 'mobile-active' : ''}`}>
-            <ul>
-              <li className={location.pathname === '/' ? "active" : ""}><Link to="/" onClick={handleNavClick}>HOME</Link></li>
-              <li className={`has-dropdown ${location.pathname.includes('/treatment') ? "active" : ""}`}>
-                <a href="#">DENTAL CARE <span className="arrow-down">▾</span></a>
-                <div className="mega-dropdown">
-                  <div className="mega-grid">
-                    <Link to="/treatment/tooth-filling" className="mega-item" onClick={handleNavClick}>Tooth Filling</Link>
-                    <Link to="/treatment/teeth-whitening" className="mega-item" onClick={handleNavClick}>Teeth Whitening</Link>
-                    <Link to="/treatment/tooth-decay-dental-cavities" className="mega-item" onClick={handleNavClick}>Tooth Decay / Dental Cavities</Link>
-                    <Link to="/treatment/bad-breath-and-halitosis" className="mega-item" onClick={handleNavClick}>Bad Breath and Halitosis</Link>
-                    <Link to="/treatment/root-canal-treatment" className="mega-item" onClick={handleNavClick}>Root Canal Treatment</Link>
-                    <Link to="/treatment/wisdom-tooth-extraction" className="mega-item" onClick={handleNavClick}>Wisdom Tooth Extraction</Link>
-                    <Link to="/treatment/kids-dentistry" className="mega-item" onClick={handleNavClick}>Kids Dentistry</Link>
-                    <Link to="/treatment/tooth-braces" className="mega-item" onClick={handleNavClick}>Tooth Braces</Link>
-                    <Link to="/treatment/clear-aligners" className="mega-item" onClick={handleNavClick}>Clear Aligners</Link>
-                    <Link to="/treatment/dental-crown" className="mega-item" onClick={handleNavClick}>Dental Crown</Link>
-                    <Link to="/treatment/smile-designing" className="mega-item" onClick={handleNavClick}>Smile Designing</Link>
-                    <Link to="/treatment/dental-implants" className="mega-item" onClick={handleNavClick}>Dental Implants</Link>
-                    <Link to="/treatment/full-mouth-implants" className="mega-item" onClick={handleNavClick}>Full Mouth Implants</Link>
-                    <Link to="/treatment/hybrid-denture" className="mega-item" onClick={handleNavClick}>Hybrid Denture</Link>
-                    <Link to="/treatment/dentures" className="mega-item" onClick={handleNavClick}>Dentures</Link>
-                    <Link to="/treatment/frenectomy" className="mega-item" onClick={handleNavClick}>Frenectomy</Link>
-                    <Link to="/treatment/cosmetic-dentistry" className="mega-item" onClick={handleNavClick}>Cosmetic Dentistry</Link>
-                    <Link to="/treatment/dental-lasers" className="mega-item" onClick={handleNavClick}>Dental Lasers</Link>
-                    <Link to="/treatment/jaw-surgery" className="mega-item" onClick={handleNavClick}>Jaw Surgery</Link>
-                    <Link to="/treatment/genioplasty" className="mega-item" onClick={handleNavClick}>Genioplasty</Link>
-                    <Link to="/treatment/periodontal-diseases-flap" className="mega-item" onClick={handleNavClick}>Periodontal Diseases &amp; Flap</Link>
-                  </div>
+          <div className="container">
+            <div className="mega-menu-grid">
+              
+              {/* Column 1: About & New Patients */}
+              <div className="mega-menu-col">
+                <h3 className="mega-col-title">About</h3>
+                <ul className="mega-menu-links">
+                  <li><Link to="/about" onClick={handleNavClick}>About Us</Link></li>
+                  <li><Link to="/problems-we-treat" onClick={handleNavClick}>Problems We Treat</Link></li>
+                  <li><Link to="/bad-breath" onClick={handleNavClick}>Bad Breath</Link></li>
+                </ul>
+                
+                <h3 className="mega-col-title" style={{marginTop: '40px'}}>New Patients</h3>
+                <ul className="mega-menu-links mb-4">
+                  <li><Link to="/new-patients" onClick={handleNavClick}>New Patient Info</Link></li>
+                  <li><Link to="#" onClick={handleNavClick}>Payment Options</Link></li>
+                  <li><Link to="#" onClick={handleNavClick}>Refer a Friend</Link></li>
+                </ul>
+                
+                <div className="menu-btn-wrapper">
+                  <Link to="/contact" className="btn-request-appointment inline-block" onClick={handleNavClick}>Request Appointment</Link>
                 </div>
-              </li>
-              <li className={location.pathname.startsWith('/blog') ? "active" : ""}><Link to="/blog" onClick={handleNavClick}>BLOG</Link></li>
-              <li className={location.pathname.startsWith('/clinic') ? "active" : ""}><Link to="/clinic" onClick={handleNavClick}>OUR CLINICS</Link></li>
-              <li className={location.pathname === '/about' ? "active" : ""}>
-  <Link to="/about" onClick={handleNavClick}>ABOUT US</Link>
-</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+              </div>
 
-      {/* Info Sub-header Layer (from screenshot 3) */}
-      <div className="info-sub-header">
-        <div className="container info-grid">
-          <a href="https://maps.app.goo.gl/vYRxei6adkCdmwYH6" target="_blank" rel="noreferrer" className="info-item" style={{textDecoration: 'none', color: 'inherit'}}>
-            <MapPin size={24} className="info-icon" color="#4285F4" />
-            <div className="info-text">
-              <strong>Find Clinic Near You</strong>
+              {/* Column 2: Cosmetic & Restorative */}
+              <div className="mega-menu-col">
+                <h3 className="mega-col-title">Cosmetic</h3>
+                <ul className="mega-menu-links">
+                  <li><Link to="/cosmetic-dentistry" onClick={handleNavClick}>Cosmetic Dentistry</Link></li>
+                  <li><Link to="/veneers" onClick={handleNavClick}>Veneers</Link></li>
+                  <li><Link to="/teeth-whitening" onClick={handleNavClick}>Teeth Whitening</Link></li>
+                  <li><Link to="/dental-bonding" onClick={handleNavClick}>Bonding</Link></li>
+                </ul>
+
+                <h3 className="mega-col-title" style={{marginTop: '40px'}}>Restorative</h3>
+                <ul className="mega-menu-links">
+                  <li><Link to="/treatment/restorative" onClick={handleNavClick}>Restorative Dentistry</Link></li>
+                  <li><Link to="/treatment/bridges" onClick={handleNavClick}>Bridges</Link></li>
+                  <li><Link to="/dental-crowns" onClick={handleNavClick}>Traditional Crowns</Link></li>
+                  <li><Link to="/treatment/same-day-crowns" onClick={handleNavClick}>Same-Day Crowns</Link></li>
+                  <li><Link to="/treatment/implant-restoration" onClick={handleNavClick}>Implant Restoration</Link></li>
+                  <li><Link to="/treatment/inlays-onlays" onClick={handleNavClick}>Inlays Onlays</Link></li>
+                </ul>
+              </div>
+
+              {/* Column 3: General */}
+              <div className="mega-menu-col">
+                <h3 className="mega-col-title">General</h3>
+                <ul className="mega-menu-links">
+                  <li><Link to="/treatment/general-dentistry" onClick={handleNavClick}>General Dentistry</Link></li>
+                  <li><Link to="/treatment/cleaning-exams" onClick={handleNavClick}>Cleaning & Exams</Link></li>
+                  <li><Link to="/treatment/fillings" onClick={handleNavClick}>Fillings</Link></li>
+                  <li><Link to="/treatment/mercury-filling-removal" onClick={handleNavClick}>Mercury Filling Removal</Link></li>
+                  <li><Link to="/treatment/sedation" onClick={handleNavClick}>Sedation</Link></li>
+                  <li><Link to="/treatment/family-dentistry" onClick={handleNavClick}>Family Dentistry</Link></li>
+                  <li><Link to="/treatment/pediatric-dentistry" onClick={handleNavClick}>Pediatric Dentistry</Link></li>
+                  <li><Link to="/treatment/emergency-dentistry" onClick={handleNavClick}>Emergency Dentistry</Link></li>
+                  <li><Link to="/treatment/mouthguards" onClick={handleNavClick}>Mouthguards</Link></li>
+                  <li><Link to="/treatment/sealants" onClick={handleNavClick}>Sealants</Link></li>
+                  <li><Link to="/treatment/gum-treatment" onClick={handleNavClick}>Gum Treatment</Link></li>
+                  <li><Link to="/treatment/fluoride-treatment" onClick={handleNavClick}>Fluoride Treatment</Link></li>
+                  <li><Link to="/treatment/tooth-extractions" onClick={handleNavClick}>Tooth Extractions</Link></li>
+                  <li><Link to="/treatment/special-needs-dentistry" onClick={handleNavClick}>Special Needs Dentistry</Link></li>
+                </ul>
+              </div>
+
             </div>
-          </a>
-          <a href="https://wa.me/919077770586" target="_blank" rel="noreferrer" className="info-item" style={{textDecoration: 'none', color: 'inherit'}}>
-            <div className="info-icon" style={{color: '#25D366', display: 'flex', alignItems: 'center'}}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </div>
-            <div className="info-text">
-              <strong>+91 90777 70586</strong>
-              <span>WhatsApp Now</span>
-            </div>
-          </a>
-          <a href="tel:+919077770586" className="info-item" style={{textDecoration: 'none', color: 'inherit'}}>
-            <div className="info-icon" style={{color: '#333', display: 'flex', alignItems: 'center'}}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-              </svg>
-            </div>
-            <div className="info-text">
-              <strong>+91 98568 83519</strong>
-              <span>Call Us Now</span>
-            </div>
-          </a>
-          <div className="info-item">
-            <Calendar size={24} className="info-icon" color="#4285F4" />
-            <div className="info-text">
-              <strong>Book Appointment</strong>
-              <span>32signaturesmilez@gmail.com</span>
+
+            {/* Bottom Contact Footer inside Menu */}
+            <div className="mega-menu-footer">
+              <div className="mega-footer-left">
+                {/* Map styling matching the reference */}
+                <div className="mega-map-placeholder">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7186178792014!2d91.27855367610667!3d23.83441588628929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f412c125749f%3A0x6bba843a85b991cf!2s32%20Signature%20Smilez%20Multispeciality%20Dental%20Clinic%20%26%20Implant%20Center!5e0!3m2!1sen!2sin!4v1711993414842!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="200" 
+                    style={{ border: 0, borderRadius: '4px' }} 
+                    allowFullScreen="" 
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+
+              <div className="mega-footer-right">
+                <ul className="mega-contact-list">
+                  <li>
+                    <MapPin size={22} className="mc-icon" />
+                    <div>
+                      <p>Thakur Pally Rd, opposite satsangha ashram,</p>
+                      <p>Krishna Nagar, Agartala, Tripura 799001</p>
+                      <a href="https://maps.app.goo.gl/vYRxei6adkCdmwYH6" target="_blank" rel="noreferrer" className="get-directions">Get Directions</a>
+                    </div>
+                  </li>
+                  <li>
+                    <Phone size={22} className="mc-icon" />
+                    <p><a href="tel:+919077770586">+91 90777 70586</a></p>
+                  </li>
+                  <li>
+                    <Calendar size={22} className="mc-icon" />
+                    <div>
+                      <p>Monday-Sunday:</p>
+                      <p>10:00 am - 8:00 pm</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Mail size={22} className="mc-icon" />
+                    <p><a href="mailto:32signaturesmilez@gmail.com">32signaturesmilez@gmail.com</a></p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-    </header>
     </>
   );
 };

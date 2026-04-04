@@ -1,0 +1,280 @@
+/* ===== SCROLL ANIMATIONS — scoped to prevent global CSS collisions ===== */
+
+.new-patients-wrapper {
+  background-color: #ffffff;
+}
+
+/* Base animation states — scoped under wrapper for specificity */
+.new-patients-wrapper .fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.new-patients-wrapper .fade-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.new-patients-wrapper .fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.new-patients-wrapper .fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.new-patients-wrapper .zoom-in {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* ACTIVE STATE — wins over any global .animate { opacity: 0 } */
+.new-patients-wrapper .show {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+
+
+/* 1. Hero */
+.np-hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 100px;
+  background-color: #fcfbf9;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.np-hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover; background-position: center bottom;
+  opacity: 0.15; z-index: 1;
+}
+.np-hero-content {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+}
+.np-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem; color: #3b4657; margin-bottom: 25px;
+}
+.np-hero-content p {
+  font-family: 'Georgia', serif; font-size: 1.5rem; color: #c57b43; margin-bottom: 40px; font-weight: 500;
+}
+.np-btn-row {
+  display: flex; gap: 20px; justify-content: center;
+}
+
+/* Base generic split */
+.split-section { padding: 100px 20px; }
+.split-container { display: flex; align-items: center; gap: 50px; max-width: 1200px; margin: 0 auto; }
+.split-text { flex: 1; }
+.split-text h2 { font-family: 'Playfair Display', serif; font-size: 3.2rem; font-weight: 700; color: #3b4657; margin-bottom: 25px; }
+.split-text p { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; color: #4a5568; margin-bottom: 25px; }
+.split-image { flex: 1; position: relative; }
+.section-bg-cream { background-color: #fbf7ee; }
+.section-bg-white { background-color: #ffffff; }
+
+/* 3. First Visit Hexagons */
+.np-first-visit { padding: 80px 20px; text-align: center; background-color: #ffffff; }
+.np-first-visit-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 25px; }
+.visit-desc { font-family: 'Georgia', serif; font-size: 1.2rem; color: #4a5568; margin: 0 auto 50px; max-width: 800px; line-height: 1.7; }
+.np-hexagon-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 50px; }
+.np-hex-card {
+  background: #fbf7ee;
+  width: 220px;
+  height: 240px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+
+  text-align: center;
+  border-radius: 12px;
+
+  transition: transform 0.3s;
+}
+.np-hex-card:hover { transform: translateY(-5px); }
+.hex-icon-vector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.np-hex-card h3 { font-family: 'Georgia', serif; font-size: 1.2rem; color: #c57b43; font-weight: 600; line-height: 1.4; }
+
+/* 4. Checklist */
+.np-checklist { list-style: none; padding: 0; margin-top: 20px; }
+.np-checklist li { display: flex; align-items: center; gap: 15px; font-family: 'Georgia', serif; font-size: 1.2rem; color: #3b4657; margin-bottom: 15px; font-weight: 600; }
+.check-icon-wrapper { background: #c57b43; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; }
+
+/* 5. Emergency */
+.bold-orange-link { color: #c57b43; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+
+/* 6. One of a kind */
+.np-ook-experience { padding: 100px 20px; text-align: center; }
+.np-ook-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 60px; }
+.np-ook-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+.np-ook-card { flex: 1; background: #fbf7ee; padding: 50px 30px; text-align: center; border-radius: 15px; transition: transform 0.3s; }
+.np-ook-card:hover { transform: translateY(-6px); }
+.np-ook-card .hex-icon-vector,
+.np-ook-card .large-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.np-ook-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #c57b43; margin-bottom: 15px; font-weight: 700; }
+.np-ook-card p { font-family: 'Georgia', serif; font-size: 1.1rem; line-height: 1.7; color: #4a5568; }
+
+/* 7. Orange FAQ — dark copper background, white text, white dividers */
+.np-orange-faq {
+  padding: 100px 20px;
+  background-color: #c57b43;
+}
+.np-faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.np-faq-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+.np-faq-list {
+  text-align: left;
+}
+/* No card/box — just a bottom white line per item */
+.np-faq-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+}
+.np-faq-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+.np-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: none;
+  border: none;
+  padding: 30px 10px;
+
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: 
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    letter-spacing 0.2s ease;
+}
+
+/* HOVER EFFECT */
+.np-faq-question:hover {
+  opacity: 0.85;
+  transform: translateX(4px);
+  letter-spacing: 0.3px;
+}
+
+/* ACTIVE (OPEN STATE) */
+.np-faq-item.open .np-faq-question {
+  opacity: 1;
+  transform: translateX(6px);
+}
+.np-faq-question:hover { opacity: 0.85; }
+.np-faq-icon {
+  font-size: 1.6rem;
+  color: #ffffff;
+  flex-shrink: 0;
+  margin-left: 20px;
+  line-height: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* OPEN STATE (rotate to X) */
+.np-faq-icon.open {
+  transform: rotate(45deg);
+}
+
+/* HOVER EFFECT */
+.np-faq-question:hover .np-faq-icon {
+  transform: scale(1.15);
+}
+.np-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(-10px);
+
+  transition: 
+    max-height 0.5s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    padding 0.3s ease;
+
+  padding: 0 10px;
+  background: transparent;
+}
+
+.np-faq-item.open .np-faq-answer {
+  max-height: 300px; /* smoother than 500px */
+  opacity: 1;
+  transform: translateY(0);
+
+  padding: 0 10px 25px 10px;
+}
+.np-faq-answer p { font-family: 'Georgia', serif; font-size: 1.1rem; line-height: 1.75; color: rgba(255, 255, 255, 0.9); margin: 0; }
+
+/* Rough buttons */
+.rough-btn {
+  display: inline-flex; justify-content: center; align-items: center;
+  padding: 15px 35px; border-radius: 8px; font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 700; text-decoration: none; transition: all 0.3s;
+}
+.rough-btn-primary { background: #c57b43; color: white; border: 2px solid #c57b43; }
+.rough-btn-primary:hover { background: #a66535; color: white; }
+.rough-btn-dark { background: transparent; border: 2px solid #3b4657; color: #3b4657; }
+.rough-btn-dark:hover { background: #3b4657; color: white; }
+.np-visit-btn { display: flex; justify-content: center; margin-top: 20px; }
+
+/* Mobile */
+@media (max-width: 900px) {
+  .np-hero-content h1 { font-size: 3rem; }
+  .split-container { flex-direction: column; }
+  .reverse-on-mobile .split-container { flex-direction: column-reverse; }
+  .np-ook-grid { flex-direction: column; }
+}

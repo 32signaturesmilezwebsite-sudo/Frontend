@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Lock } from 'lucide-react';
 import './AdminStyles.css';
 
@@ -9,6 +9,17 @@ const AdminLogin = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  // Override the global dark body background for this page only
+  useEffect(() => {
+    const prev = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = '#f4f7f6';
+    document.body.style.backgroundImage = 'none';
+    return () => {
+      document.body.style.backgroundColor = prev;
+      document.body.style.backgroundImage = '';
+    };
+  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -52,7 +63,7 @@ const AdminLogin = () => {
 
         <form onSubmit={handleLogin}>
           <div className="form-group">
-            <label>Username</label>
+            <label>Email / Username</label>
             <input 
               type="text" 
               className="admin-input" 
@@ -78,7 +89,7 @@ const AdminLogin = () => {
           </button>
         </form>
         
-        <p className="return-link"><a href="/">← Return to Website</a></p>
+        <p className="return-link"><Link to="/">← Return to Website</Link></p>
       </div>
     </div>
   );

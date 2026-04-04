@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+.welcome-section {
+  padding: 100px 0 120px 0;
+  background-color: #ffffff; /* Clean white background */
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left Image Box */
+.welcome-image-wrapper {
+  flex: 1;
+  max-width: 55%; /* Image dominates slightly more than text */
+}
+
+.welcome-team-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.welcome-image-wrapper:hover .welcome-team-img {
+  transform: scale(1.05);
+}
+
+/* Right Text Box */
+.welcome-text-content {
+  flex: 1;
+  max-width: 45%;
+  padding-right: 20px;
+}
+.welcome-title {
+  position: relative;
+}
+
+.welcome-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 3px;
+  background: #e38d58;
+  transition: 0.5s ease;
+}
+
+.welcome-text-content:hover .welcome-title::after {
+  width: 120px;
+}
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #3b4657; /* Slate dark text matching screenshot */
+  margin-bottom: 30px;
+  line-height: 1.15;
+}
+
+.welcome-desc {
+  font-family: 'Georgia', serif; /* Classic elegant serif for body */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+/* The button automatically inherits the rough torn-edge style from global CSS */
+.welcome-action {
+  display: block;
+}
+.premium-btn {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #c97b47, #e38d58);
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(227, 141, 88, 0.3);
+}
+
+/* Hover */
+.premium-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(227, 141, 88, 0.4);
+}
+
+/* Click */
+.premium-btn:active {
+  transform: scale(0.95);
+}
+
+/* Shine Effect */
+.premium-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-20deg);
+}
+
+.premium-btn:hover::before {
+  left: 130%;
+  transition: 0.7s;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .welcome-title {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .welcome-image-wrapper {
+    max-width: 100%;
+  }
+
+  .welcome-text-content {
+    max-width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .welcome-desc {
+    margin: 0 auto 35px auto;
+  }
+
+  .welcome-action {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 2.5rem;
+  }
+  .welcome-section {
+    padding: 60px 0;
+  }
+}

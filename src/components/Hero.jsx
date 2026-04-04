@@ -1,75 +1,95 @@
-import React, { useState, useEffect } from 'react';
-import { Star } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
-
-const SLIDES = [
-  '/hero-slides/slide-1.jpg',
-  '/hero-slides/slide-2.jpg',
-  '/hero-slides/slide-3.jpg',
-  '/hero-slides/slide-4.jpg',
-  '/hero-slides/slide-5.jpg',
-  '/hero-slides/slide-6.JPG',
-];
+import { motion } from 'framer-motion';
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.25
+      }
+    }
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
-    <section className="hero-section">
+    <section className="hero-light-section">
 
-      {/* HERO */}
-      <div className="hero-banner">
-        <div className="hero-slideshow-container">
-          {SLIDES.map((slide, index) => (
-            <img 
-              key={index} 
-              src={slide} 
-              alt={`Clinic Image ${index + 1}`}
-              className={`sliding-hero-image ${index === currentSlide ? 'active' : ''}`}
+      {/* Background */}
+      <div
+        className="hero-light-bg"
+        style={{ backgroundImage: "url('/Background.png')" }}
+      ></div>
+
+      <div className="container hero-light-container">
+
+        {/* LEFT CONTENT WITH ANIMATION */}
+        <motion.div
+          className="hero-light-content"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+
+          <motion.h1
+            className="hero-headline"
+            variants={fadeUp}
+          >
+            Your Signature Smilez<br />Family Dentist
+          </motion.h1>
+
+          <motion.p
+            className="hero-subheadline"
+            variants={fadeUp}
+          >
+            A new approach to dental comfort
+          </motion.p>
+
+          <motion.div
+            className="hero-actions"
+            variants={fadeUp}
+          >
+            <Link to="/contact" className="btn btn-primary">
+              <span className="btn-text">Request Appointment</span>
+            </Link>
+
+            <a href="tel:+919077770586" className="btn btn-secondary">
+              <span className="btn-text">Call: +91 90777 70586</span>
+            </a>
+          </motion.div>
+
+        </motion.div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          className="hero-light-image"
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <div className="doctor-frame">
+            <img
+              src="/Deep Datta.PNG"
+              alt="Dr. Deep Datta"
+              className="doctor-hero-img"
             />
-          ))}
-          <div className="hero-overlay"></div>
-        </div>
-
-        <div className="container hero-banner-content">
-          <div className="hero-text-area">
-
-            
-
-            {/* Main Title */}
-            <h1 className="hero-title fade-up delay-2">
-              Dental Implants
-            </h1>
-
-            {/* Subtext */}
-            <p className="hero-subtext fade-up delay-3">
-              Permanent & Natural-Looking
-            </p>
-
-            {/* Secondary */}
-            <h2 className="hero-secondary fade-up delay-4">
-              Restore Your Smile <br/> With Confidence
-            </h2>
-
-            {/* CTA */}
-            <button 
-              className="btn-primary fade-up delay-5"
-              onClick={() => {
-                document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Book Free Consultation
-            </button>
-
           </div>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );

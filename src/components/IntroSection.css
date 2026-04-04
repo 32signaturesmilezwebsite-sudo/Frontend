@@ -1,0 +1,166 @@
+/* IntroSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+.intro-section {
+  padding: 100px 0;
+  background-color: #ffffff; /* pure white background */
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+.intro-text-content {
+  flex: 1;
+  max-width: 550px;
+  padding-left: 20px;
+}
+
+.intro-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2b3644;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.intro-paragraph {
+  font-size: 1.1rem;
+  color: #5a6675;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.intro-highlight {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  color: #c57b43; /* Matches the Earthy primary color */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right Media Group */
+.intro-media-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-media-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.intro-video-thumbnail {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  /* 🔥 CHANGE THIS */
+  object-position: center 20%;  /* was center */
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+.intro-media-container:hover .play-button-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.intro-media-container:hover .intro-video-thumbnail {
+  transform: scale(1.02);
+}
+
+.play-button-overlay svg {
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.intro-media-container:hover .play-button-overlay svg {
+  transform: scale(1.1);
+}
+/* ===== PLAY BUTTON PULSE ===== */
+.play-button-overlay::before {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .intro-headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .intro-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .intro-text-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding-left: 0;
+  }
+  .intro-media-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    padding: 60px 0;
+  }
+  .intro-headline {
+    font-size: 2.2rem;
+  }
+  .intro-paragraph {
+    font-size: 1rem;
+  }
+  .intro-highlight {
+    font-size: 1.25rem;
+  }
+  .play-button-overlay svg {
+    width: 60px;
+    height: 60px;
+  }
+}

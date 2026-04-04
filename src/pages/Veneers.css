@@ -1,0 +1,663 @@
+.vn-wrapper {
+  background-color: #ffffff;
+}
+
+/* ============================== */
+/* HERO */
+/* ============================== */
+
+.vn-hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 100px;
+  background-color: #fcfbf9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BACKGROUND */
+
+.vn-hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  opacity: 0.15;
+  z-index: 1;
+
+  transform: scale(1.1);
+}
+
+/* subtle zoom animation */
+.zoom-bg {
+  animation: heroZoom 6s ease forwards;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.15);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* CONTENT */
+
+.vn-hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vn-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.vn-hero-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #c57b43;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.vn-hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ============================== */
+/* 🔥 ANIMATIONS */
+/* ============================== */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger delays */
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* ============================== */
+/* 🔥 BUTTON HOVER */
+/* ============================== */
+
+.btn-animate {
+  transition: all 0.3s ease;
+}
+
+.btn-animate:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+
+@media (max-width: 768px) {
+  .vn-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .vn-hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .vn-hero-buttons {
+    flex-direction: column;
+  }
+}
+/* ============================== */
+/* SECTION 2 */
+/* ============================== */
+
+.vn-centered-text {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.vn-ct-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* TEXT */
+
+.vn-ct-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 40px;
+}
+
+.vn-ct-container p {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+/* ============================== */
+/* 🔥 ANIMATIONS */
+/* ============================== */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger */
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* ============================== */
+/* 🔥 OPTIONAL PREMIUM EFFECT */
+/* ============================== */
+
+/* subtle text reveal polish */
+.vn-ct-container h2.animate {
+  letter-spacing: 0.5px;
+}
+
+.vn-ct-container p.animate {
+  opacity: 0;
+}
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+
+@media (max-width: 768px) {
+  .vn-ct-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .vn-ct-container p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================== */
+/* SECTION 4: PROCESS  & SECTION: 5*/
+/* ============================== */
+
+.vn-split-section {
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.vn-split-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vn-split-content {
+  flex: 1;
+}
+
+.vn-split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.vn-bold-lead {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.vn-bullet-list {
+  padding-left: 25px;
+  margin-bottom: 30px;
+}
+
+.vn-bullet-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 12px;
+}
+
+.vn-cta-text {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+.vn-split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================== */
+/* 🔥 ANIMATIONS */
+/* ============================== */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* slide fix */
+
+.animate-slide-left {
+  transform: translate(-60px, 40px);
+}
+
+.animate-slide-right {
+  transform: translate(60px, 40px);
+}
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translate(0, 0);
+}
+
+/* stagger */
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.55s; }
+.delay-4 { transition-delay: 0.7s; }
+.delay-5 { transition-delay: 0.85s; }
+
+/* ============================== */
+/* 🔥 IMAGE EFFECT */
+/* ============================== */
+
+.img-zoom {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+
+.animate-show .img-zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+
+@media (max-width: 900px) {
+  .vn-split-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ============================= */
+/* SECTION 3: SAVE AND SMILE     */
+/* ============================= */
+
+.vn-dark-split {
+  position: relative;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+
+.vn-dark-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 1;
+
+  transform: scale(1.05);
+  animation: vn-bgZoom 2s ease forwards;
+}
+
+@keyframes vn-bgZoom {
+  to { transform: scale(1); }
+}
+
+.vn-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(33,41,33,0.4), rgba(10,15,10,0.9));
+  z-index: 2;
+}
+
+/* CONTAINER — matches cd-dark-container */
+
+.vn-dark-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  gap: 60px;
+}
+
+/* IMAGE SIDE — matches cd-ds-image */
+
+.vn-ds-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* PREMIUM GLASSMORPHISM FRAME — exact match to CosmeticDentistry */
+
+.frame-outer {
+  position: relative;
+  width: 420px;
+  aspect-ratio: 1 / 1;
+  padding: 14px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+}
+
+/* inner white frame */
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+/* glow halo */
+.frame-outer::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  z-index: -1;
+}
+
+/* hover lift */
+.frame-outer:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.25);
+}
+
+.frame-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Portrait — matches dr-portrait-fixed in CD, always fully visible */
+.vn-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* TEXT SIDE — matches cd-ds-content */
+
+.vn-ds-content {
+  flex: 1;
+}
+
+.vn-ds-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: letter-spacing 0.5s ease;
+}
+
+.vn-ds-content h2.animate-show {
+  letter-spacing: 2px;
+}
+
+.vn-ds-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e2e8f0;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .vn-dark-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .vn-ds-content p {
+    margin: 0 auto;
+  }
+
+  .frame-outer {
+    width: 90%;
+  }
+}
+
+
+
+/* ============================== */
+/* SECTION: 6 */
+/* ============================== */
+
+.vn-redefining {
+  padding: 100px 20px 40px;
+  text-align: center;
+}
+
+.vn-redefining h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 60px;
+}
+
+/* ============================== */
+/* GRID */
+/* ============================== */
+
+.vn-ook-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================== */
+/* CARD */
+/* ============================== */
+
+.vn-ook-card {
+  flex: 1;
+  background-color: #fbf7ee;
+  padding: 50px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition: all 0.4s ease;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 15%,
+    100% 85%,
+    50% 100%,
+    0% 85%,
+    0% 15%
+  );
+}
+
+/* hover */
+.vn-ook-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================== */
+/* ICON */
+/* ============================== */
+
+.hex-icon-vector {
+  margin-bottom: 20px;
+  color: #c57b43;
+
+  transition: transform 0.4s ease;
+}
+
+/* icon hover animation */
+.vn-ook-card:hover .hex-icon-vector {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* ============================== */
+/* TEXT */
+/* ============================== */
+
+.vn-ook-card h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #c57b43;
+}
+
+/* ============================== */
+/* 🔥 ANIMATIONS */
+/* ============================== */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger */
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+.delay-4 { transition-delay: 0.8s; }
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+
+@media (max-width: 900px) {
+  .vn-ook-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vn-ook-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .vn-hero-content h1, .vn-ct-container h2, .vn-split-content h2, .vn-ds-content h2, .vn-redefining h2 { font-size: 2.8rem; }
+  .vn-split-container, .vn-dark-container { flex-direction: column; }
+  .reverse-mobile { flex-direction: column-reverse; }
+  .vn-ds-content { padding: 60px 20px 40px; text-align: center; }
+  .vn-ds-image { padding-top: 0; justify-content: center; }
+  .vn-ook-grid { flex-direction: column; align-items: center; }
+  .vn-ook-card { max-width: 400px; width: 100%; }
+}
+@media (max-width: 768px) {
+  .vn-hero-content h1, .vn-split-content h2 { font-size: 2.5rem; }
+}

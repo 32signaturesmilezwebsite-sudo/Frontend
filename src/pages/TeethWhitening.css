@@ -1,0 +1,862 @@
+
+.tw-wrapper { background-color: #ffffff; }
+/* ============================= */
+/* SECTION 1: HERO */
+/* ============================= */
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.tw-hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 100px;
+  background-color: #fcfbf9;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================= */
+/* BACKGROUND */
+/* ============================= */
+
+.tw-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+
+  /* subtle zoom animation */
+  transform: scale(1);
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+
+.tw-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE */
+.tw-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+/* SUBTITLE */
+.tw-hero-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #c57b43;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* BUTTONS */
+.tw-hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================= */
+/* BUTTON ENHANCEMENTS */
+/* ============================= */
+
+/* primary */
+.btn-solid-orange {
+  background: linear-gradient(135deg, #c57b43, #e29a5a);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* shine */
+.btn-solid-orange::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.btn-solid-orange:hover::before {
+  left: 125%;
+}
+
+.btn-solid-orange:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(197,123,67,0.4);
+}
+
+/* outline call button */
+.btn-outline-dark {
+  border: 2px solid #3b4657;
+  color: #3b4657;
+  background-color: transparent;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #3b4657;
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(59, 70, 87, 0.3);
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* stagger delays */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+/* ============================= */
+/* SECTION 2: CONTENT */
+/* ============================= */
+
+
+.tw-centered-text {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tw-ct-container {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.tw-ct-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* underline animation */
+.tw-ct-container h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #c57b43;
+  margin: 12px auto 0;
+  transition: width 0.6s ease;
+}
+
+.tw-ct-container h2.show::after {
+  width: 80px;
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.tw-ct-container p {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+/* Base: transition MUST be here so it's active before .show is added */
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* stagger */
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* ============================= */
+/* OPTIONAL BACKGROUND GLOW */
+/* ============================= */
+
+.tw-centered-text::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(197,123,67,0.08), transparent 70%);
+  top: -80px;
+  left: -80px;
+}
+
+.tw-centered-text::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(59,70,87,0.08), transparent 70%);
+  bottom: -80px;
+  right: -80px;
+}
+
+
+/* ============================= */
+/* SECTION 3*/
+/* ============================= */
+
+.tw-dark-split {
+  position: relative;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* BACKGROUND */
+/* ============================= */
+
+.tw-dark-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 1;
+
+  transform: scale(1.05);
+  animation: bgZoom 2s ease forwards;
+}
+
+@keyframes bgZoom {
+  to { transform: scale(1); }
+}
+
+.tw-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(33,41,33,0.4), rgba(10,15,10,0.9));
+  z-index: 2;
+}
+
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+
+.tw-dark-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.tw-ds-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tw-ds-content {
+  flex: 1;
+}
+
+/* ============================= */
+/* 🖼️ FRAME */
+/* ============================= */
+
+.frame-outer {
+  position: relative;
+  width: 420px;
+  aspect-ratio: 1 / 1;
+  padding: 14px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+}
+
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.frame-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dr-portrait-fixed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* hover */
+.frame-outer:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.25);
+}
+
+/* glow */
+.frame-outer::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  z-index: -1;
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.tw-ds-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.tw-ds-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e2e8f0;
+  margin-bottom: 30px;
+}
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+/* Base: transition MUST be here so it's active before .animate-show is added */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+.animate-slide-left {
+  transform: translateX(-60px);
+}
+
+.animate-slide-right {
+  transform: translateX(60px);
+}
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translateX(0);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .tw-dark-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .frame-outer {
+    width: 90%;
+  }
+}
+
+/* old one-liners removed — replaced by detailed rules below */
+
+/* ==============================
+   SECTIONS 4 & 5: SPLIT LAYOUTS
+   ============================== */
+
+.tw-split-section {
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.tw-split-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tw-split-content {
+  flex: 1;
+}
+
+.tw-split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.tw-split-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 25px;
+}
+
+.tw-split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tw-split-image img,
+.shaped-image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.shaped-image:hover {
+  transform: scale(1.03);
+}
+
+.pr-large {
+  padding-right: 40px;
+}
+
+.bg-cream { background-color: #fbf7ee; }
+.bg-white  { background-color: #ffffff; }
+
+.txt-orange {
+  color: #c57b43;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Bullet list */
+.tw-bullet-list {
+  padding-left: 22px;
+  margin-bottom: 28px;
+}
+
+.tw-bullet-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+/* Numbered list (Section 5) */
+.tw-sub-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 18px;
+}
+
+.tw-number-list {
+  padding-left: 22px;
+  margin-bottom: 30px;
+}
+
+.tw-number-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 12px;
+}
+
+.tw-bold-lead {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.tw-cta-text {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 28px;
+}
+
+.tw-split-btn {
+  display: inline-block;
+}
+
+/* Image reveal animation */
+.image-reveal {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.image-reveal.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================== */
+/* SECTION 6: HEX FEATURE CARDS  */
+/* ============================== */
+
+.tw-redefining {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.tw-redefining h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 60px;
+}
+
+.tw-ook-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Card — matches ProblemsWeTreat premium hex card */
+.tw-ook-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 360px;
+  padding: 60px 35px;
+  background: #fbf7ee;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 12%,
+    100% 88%,
+    50% 100%,
+    0%  88%,
+    0%  12%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.tw-ook-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Soft radial glow on hover */
+.tw-ook-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(197,123,67,0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.tw-ook-card:hover::before {
+  opacity: 1;
+}
+
+
+/* Icon — simple, no circle bg, just the color (matches PWT) */
+.hex-icon {
+  margin-bottom: 20px;
+  color: #c57b43;
+  transition: transform 0.3s ease;
+}
+
+.tw-ook-card:hover .hex-icon {
+  transform: scale(1.1);
+}
+
+.tw-ook-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c57b43;
+  margin-bottom: 15px;
+}
+
+.tw-ook-card p {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 270px;
+}
+
+
+/* ==============================
+   RESPONSIVE — ALL SECTIONS
+   ============================== */
+
+@media (max-width: 900px) {
+  .tw-hero-content h1,
+  .tw-ct-container h2,
+  .tw-split-content h2,
+  .tw-ds-content h2,
+  .tw-redefining h2 {
+    font-size: 2.8rem;
+  }
+
+  .tw-split-container,
+  .tw-dark-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .reverse-mobile { flex-direction: column-reverse; }
+  .pr-large { padding-right: 0; }
+
+  .tw-ds-content { padding: 60px 20px 40px; text-align: center; }
+  .tw-ds-image { padding-top: 0; justify-content: center; }
+
+  .tw-ook-grid { gap: 20px; }
+  .tw-ook-card { width: 240px; height: 230px; }
+}
+
+@media (max-width: 768px) {
+  .tw-hero-content h1,
+  .tw-split-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .tw-ook-card { width: 200px; height: 200px; }
+}
+/* ======================================
+   SHARED: SCROLL ANIMATIONS & PREMIUM FRAME
+   (Standard from DentalCrowns.css)
+   ====================================== */
+
+/* Base — transition on base state so it fires when class is added */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Slide directions */
+.animate-slide-left  { transform: translateX(-60px); }
+.animate-slide-right { transform: translateX(60px);  }
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translateX(0) translateY(0);
+}
+
+/* fade-up for headings / text blocks */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.30s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.60s; }
+.delay-5 { transition-delay: 0.75s; }
+
+/* Image zoom — activated when parent gets .animate-show */
+.img-zoom {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-show .img-zoom { opacity: 1; transform: scale(1); }
+.img-zoom:hover          { transform: scale(1.05); }
+
+/* ======================================
+   SHARED: PREMIUM DOCTOR FRAME
+   ====================================== */
+
+.frame-outer {
+  position: relative;
+  width: 420px;
+  aspect-ratio: 1 / 1;
+  padding: 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.frame-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dr-portrait-fixed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.frame-outer:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.25);
+}
+
+.frame-outer::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  z-index: -1;
+}
+
+@media (max-width: 900px) {
+  .frame-outer { width: 90%; }
+}

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+.contact-section {
+  padding: 50px 0 120px 0;
+  background-color: #ffffff; /* Seamless integration with white layout above */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Duplicate Base Card Styles */
+.contact-card {
+  flex: 1;
+  background-color: #fcf7ef; /* The beautiful earthy beige cream from the screenshot */
+  position: relative;
+  overflow: hidden; 
+  padding: 85px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-card {
+  transition: all 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+.contact-icon {
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover .contact-icon {
+  transform: scale(1.15) rotate(5deg);
+  background-color: rgba(197, 123, 67, 0.1);
+}
+
+/* Internal Faint Background Image Overlay */
+.contact-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.05; /* VERY faint transparency for the tree background requested */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-card-content {
+  position: relative;
+  z-index: 2; /* Keep text legible above the image */
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #c57b43; /* Rustic orange */
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+/* Left Card Details */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  color: #c57b43;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  stroke-width: 1.5px;
+  border: 1px solid rgba(197, 123, 67, 0.5); /* subtle ring around icon */
+  border-radius: 50%;
+  padding: 7px;
+  background-color: transparent;
+}
+
+.contact-text-block {
+  font-family: 'Georgia', serif;
+  color: #4a5568; 
+}
+
+.contact-text-block p {
+  margin: 0 0 5px 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.contact-link {
+  color: #c57b43;
+  font-size: 1.05rem;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+.premium-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #c57b43, #e38d58);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(197, 123, 67, 0.3);
+}
+
+.premium-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(197, 123, 67, 0.4);
+}
+
+.premium-btn:active {
+  transform: scale(0.95);
+}
+
+/* Right Card Details */
+.contact-desc {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.contact-desc strong {
+  color: #c57b43; /* Inherits the requested highlight */
+}
+
+.action-button-wrapper {
+  margin-top: 20px;
+}
+
+
+/* Responsive Layout Shifts */
+@media (max-width: 1200px) {
+  .contact-title {
+    font-size: 2.8rem;
+  }
+  .contact-card {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 40px 0 80px;
+  }
+  .contact-card {
+    padding: 50px 30px;
+  }
+  .contact-title {
+    font-size: 2.4rem;
+  }
+}

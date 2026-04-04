@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* COMBINED HERO & FORM SECTION */
+.contact-hero-form-container {
+  position: relative;
+  background-color: #fbf7ee; /* Base pale cream extending down */
+  padding: 100px 0 100px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05); /* faint bottom separation */
+  overflow: hidden;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.05; /* Fade overlay background image */
+  z-index: 1;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  color: #3b4657; /* Slate */
+  margin-bottom: 25px;
+  line-height: 1.15;
+}
+
+.contact-hero-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  color: #4a5568;
+  margin-bottom: 40px;
+}
+
+.rough-btn-dark {
+  background-color: #3b4657;
+  color: #ffffff;
+  padding: 16px 28px;
+  font-size: 1rem;
+}
+
+.rough-btn-dark:hover {
+  background-color: #272e39;
+}
+
+/* FORM WRAPPER */
+.appointment-form-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 80px auto 0 auto; /* space below hero */
+  background: transparent;
+}
+
+.custom-input-group {
+  margin-bottom: 30px;
+}
+
+.custom-input-group input {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 1px solid #c57b43; /* Rusty orange border from design */
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #3b4657;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.custom-input-group input::placeholder {
+  color: #888;
+  font-style: italic; /* If needed */
+}
+
+.custom-input-group input:focus {
+  border-bottom-width: 2px;
+}
+
+/* Spacing out the bottom "How can we help" field extra */
+.custom-textarea-group {
+  margin-bottom: 60px; 
+}
+.custom-textarea-group input {
+  padding-bottom: 40px; /* Make it look taller */
+}
+
+.submit-btn-large {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.form-alert {
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-alert.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.form-alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* NEW PATIENT PROMO */
+.new-patient-promo {
+  background-color: #ffffff;
+  padding: 90px 20px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.promo-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.promo-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  color: #3b4657;
+  margin-bottom: 30px;
+}
+
+.promo-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 40px;
+}
+
+.btn-centerer {
+  display: flex;
+  justify-content: center;
+}
+
+/* DENTAL SERVICES YOU'LL LOVE */
+.mini-services {
+  background-color: #ffffff;
+  padding: 100px 20px 120px 20px;
+  text-align: center;
+}
+
+.mini-services-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.services-desc {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto 70px auto;
+}
+
+/* Hexagon Grid layout */
+.services-hexagon-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mini-hex-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  height: 300px; /* Force proportions for hexagon */
+  background-color: #fbf7ee; /* Pale earthy cream fill */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+}
+
+.mini-hex-card:hover {
+  transform: translateY(-8px);
+}
+
+.hex-icon-vector {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-hex-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c57b43;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .contact-hero-content h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-form-container {
+    padding: 70px 0;
+  }
+  .contact-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .promo-content h2, .mini-services-content h2 {
+    font-size: 2.6rem;
+  }
+  .services-hexagon-grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .mini-hex-card {
+    min-width: calc(50% - 15px);
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mini-hex-card {
+    min-width: 100%;
+  }
+}

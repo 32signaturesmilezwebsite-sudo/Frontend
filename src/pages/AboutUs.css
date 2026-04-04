@@ -1,655 +1,522 @@
-/* ═══════════════════════════════════════════
-   ABOUT US PAGE  —  Neon Green Dark Premium
-   ═══════════════════════════════════════════ */
+/* AboutUs.css - Custom Redesign */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
-.about-page {
-  background: #0a0a0a;
-  color: #e8e8e8;
-  font-family: 'Outfit', sans-serif;
+.about-us-wrapper {
+  background-color: #ffffff;
+  overflow-x: hidden;
 }
 
-/* ── SHARED HELPERS ── */
-.au-section { padding: 80px 0; }
-.au-section-tag {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: #00FF88;
-  margin-bottom: 10px;
-}
-.au-section-center-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin-bottom: 12px;
-}
-.au-section-subtitle {
-  text-align: center;
-  color: #888;
-  font-size: 1rem;
-  max-width: 580px;
-  margin: 0 auto 50px;
-  line-height: 1.7;
-}
-
-/* ═══════════════════════════════════════════
-   HERO
-   ═══════════════════════════════════════════ */
-.au-hero {
+/* 1. HERO SECTION */
+.about-hero-section {
   position: relative;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  background:
-    url('/clinic-room-1.jpg') center/cover no-repeat;
-  overflow: hidden;
+  padding: 160px 20px 140px;
+  text-align: center;
+  background-color: #fcfbf9; /* very light cream/grey base */
+  border-bottom: 1px solid #eaeaea;
 }
 
-.au-hero-overlay {
+.about-hero-bg {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(0, 0, 0, 0.92) 50%,
-    rgba(0, 20, 10, 0.75) 100%
-  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* Low transparency for watermark effect */
+  z-index: 0;
+  pointer-events: none;
 }
 
-.au-hero-content {
+.about-hero-content {
   position: relative;
-  z-index: 2;
-  padding: 80px 20px;
-  max-width: 700px;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.au-eyebrow {
-  display: inline-block;
-  font-size: 0.78rem;
+.about-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #00FF88;
-  margin-bottom: 18px;
+  color: #3b4657;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
-.au-hero-content h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.4rem;
-  font-weight: 900;
+.hero-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.hero-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-solid-orange {
+  display: inline-block;
+  background-color: #c57b43;
   color: #ffffff;
-  line-height: 1.18;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px 35px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #c57b43;
+}
+
+.btn-solid-orange:hover {
+  background-color: #ab6735;
+  color: #ffffff;
+}
+
+.btn-outline-dark {
+  display: inline-block;
+  background-color: #343f52;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px 35px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #343f52;
+}
+
+.btn-outline-dark:hover {
+  background-color: transparent;
+  color: #343f52;
+}
+
+/* 2. DENTAL CARE SECTION */
+.dental-care-section {
+  padding: 120px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.dental-care-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 40px;
+}
+
+.dental-care-text {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.dental-care-text p {
   margin-bottom: 20px;
 }
 
-.au-highlight {
-  background: linear-gradient(90deg, #00FF88, #00ffb3, #00FF88);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: highlightShine 4s linear infinite;
+.image-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-@keyframes highlightShine {
-  0%   { background-position: 0% center; }
-  100% { background-position: 200% center; }
+.grid-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* subtle depth like screenshot */
 }
 
-.au-hero-content p {
-  color: rgba(255,255,255,0.65);
+/* 3. YOUR NEW FAVORITE DENTIST (SPLIT BIO) */
+.favorite-dentist-section {
+  background-color: #ffffff;
+}
+
+.split-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 800px; /* Gives the image room to stretch */
+}
+
+.doc-image-side {
+  flex: 5; /* 50% width approx */
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Align doctor to bottom */
+  justify-content: center;
+  overflow: hidden;
+}
+
+.doc-orange-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #d28c52; /* Vivid rust orange */
+  z-index: 1;
+}
+
+.doc-tree-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12; /* Subtle pine trees over orange */
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+.doc-cutout {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+}
+
+.doc-text-side {
+  flex: 6; /* Slightly wider text area */
+  padding: 80px 80px 80px 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.doc-text-side h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.doc-intro {
+  font-family: 'Georgia', serif;
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 32px;
-  max-width: 560px;
+  color: #4a5568;
+  margin-bottom: 40px;
 }
 
-.au-hero-badges {
+.list-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.doc-list {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.doc-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #3b4657;
+  margin-bottom: 12px;
+}
+
+.doc-quote {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #eaeaea;
+}
+
+.doc-quote p {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #c57b43;
+  margin-bottom: 15px;
+}
+
+.doc-quote span {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #999;
+}
+
+
+/* 4. DENTAL EXPERIENCES REDEFINED (Hexagons) */
+.experiences-redefined-section {
+  padding: 100px 20px 120px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.experiences-redefined-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 60px;
+}
+
+.ook-grid {
   display: flex;
-  gap: 12px;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
-.au-badge {
-  background: rgba(0, 255, 136, 0.1);
-  border: 1px solid rgba(0, 255, 136, 0.25);
-  color: #00FF88;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  backdrop-filter: blur(8px);
-}
-
-/* ═══════════════════════════════════════════
-   STATS BAR
-   ═══════════════════════════════════════════ */
-.au-stats-bar {
-  background: linear-gradient(90deg, #0d0d0d, #111111, #0d0d0d);
-  border-top: 1px solid rgba(0, 255, 136, 0.15);
-  border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+/* =========================
+   🔥 HEXAGON CARD ENHANCED
+========================= */
+.ook-card {
   position: relative;
-  overflow: hidden;
-}
-
-.au-stats-bar::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%; width: 300%; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,255,136,0.6), transparent);
-  animation: statsBarSweep 5s linear infinite;
-}
-
-@keyframes statsBarSweep {
-  0%   { left: -100%; }
-  100% { left: 100%; }
-}
-
-.au-stats-inner {
-  display: flex;
-  justify-content: space-around;
-  padding: 32px 0;
-}
-
-.au-stat {
-  text-align: center;
-  cursor: default;
-  padding: 12px 24px;
-  transition: transform 0.3s;
-}
-
-.au-stat:hover { transform: translateY(-4px); }
-
-.au-stat-value {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(135deg, #00ffb3, #00FF88, #00CC6A);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 14px rgba(0,255,136,0.4));
-  margin-bottom: 6px;
-}
-
-.au-stat-label {
-  font-size: 0.8rem;
-  color: #888;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ═══════════════════════════════════════════
-   WHO WE ARE
-   ═══════════════════════════════════════════ */
-.au-who {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  padding: 80px 0;
-}
-
-.au-who-text h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.au-who-text p {
-  color: #b0b0b0;
-  line-height: 1.85;
-  margin-bottom: 16px;
-  font-size: 1rem;
-}
-
-.au-who-text p strong { color: #00FF88; }
-
-/* Values list */
-.au-values {
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.au-value-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.au-value-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #00FF88;
-  box-shadow: 0 0 10px rgba(0,255,136,0.6);
-  flex-shrink: 0;
-  margin-top: 6px;
-}
-
-.au-value-item strong {
-  color: #ffffff;
-  font-size: 0.95rem;
-  display: block;
-  margin-bottom: 2px;
-}
-
-.au-value-item p {
-  margin: 0;
-  color: #888;
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-/* Gallery */
-.au-who-gallery {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 12px;
-  height: 500px;
-}
-
-.au-gallery-main {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  border: 1px solid rgba(0,255,136,0.15);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-}
-
-.au-gallery-main img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.au-gallery-main:hover img { transform: scale(1.05); }
-
-.au-gallery-side {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.au-gallery-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease;
-}
-
-.au-gallery-side > div {
   flex: 1;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid rgba(0,255,136,0.12);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-}
+  min-width: 320px;
+  max-width: 400px;
+  padding: 60px 40px;
+  background-color: #fbf7ee;
 
-.au-gallery-side > div:hover img { transform: scale(1.05); }
+  /* keep hex shape */
+  clip-path: polygon(50% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%, 0% 12%);
 
-.au-gallery-tag {
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-  background: rgba(0,0,0,0.78);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,255,136,0.3);
-  color: #00FF88;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 50px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-/* ═══════════════════════════════════════════
-   CLINIC SHOWCASE MOSAIC
-   ═══════════════════════════════════════════ */
-.au-showcase {
-  background: #0d0d0d;
-  padding: 80px 0;
-  border-top: 1px solid rgba(0,255,136,0.08);
-  border-bottom: 1px solid rgba(0,255,136,0.08);
-}
-
-.au-clinic-mosaic {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 16px;
-  height: 460px;
-  margin-top: 48px;
-}
-
-.au-mosaic-big {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  border: 1px solid rgba(0,255,136,0.18);
-  box-shadow: 0 12px 50px rgba(0,0,0,0.6);
-}
-
-.au-mosaic-big img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-.au-mosaic-big:hover img { transform: scale(1.04); }
-
-.au-mosaic-stack {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.au-mosaic-card {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  border: 1px solid rgba(0,255,136,0.12);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-}
-
-.au-mosaic-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.au-mosaic-card:hover img { transform: scale(1.06); }
-
-.au-mosaic-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px 16px 16px;
-  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ═══════════════════════════════════════════
-   MISSION & VISION
-   ═══════════════════════════════════════════ */
-.au-mv-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.au-mv-card {
-  background: linear-gradient(160deg, #141414 0%, #111111 100%);
-  border-radius: 20px;
-  padding: 36px 32px;
-  border: 1px solid rgba(0,255,136,0.12);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.au-mv-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #00FF88, transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.au-mv-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(0,255,136,0.28);
-}
-.au-mv-card:hover::before { opacity: 1; }
-
-.au-mv-icon {
-  font-size: 2.4rem;
-  margin-bottom: 16px;
-}
-
-.au-mv-card h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
-.au-mv-card > p {
-  color: #b0b0b0;
-  line-height: 1.75;
-  margin-bottom: 22px;
-  font-size: 0.97rem;
-}
-
-.au-mv-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.au-mv-card li {
-  color: #cccccc;
-  font-size: 0.9rem;
-  display: flex;
   align-items: center;
-  gap: 10px;
-  line-height: 1.5;
+  text-align: center;
+
+  /* smooth animation base */
+  transition: all 0.4s ease;
+
+  /* initial animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: cardFade 0.8s ease forwards;
 }
 
-.au-mv-card li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #00FF88;
-  box-shadow: 0 0 8px rgba(0,255,136,0.5);
-  flex-shrink: 0;
+/* =========================
+   🚀 HOVER EFFECT (LIFT + GLOW)
+========================= */
+.ook-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  background-color: #fffaf3;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 2px rgba(197, 123, 67, 0.15);
 }
 
-/* ═══════════════════════════════════════════
-   WHY CHOOSE US
-   ═══════════════════════════════════════════ */
-.au-why {
-  padding: 80px 0;
-  background: linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%);
-  border-top: 1px solid rgba(0,255,136,0.08);
-}
-
-.au-why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.au-why-card {
-  background: linear-gradient(145deg, #141414, #111111);
-  border-radius: 16px;
-  padding: 28px 24px;
-  border: 1px solid rgba(0,255,136,0.1);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.au-why-card::after {
-  content: '';
+/* subtle inner glow */
+.ook-card::after {
+  content: "";
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #00FF88, transparent);
-  transform: scaleX(0);
+  inset: 0;
+  clip-path: inherit;
+  background: radial-gradient(circle at center, rgba(197,123,67,0.15), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ook-card:hover::after {
+  opacity: 1;
+}
+
+/* =========================
+   🔥 ICON ANIMATION
+========================= */
+.hex-icon-vector {
+  margin-bottom: 25px;
   transition: transform 0.4s ease;
 }
 
-.au-why-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(0,255,136,0.28);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(0,255,136,0.08);
-}
-.au-why-card:hover::after { transform: scaleX(1); }
-
-.au-why-icon {
-  font-size: 2rem;
-  margin-bottom: 14px;
-  display: block;
+.hex-icon-vector svg {
+  width: 70px;
+  height: 70px;
+  stroke: #c57b43;
+  transition: all 0.4s ease;
 }
 
-.au-why-card h4 {
-  font-size: 1.05rem;
+/* icon bounce */
+.ook-card:hover .hex-icon-vector {
+  transform: translateY(-8px) scale(1.1);
+}
+
+/* =========================
+   ✨ TEXT POLISH
+========================= */
+.ook-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 10px;
+  color: #c57b43;
+  margin-bottom: 18px;
+  transition: color 0.3s ease;
 }
 
-.au-why-card p {
-  color: #888;
-  font-size: 0.88rem;
-  line-height: 1.65;
-}
-
-/* ═══════════════════════════════════════════
-   CTA BANNER
-   ═══════════════════════════════════════════ */
-.au-cta {
-  position: relative;
-  background: url('/clinic-room-2.jpg') center/cover no-repeat;
-  overflow: hidden;
-  padding: 0;
-}
-
-.au-cta-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.95) 40%,
-    rgba(0,30,15,0.9) 100%
-  );
-}
-
-.au-cta-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 90px 20px;
-}
-
-.au-cta-content h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 16px;
-}
-
-.au-cta-content p {
-  color: rgba(255,255,255,0.55);
+.ook-card p {
+  font-family: 'Georgia', serif;
   font-size: 1.05rem;
-  margin-bottom: 36px;
+  line-height: 1.6;
+  color: #4a5568;
 }
 
-.au-cta-btns {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* =========================
+   🔥 STAGGER ENTRY ANIMATION
+========================= */
+.ook-card:nth-child(1) { animation-delay: 0.2s; }
+.ook-card:nth-child(2) { animation-delay: 0.4s; }
+.ook-card:nth-child(3) { animation-delay: 0.6s; }
 
-.au-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #00CC6A, #00FF88, #00ffb3);
-  background-size: 200% auto;
-  color: #0a0a0a;
-  padding: 15px 36px;
-  border-radius: 50px;
-  font-weight: 800;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: background-position 0.4s, transform 0.3s, box-shadow 0.3s;
-  letter-spacing: 0.3px;
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.au-btn-primary:hover {
-  background-position: right center;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0,255,136,0.45);
-}
-
-.au-btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 2px solid rgba(0,255,136,0.5);
-  color: #00FF88;
-  background: transparent;
-  padding: 14px 34px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.au-btn-outline:hover {
-  background: rgba(0,255,136,0.1);
-  border-color: #00FF88;
-  transform: translateY(-3px);
-}
-
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════ */
+/* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
-  .au-who-gallery { grid-template-columns: 1fr; height: auto; gap: 12px; }
-  .au-gallery-main { height: 350px; }
-  .au-gallery-side { flex-direction: row; height: 180px; }
+  .split-layout {
+    flex-direction: column;
+  }
+  .doc-image-side {
+    height: 600px;
+  }
+  .doc-text-side {
+    padding: 60px 40px;
+  }
+  .image-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .grid-img {
+    height: auto;
+    aspect-ratio: 16/9;
+  }
 }
 
-@media (max-width: 900px) {
-  .au-hero-content h1 { font-size: 2.2rem; }
-  .au-who { grid-template-columns: 1fr; gap: 36px; }
-  .au-gallery-main { height: 280px; }
-  .au-gallery-side { height: 140px; }
-  .au-mv-grid { grid-template-columns: 1fr; }
-  .au-why-grid { grid-template-columns: 1fr 1fr; }
-  .au-clinic-mosaic { grid-template-columns: 1fr; height: auto; gap: 16px; }
-  .au-mosaic-big { height: 280px; }
-  .au-mosaic-stack { flex-direction: row; height: 140px; }
-  .au-stats-inner { flex-wrap: wrap; gap: 8px; }
-  .au-stat { flex: 45%; }
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-btn-group {
+    flex-direction: column;
+  }
+  .dental-care-section h2 {
+    font-size: 2.5rem;
+  }
+  .doc-text-side h2 {
+    font-size: 2.5rem;
+  }
+  .experiences-redefined-section h2 {
+    font-size: 2.5rem;
+  }
 }
 
-@media (max-width: 600px) {
-  .au-hero-content h1 { font-size: 1.7rem; }
-  .au-hero { min-height: 380px; }
-  .au-why-grid { grid-template-columns: 1fr; }
-  .au-section-center-title { font-size: 1.6rem; }
-  .au-stat-value { font-size: 2rem; }
-  .au-cta-content h2 { font-size: 1.8rem; }
-  .au-mv-card { padding: 24px 20px; }
+
+/* =========================
+   🔥 HERO ANIMATIONS
+========================= */
+.about-hero-content h1,
+.hero-subtitle,
+.hero-btn-group {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
 }
+
+.hero-subtitle {
+  animation-delay: 0.3s;
+}
+
+.hero-btn-group {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   🔥 SCROLL REVEAL (SECTIONS)
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   🔥 IMAGE GRID HOVER EFFECT
+========================= */
+.grid-img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.grid-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   🔥 DOCTOR IMAGE ANIMATION
+========================= */
+.doc-cutout {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   🔥 HEXAGON CARDS ANIMATION
+========================= */
+.ook-card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: cardFade 0.8s ease forwards;
+}
+
+.ook-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.ook-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.ook-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

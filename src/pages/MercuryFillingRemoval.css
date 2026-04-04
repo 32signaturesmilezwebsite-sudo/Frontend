@@ -1,0 +1,187 @@
+.mer-wrapper { background-color: #ffffff; }
+
+.mer-hero { position: relative; text-align: center; padding: 140px 20px 100px; background-color: #fcfbf9; border-bottom: 1px solid rgba(0,0,0,0.05); overflow: hidden; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.mer-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.15; z-index: 1; }
+.mer-hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+.mer-hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: #3b4657; margin-bottom: 25px; }
+.mer-hero-subtitle { font-family: 'Georgia', serif; font-size: 1.5rem; color: #c57b43; margin-bottom: 40px; font-weight: 500; }
+.mer-hero-buttons { display: flex; gap: 20px; justify-content: center; }
+
+.mer-centered-text { background-color: #ffffff; padding: 100px 20px; text-align: center; }
+.mer-ct-container { max-width: 850px; margin: 0 auto; }
+.mer-ct-container h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 40px; }
+.mer-ct-container p { font-family: 'Georgia', serif; font-size: 1.25rem; line-height: 1.8; color: #4a5568; margin-bottom: 30px; }
+
+/* SECTION */
+.mer-split-section {
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* LAYOUT */
+.mer-split-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mer-split-content {
+  flex: 1;
+}
+
+/* TITLE */
+.mer-split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 25px;
+
+  transition: all 0.4s ease;
+}
+
+.mer-split-content h2:hover {
+  transform: translateY(-3px);
+  letter-spacing: 1px;
+}
+
+/* BULLETS */
+.mer-bullet-list {
+  padding-left: 25px;
+  margin-bottom: 30px;
+}
+
+.mer-bullet-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 12px;
+
+  transition: transform 0.3s ease;
+}
+
+.mer-bullet-list li:hover {
+  transform: translateX(6px);
+}
+
+/* IMAGE */
+.mer-split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE STYLE */
+.shaped-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+}
+
+.shaped-image:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+}
+
+/* ============================= */
+/* SCROLL REVEAL */
+/* ============================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* STAGGER */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
+
+/* ============================= */
+/* SLIDE ANIMATION */
+/* ============================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-left {
+  transform: translateX(-60px);
+}
+
+.animate-slide-right {
+  transform: translateX(60px);
+}
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translateX(0) translateY(0);
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .mer-split-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .mer-bullet-list {
+    text-align: left;
+  }
+}
+
+.mer-dark-split { position: relative; background-color: #1a1a1a; color: #ffffff; }
+.mer-dark-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.7; z-index: 1; }
+.mer-dark-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(33, 41, 33, 0.4), rgba(10, 15, 10, 0.9)); z-index: 2; }
+.mer-dark-container { display: flex; align-items: center; position: relative; z-index: 3; max-width: 1200px; margin: 0 auto; }
+.mer-ds-image { flex: 1; display: flex; justify-content: flex-start; align-items: flex-end; align-self: stretch; overflow: hidden; padding-top: 50px; }
+.mer-ds-content { flex: 1; padding: 80px 20px 80px 40px; }
+.mer-ds-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #ffffff; }
+.mer-ds-content p { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; margin-bottom: 35px; color: #e2e8f0; }
+
+.mer-redefining { padding: 100px 20px 40px; text-align: center; }
+.mer-redefining h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 60px; }
+.mer-ook-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+.mer-ook-card { flex: 1; background-color: #fbf7ee; padding: 50px 30px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease; clip-path: polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%); }
+.mer-ook-card:hover { transform: translateY(-5px); }
+.mer-ook-card h3 { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: 600; color: #c57b43; }
+
+@media (max-width: 900px) {
+  .mer-hero-content h1, .mer-ct-container h2, .mer-split-content h2, .mer-ds-content h2, .mer-redefining h2 { font-size: 2.8rem; }
+  .mer-split-container, .mer-dark-container { flex-direction: column; }
+  .reverse-mobile { flex-direction: column-reverse; }
+  .mer-ds-content { padding: 60px 20px 40px; text-align: center; }
+  .mer-ds-image { padding-top: 0; justify-content: center; }
+  .mer-ook-grid { flex-direction: column; align-items: center; }
+  .mer-ook-card { max-width: 400px; width: 100%; }
+}
+@media (max-width: 768px) {
+  .mer-hero-content h1, .mer-split-content h2 { font-size: 2.5rem; }
+}

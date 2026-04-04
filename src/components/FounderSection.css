@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+.founder-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 80px; /* Space above text */
+  margin-top: 30px;
+}
+
+.founder-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(28, 25, 23, 0.75); /* Dark charcoal/brown tint to ensure white text readability */
+  z-index: 1;
+}
+
+.founder-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+/* Left Image Box */
+.founder-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center horizontally and vertically */
+  max-width: 500px;
+  padding: 40px 0; /* Add breathing room top and bottom */
+}
+
+/* ===== PREMIUM FOUNDER FRAME ===== */
+.founder-frame {
+  position: relative;
+  padding: 12px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.4),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  transition: all 0.4s ease;
+}
+
+/* Inner white layer */
+.founder-frame::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+/* Image */
+.founder-doctor-img {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 20%;
+
+  border-radius: 12px;
+}
+
+/* Hover effect */
+.founder-frame:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.3);
+}
+/* Right Text Box */
+.founder-text-content {
+  flex: 1;
+  color: #ffffff;
+  padding: 40px 0 80px 0; /* Add bottom padding to give text breathing room */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.founder-headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.founder-paragraph {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #eeeeee;
+  margin-bottom: 20px;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .founder-headline {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .founder-container {
+    flex-direction: column-reverse; /* Put text above the image for better mobile flow */
+    gap: 0;
+    align-items: center;
+  }
+  
+  .founder-text-content {
+    padding: 20px 20px 40px 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .founder-headline {
+    font-size: 2.8rem;
+  }
+
+  .founder-image-wrapper {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-section {
+    padding-top: 50px;
+  }
+  .founder-headline {
+    font-size: 2.2rem;
+  }
+  .founder-paragraph {
+    font-size: 1rem;
+  }
+  .founder-image-wrapper {
+    max-width: 95%;
+  }
+}

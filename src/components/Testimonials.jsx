@@ -1,287 +1,146 @@
-import React, { useState, useEffect } from 'react';
-import { Star, Quote, User, Filter, X } from 'lucide-react';
-import ReviewModal from './ReviewModal';
-import './Testimonials.css';
 
-const staticReviews = [
+import React, { useState, useEffect, useRef } from 'react';
+import './Testimonials.css';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
+
+/* 🔥 REVIEWS (NO AUTHORS) */
+const reviewsData = [
   {
-    _id: 'static1',
-    reviewerName: 'Ajay Ratnam',
-    createdAt: new Date().setMonth(new Date().getMonth() - 2),
-    rating: 5,
-    text: "I got instant relief with 32 Signature's painless root canal treatment. The doctors are incredibly skilled and the clinic environment is top-notch. Highly recommend!",
-    isGoogle: true
+    id: 1,
+    text: "Dr Datta and his staff are courteous and professional at all times. You feel as if your business is really appreciated. My wife and I have gotten great dental care for several years and we would not consider going anywhere else."
   },
   {
-    _id: 'static2',
-    reviewerName: 'Bhavana',
-    createdAt: new Date().setMonth(new Date().getMonth() - 4),
-    rating: 5,
-    text: "Now I smile, speak & perform with confidence. The customised smile design transformed my entire look. Thank you to the wonderful team at 32 Signature Smilez!",
-    isGoogle: true
+    id: 2,
+    text: "Great people in this office! Everyone is friendly, caring, and always smiling! And the biggest thing is they LISTEN to you. I will definitely continue to go for years to come!"
   },
   {
-    _id: 'static3',
-    reviewerName: 'BSN Dutt',
-    createdAt: new Date().setMonth(new Date().getMonth() - 6),
-    rating: 5,
-    text: "I look 20 years younger! I can eat everything again after getting full mouth implants. The procedure was smooth and the aftercare was phenomenal.",
-    isGoogle: true
+    id: 3,
+    text: "Totally outstanding, professional and courteous service in every regard. They made sure I was completely comfortable throughout the entire procedure. 10/10."
   },
   {
-    _id: 'static4',
-    reviewerName: 'Meena Vasu',
-    createdAt: new Date().setMonth(new Date().getMonth() - 12),
-    rating: 5,
-    text: "The most priceless ornament is your smile. The Invisalign aligners worked perfectly. The staff is always friendly and professional. Best dental clinic in Tripura!",
-    isGoogle: true
+    id: 4,
+    text: "The clinic is extremely clean and modern. The staff is polite and the doctor explains everything very clearly. Best dental experience I’ve had."
+  },
+  {
+    id: 5,
+    text: "I was very anxious before my treatment, but the team handled everything so calmly and professionally. I didn’t feel any pain at all!"
+  },
+  {
+    id: 6,
+    text: "Highly recommend 32 Signature Smilez! The attention to detail and care provided here is truly exceptional."
+  },
+  {
+    id: 7,
+    text: "My child actually enjoys visiting the dentist now! The environment is very friendly and welcoming."
+  },
+  {
+    id: 8,
+    text: "From consultation to treatment, everything was smooth and well-organized. You can really trust their expertise."
   }
 ];
 
 const Testimonials = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isViewAllOpen, setIsViewAllOpen] = useState(false);
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [dynamicReviews, setDynamicReviews] = useState([]);
-  const [selectedFilter, setSelectedFilter] = useState(5);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  /* 🔥 Scroll Animation */
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const nextReview = () => {
+    setCurrentIndex((prev) => (prev + 1) % reviewsData.length);
+  };
+
+  const prevReview = () => {
+    setCurrentIndex((prev) => (prev - 1 + reviewsData.length) % reviewsData.length);
+  };
+
+  /* 🔥 FIXED AUTOPLAY */
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/reviews`);
-        if (res.ok) {
-          const data = await res.json();
-          setDynamicReviews(data);
-        }
-      } catch (err) {
-        console.error("Error fetching dynamic reviews:", err);
-      }
-    };
-    fetchReviews();
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % reviewsData.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
   }, []);
 
-  // Combine dynamic and static reviews
-  const allReviews = [...dynamicReviews, ...staticReviews];
-  
-  // Apply filter
-  const filteredReviews = allReviews.filter(review => {
-    if (selectedFilter === 'all') return true;
-    return review.rating === selectedFilter;
-  });
-
-  // Apply limit for main view
-  const displayedReviews = filteredReviews.slice(0, 5);
-
-  const filterOptions = [
-    { label: 'All Reviews', value: 'all' },
-    { label: '5 Stars', value: 5 },
-    { label: '4 Stars', value: 4 },
-    { label: '3 Stars', value: 3 },
-    { label: '2 Stars', value: 2 },
-    { label: '1 Star', value: 1 }
-  ];
+  /* 🔥 Animation Variants */
+  const variants = {
+    initial: { opacity: 0, y: 30, scale: 0.97 },
+    animate: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: -30, scale: 0.97 }
+  };
 
   return (
-    <section className="testimonials-section">
-      <ReviewModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      
-      {/* View All Modal */}
-      {isViewAllOpen && (
-        <div className="modal-overlay" onClick={() => setIsViewAllOpen(false)} style={{ zIndex: 99999 }}>
-          <div 
-            onClick={e => e.stopPropagation()} 
-            style={{
-              background: 'linear-gradient(160deg, #111111 0%, #0a0a0a 100%)',
-              borderRadius: '16px',
-              width: '100%',
-              maxWidth: '900px',
-              maxHeight: '90vh',
-              overflowY: 'auto',
-              padding: '40px',
-              border: '1px solid rgba(0, 255, 136, 0.2)',
-              position: 'relative'
-            }}
-          >
-            <button 
-              onClick={() => setIsViewAllOpen(false)} 
-              style={{
-                position: 'absolute', top: '20px', right: '20px', 
-                background: 'transparent', border: 'none', color: '#888', cursor: 'pointer'
-              }}
-            >
-              <X size={28} />
+    <section className="testimonials-section" ref={ref}>
+      <div className="testimonials-container">
+
+        {/* LEFT SIDE */}
+        <motion.div
+          className="testimonials-left"
+          initial={{ opacity: 0, x: -80 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="testimonials-title">Word of Mouth</h2>
+
+          <div className="testimonial-slider-area">
+
+            <button className="slider-nav-btn prev" onClick={prevReview}>
+              <ChevronLeft size={24} />
             </button>
-            <h2 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '30px', textAlign: 'center' }}>
-              All Reviews {selectedFilter !== 'all' && `(${selectedFilter} Stars)`}
-            </h2>
-            <div className="reviews-grid">
-              {filteredReviews.map((review, index) => {
-                const dateObj = new Date(review.createdAt);
-                const formattedDate = !isNaN(dateObj) ? dateObj.toLocaleDateString() : 'Recently';
-                return (
-                  <div className="review-card fade-in" style={{animationDelay: `${(index % 10) * 0.1}s`}} key={`modal-${review._id}`}>
-                    <div className="review-header">
-                      <div className="reviewer-info">
-                        {review.reviewerImage ? (
-                           <img src={review.reviewerImage} alt="avatar" style={{width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover'}} />
-                        ) : (
-                           <div className="avatar">
-                             {review.reviewerName ? review.reviewerName.charAt(0).toUpperCase() : <User size={20} />}
-                           </div>
-                        )}
-                        <div>
-                          <h4 className="reviewer-name">{review.reviewerName}</h4>
-                          <span className="review-date">{formattedDate}</span>
-                        </div>
-                      </div>
-                      {review.isGoogle && (
-                        <div className="google-icon-small"><span className="g-blue">G</span></div>
-                      )}
-                    </div>
-                    <div className="review-stars">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} fill={i < review.rating ? "var(--primary-gold)" : "transparent"} color="var(--primary-gold)" size={16} opacity={i < review.rating ? 1 : 0.3} />
-                      ))}
-                    </div>
-                    <div className="review-body">
-                      <Quote className="quote-icon" size={24} color="var(--primary-gold)" opacity={0.3} />
-                      <p>"{review.text}"</p>
-                    </div>
-                  </div>
-                );
-              })}
+
+            <div className="testimonial-bubble">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  variants={variants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="testimonial-text">
+                    <span className="quote-mark">“</span>
+                    <span className="stars">★★★★★</span>
+                    {reviewsData[currentIndex].text}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
             </div>
-          </div>
-        </div>
-      )}
 
-      <div className="container">
-        <h2 className="section-title">What Our Patients Say</h2>
-        <p className="section-subtitle">Real stories from real smiles. See why we are the top-rated dental clinic.</p>
-
-        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px', position: 'relative' }}>
-          <button 
-            onClick={() => setIsFilterOpen(!isFilterOpen)}
-            style={{ 
-              display: 'flex', alignItems: 'center', gap: '8px',
-              padding: '8px 16px', borderRadius: '20px', background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.2)', color: '#fff', cursor: 'pointer', transition: 'all 0.3s'
-            }}
-          >
-            <Filter size={18} /> Filter Reviews
-          </button>
-          
-          {isFilterOpen && (
-            <div style={{ 
-              position: 'absolute', top: '100%', right: 0, marginTop: '10px',
-              background: '#111', border: '1px solid #333', borderRadius: '12px',
-              padding: '16px', zIndex: 100, minWidth: '180px',
-              boxShadow: '0 10px 25px rgba(0,0,0,0.5)'
-            }}>
-              <h4 style={{ color: '#888', fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '12px', marginLeft: '4px' }}>Filter by Rating</h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {filterOptions.map(option => (
-                  <label key={option.value} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#ccc', cursor: 'pointer', fontSize: '0.95rem' }}>
-                    <input 
-                      type="radio" 
-                      name="rating-filter" 
-                      value={option.value} 
-                      checked={selectedFilter === option.value}
-                      onChange={() => {
-                        setSelectedFilter(option.value);
-                        setIsFilterOpen(false);
-                      }}
-                      style={{ accentColor: '#00FF88', width: '16px', height: '16px', cursor: 'pointer' }}
-                    />
-                    {option.label}
-                  </label>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {filteredReviews.length === 0 ? (
-          <div style={{ textAlign: 'center', color: '#888', padding: '40px 0' }}>
-            No reviews found for this rating.
-          </div>
-        ) : (
-          <div className="reviews-grid">
-            {displayedReviews.map((review, index) => {
-              const dateObj = new Date(review.createdAt);
-              const formattedDate = !isNaN(dateObj) ? dateObj.toLocaleDateString() : 'Recently';
-              
-              return (
-                <div className="review-card fade-in" style={{animationDelay: `${(index % 5) * 0.15}s`}} key={review._id}>
-                  <div className="review-header">
-                    <div className="reviewer-info">
-                      {review.reviewerImage ? (
-                         <img src={review.reviewerImage} alt="avatar" style={{width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover'}} />
-                      ) : (
-                         <div className="avatar">
-                           {review.reviewerName ? review.reviewerName.charAt(0).toUpperCase() : <User size={20} />}
-                         </div>
-                      )}
-                      <div>
-                        <h4 className="reviewer-name">{review.reviewerName}</h4>
-                        <span className="review-date">{formattedDate}</span>
-                      </div>
-                    </div>
-                    {review.isGoogle && (
-                      <div className="google-icon-small">
-                        <span className="g-blue">G</span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <div className="review-stars">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} fill={i < review.rating ? "var(--primary-gold)" : "transparent"} color={i < review.rating ? "var(--primary-gold)" : "var(--primary-gold)"} size={16} opacity={i < review.rating ? 1 : 0.3} />
-                    ))}
-                  </div>
-                  
-                  <div className="review-body">
-                    <Quote className="quote-icon" size={24} color="var(--primary-gold)" opacity={0.3} />
-                    <p>"{review.text}"</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        <div className="reviews-cta" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
-          {filteredReviews.length > 5 && (
-            <button 
-              onClick={() => setIsViewAllOpen(true)}
-              className="btn-primary" 
-              style={{ 
-                background: 'transparent', 
-                color: '#fff', 
-                border: '1px solid #555',
-                cursor: 'pointer'
-              }}
-            >
-               See All Reviews ({filteredReviews.length})
+            <button className="slider-nav-btn next" onClick={nextReview}>
+              <ChevronRight size={24} />
             </button>
-          )}
 
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="btn-primary" 
-            style={{ 
-              background: 'rgba(0, 255, 136, 0.1)', 
-              color: '#00FF88', 
-              border: '1px solid rgba(0, 255, 136, 0.4)',
-              cursor: 'pointer'
-            }}
-          >
-             Write a Review
-          </button>
-          <a href="https://maps.app.goo.gl/Sw1ejpgGe2Nmy7ZT8" target="_blank" rel="noreferrer" className="btn-primary">
-             Read all our Google Reviews
-          </a>
-        </div>
+          </div>
+
+          {/* DOTS */}
+          <div className="slider-dots">
+            {reviewsData.map((_, idx) => (
+              <span
+                key={idx}
+                className={`dot ${currentIndex === idx ? 'active' : ''}`}
+                onClick={() => setCurrentIndex(idx)}
+              ></span>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* RIGHT SIDE IMAGE */}
+        <motion.div
+          className="testimonials-right"
+          initial={{ opacity: 0, x: 80 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <img
+            src="/IMG_0591.jpeg"
+            alt="Happy family"
+            className="testimonials-family-img"
+          />
+        </motion.div>
+
       </div>
     </section>
   );

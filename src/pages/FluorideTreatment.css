@@ -1,0 +1,52 @@
+.flu-wrapper { background-color: #ffffff; }
+
+.flu-hero { position: relative; text-align: center; padding: 140px 20px 100px; background-color: #fcfbf9; border-bottom: 1px solid rgba(0,0,0,0.05); overflow: hidden; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.flu-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.15; z-index: 1; }
+.flu-hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+.flu-hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: #3b4657; margin-bottom: 25px; }
+.flu-hero-subtitle { font-family: 'Georgia', serif; font-size: 1.5rem; color: #c57b43; margin-bottom: 40px; font-weight: 500; }
+.flu-hero-buttons { display: flex; gap: 20px; justify-content: center; }
+
+.flu-centered-text { background-color: #ffffff; padding: 100px 20px; text-align: center; }
+.flu-ct-container { max-width: 850px; margin: 0 auto; }
+.flu-ct-container h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 40px; }
+.flu-ct-container p { font-family: 'Georgia', serif; font-size: 1.25rem; line-height: 1.8; color: #4a5568; margin-bottom: 30px; }
+
+.flu-split-section { padding: 100px 20px; overflow: hidden; }
+.flu-split-container { display: flex; align-items: center; gap: 50px; max-width: 1200px; margin: 0 auto; }
+.flu-split-content { flex: 1; }
+.flu-split-content h2 { font-family: 'Playfair Display', serif; font-size: 3.2rem; font-weight: 700; color: #3b4657; margin-bottom: 25px; }
+.flu-bold-lead { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; color: #4a5568; margin-bottom: 25px; font-weight: 600; }
+.flu-bullet-list { padding-left: 25px; margin-bottom: 30px; }
+.flu-bullet-list li { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.7; color: #4a5568; margin-bottom: 12px; }
+.flu-cta-text { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; color: #4a5568; margin-bottom: 30px; }
+.flu-split-image { flex: 1; display: flex; justify-content: center; }
+
+.flu-dark-split { position: relative; background-color: #1a1a1a; color: #ffffff; }
+.flu-dark-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.7; z-index: 1; }
+.flu-dark-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(33, 41, 33, 0.4), rgba(10, 15, 10, 0.9)); z-index: 2; }
+.flu-dark-container { display: flex; align-items: center; position: relative; z-index: 3; max-width: 1200px; margin: 0 auto; }
+.flu-ds-image { flex: 1; display: flex; justify-content: flex-start; align-items: flex-end; align-self: stretch; overflow: hidden; padding-top: 50px; }
+.flu-ds-content { flex: 1; padding: 80px 20px 80px 40px; }
+.flu-ds-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #ffffff; }
+.flu-ds-content p { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; margin-bottom: 35px; color: #e2e8f0; }
+
+.flu-redefining { padding: 100px 20px 40px; text-align: center; }
+.flu-redefining h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 60px; }
+.flu-ook-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+.flu-ook-card { flex: 1; background-color: #fbf7ee; padding: 50px 30px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease; clip-path: polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%); }
+.flu-ook-card:hover { transform: translateY(-5px); }
+.flu-ook-card h3 { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: 600; color: #c57b43; }
+
+@media (max-width: 900px) {
+  .flu-hero-content h1, .flu-ct-container h2, .flu-split-content h2, .flu-ds-content h2, .flu-redefining h2 { font-size: 2.8rem; }
+  .flu-split-container, .flu-dark-container { flex-direction: column; }
+  .reverse-mobile { flex-direction: column-reverse; }
+  .flu-ds-content { padding: 60px 20px 40px; text-align: center; }
+  .flu-ds-image { padding-top: 0; justify-content: center; }
+  .flu-ook-grid { flex-direction: column; align-items: center; }
+  .flu-ook-card { max-width: 400px; width: 100%; }
+}
+@media (max-width: 768px) {
+  .flu-hero-content h1, .flu-split-content h2 { font-size: 2.5rem; }
+}

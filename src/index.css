@@ -178,3 +178,34 @@ button {
     font-size: 0.9rem;
   }
 }
+
+/* Global Service Template Utilities */
+.bg-cream {
+  background-color: #fbf7ee;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.shaped-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.pr-large {
+  padding-right: 40px;
+}
+
+[class$="-bullet-list"] {
+  list-style-type: disc !important;
+}
+
+@media (max-width: 900px) {
+  .pr-large {
+    padding-right: 0;
+  }
+}

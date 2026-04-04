@@ -1,0 +1,53 @@
+.gd-wrapper { background-color: #ffffff; }
+
+.gd-hero { position: relative; text-align: center; padding: 140px 20px 100px; background-color: #fcfbf9; border-bottom: 1px solid rgba(0,0,0,0.05); overflow: hidden; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.gd-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.15; z-index: 1; }
+.gd-hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+.gd-hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: #3b4657; margin-bottom: 25px; }
+.gd-hero-subtitle { font-family: 'Georgia', serif; font-size: 1.5rem; color: #c57b43; margin-bottom: 40px; font-weight: 500; }
+.gd-hero-buttons { display: flex; gap: 20px; justify-content: center; }
+
+.gd-centered-text { background-color: #ffffff; padding: 100px 20px; text-align: center; }
+.gd-ct-container { max-width: 850px; margin: 0 auto; }
+.gd-ct-container h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 40px; }
+.gd-ct-container p { font-family: 'Georgia', serif; font-size: 1.25rem; line-height: 1.8; color: #4a5568; margin-bottom: 30px; }
+
+.gd-dark-split { position: relative; background-color: #1a1a1a; color: #ffffff; }
+.gd-dark-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.7; z-index: 1; }
+.gd-dark-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(33, 41, 33, 0.4), rgba(10, 15, 10, 0.9)); z-index: 2; }
+.gd-dark-container { display: flex; align-items: center; position: relative; z-index: 3; max-width: 1200px; margin: 0 auto; }
+.gd-ds-image { flex: 1; display: flex; justify-content: flex-start; align-items: flex-end; align-self: stretch; overflow: hidden; padding-top: 50px; }
+.gd-ds-content { flex: 1; padding: 80px 20px 80px 40px; }
+.gd-ds-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #ffffff; }
+.gd-ds-content p { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; margin-bottom: 35px; color: #e2e8f0; }
+
+.gd-treatments, .gd-treatments-grid-section { padding: 100px 20px; }
+.gd-title-center, .gd-section-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 60px; text-align: center; }
+.gd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
+.gd-card { background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+.gd-card:hover { transform: translateY(-10px); }
+.gd-card-img-wrapper { width: 100%; height: 240px; overflow: hidden; }
+.gd-card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.gd-card:hover .gd-card-img-wrapper img { transform: scale(1.05); }
+.gd-card-text { padding: 40px 30px; display: flex; flex-direction: column; flex: 1; }
+.gd-card-text h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #3b4657; margin-bottom: 15px; font-weight: 700; }
+.gd-card-text p { font-family: 'Georgia', serif; font-size: 1.05rem; line-height: 1.7; color: #4a5568; margin-bottom: 25px; flex: 1; }
+.gd-action-link { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #c57b43; text-decoration: none; align-self: flex-start; display: flex; align-items: center; gap: 5px; }
+
+.gd-emergency-section { padding: 80px 20px; }
+.gd-emergency-box { max-width: 900px; margin: 0 auto; background-color: #fbf7ee; border: 2px solid #c57b43; border-radius: 20px; padding: 60px 40px; text-align: center; }
+.gd-emergency-box h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #c57b43; margin-bottom: 20px; line-height: 1.3; }
+.gd-emergency-box p { font-family: 'Georgia', serif; font-size: 1.25rem; line-height: 1.7; margin-bottom: 30px; color: #4a5568; }
+.gd-emergency-call a, .gd-emergency-phone { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: #3b4657; text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s ease; }
+.gd-emergency-call a:hover, .gd-emergency-phone:hover { color: #c57b43; }
+
+@media (max-width: 900px) {
+  .gd-hero-content h1, .gd-ct-container h2, .gd-title-center, .gd-section-title, .gd-ds-content h2, .gd-emergency-box h2 { font-size: 2.8rem; }
+  .gd-dark-container { flex-direction: column; }
+  .gd-ds-content { padding: 60px 20px 40px; text-align: center; }
+  .gd-ds-image { padding-top: 0; justify-content: center; }
+}
+@media (max-width: 768px) {
+  .gd-hero-content h1, .gd-title-center, .gd-section-title, .gd-emergency-box h2 { font-size: 2.5rem; }
+  .gd-emergency-box { padding: 40px 20px; }
+}
