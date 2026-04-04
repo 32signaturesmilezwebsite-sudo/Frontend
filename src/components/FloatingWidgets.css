@@ -38,17 +38,13 @@
   transform: scale(1.1) translateX(5px);
 }
 
-.call-btn {
-  background-color: var(--primary-gold);
-}
+
 
 .whatsapp-btn {
   background-color: var(--whatsapp-green);
 }
 
-.pulse-orange {
-  animation: pulse 2s infinite;
-}
+
 
 .pulse-green {
   animation: pulseGreen 2s infinite;

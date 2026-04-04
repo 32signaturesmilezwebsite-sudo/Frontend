@@ -47,7 +47,7 @@ const ContactPage = () => {
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
 
     try {
-      const response = await fetch('http://localhost:5000/api/appointments', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
