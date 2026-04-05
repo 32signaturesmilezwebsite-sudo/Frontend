@@ -29,10 +29,37 @@ const sedationFaqs = [
 
 const Sedation = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Sedation Dentistry | 32 Signature Smilez";
-    // Shared scroll-reveal
-    return  }, []);
+  window.scrollTo(0, 0);
+  document.title = "Sedation Dentistry | 32 Signature Smilez";
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+          // fade-up animation (text, headings)
+          if (entry.target.classList.contains("fade-up")) {
+            entry.target.classList.add("active");
+          }
+
+          // general animation (cards, images, split sections)
+          if (entry.target.classList.contains("animate")) {
+            entry.target.classList.add("animate-show");
+          }
+
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // observe all animated elements
+  const elements = document.querySelectorAll(".fade-up, .animate");
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
 
   return (
     <div className="sed-wrapper">
@@ -83,12 +110,9 @@ const Sedation = () => {
           </div>
           <div className="sed-ds-content animate animate-slide-right">
             <h2>Save and Smile</h2>
-            <p>
-              Combining multiple procedures into fewer, longer appointments while under nitrous sedation can drastically cut down on your overall copays and the time you need to take off work. Our financial experts will coordinate your care efficiently to maximize your insurance limits!
-            </p>
-            <Link to="/contact" className="btn-solid-orange">
-              Explore Financing
-            </Link>
+           <p>
+  Nitrous oxide sedation helps you feel calm, relaxed, and at ease throughout your dental visit, making even complex procedures feel comfortable and stress-free. It works quickly, wears off just as fast, and allows you to resume your day without downtime. By combining multiple treatments into fewer appointments under sedation, you can save time, reduce anxiety, and minimize repeated visits. Our team will also help you plan your treatment efficiently and maximize your insurance benefits for a smoother, more affordable experience.
+</p>
           </div>
         </div>
       </section>
@@ -123,7 +147,7 @@ const Sedation = () => {
 
     <div className="sed-split-image animate animate-slide-right">
       <img
-        src="/media__1774675276734.png"
+        src="/Gemini_Generated_Image_wjxkozwjxkozwjxk.png"
         alt="Patient relaxing in chair"
         className="shaped-image"
       />
@@ -139,7 +163,7 @@ const Sedation = () => {
 
     <div className="sed-split-image animate animate-slide-left">
       <img
-        src="/media__1774675904915.png"
+        src="/shutterstock_537833395-min.jpg.optimal.jpg"
         alt="Gentle Dental Care"
         className="shaped-image"
       />
