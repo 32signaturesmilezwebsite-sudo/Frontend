@@ -323,15 +323,22 @@
 /* ============================== */
 /* DARK SPLIT SECTION */
 /* ============================== */
+/* ============================= */
+/* SECTION BASE */
+/* ============================= */
 
 .fil-dark-split {
   position: relative;
   background-color: #1a1a1a;
   color: #ffffff;
   overflow: hidden;
+
+  min-height: 700px;
 }
 
+/* ============================= */
 /* BACKGROUND */
+/* ============================= */
 
 .fil-dark-bg {
   position: absolute;
@@ -344,14 +351,18 @@
   opacity: 0.7;
   z-index: 1;
 
-  transform: scale(1.1);
-  transition: transform 2s ease;
+  transform: scale(1.05);
+  animation: filBgZoom 10s ease-in-out infinite alternate;
 }
 
-/* 🔥 hover zoom */
-.fil-dark-split:hover .fil-dark-bg {
-  transform: scale(1.15);
+@keyframes filBgZoom {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1.12); }
 }
+
+/* ============================= */
+/* OVERLAY */
+/* ============================= */
 
 .fil-dark-overlay {
   position: absolute;
@@ -364,149 +375,184 @@
   z-index: 2;
 }
 
+/* ============================= */
+/* LAYOUT (CENTERED FIX) */
+/* ============================= */
+
 .fil-dark-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 3;
 
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 700px;
+  gap: 40px;
 }
 
-/* ============================== */
+/* ============================= */
 /* IMAGE SIDE */
-/* ============================== */
+/* ============================= */
 
 .fil-ds-image {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  align-self: stretch;
-  overflow: hidden;
-  padding-top: 60px;
-}
 
-/* 🔥 FRAME */
-
-.frame-outer {
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  padding: 12px;
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
 
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+  transform: translateX(-60px);
+  transition: all 0.9s cubic-bezier(.2,.65,.3,1);
+}
+
+/* ============================= */
+/* FRAME (UPGRADED GLASS STYLE) */
+/* ============================= */
+
+.frame-outer {
+  position: relative;
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: 12px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s ease;
+}
+
+/* inner white border */
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
 }
 
 .frame-inner {
-  border: 2px solid #c57b43;
-  padding: 10px;
-  background: #000;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
 }
-
-/* IMAGE */
 
 .dr-portrait-fixed {
   width: 100%;
-  max-width: 380px;
+  height: auto;
   display: block;
-
-  opacity: 0;
-  transform: scale(1.1);
-  transition: all 1s ease;
+  transition: transform 0.6s ease;
 }
 
-/* ============================== */
-/* CONTENT */
-/* ============================== */
+/* hover */
+.frame-outer:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 25px rgba(197,123,67,0.25);
+}
+
+.fil-ds-image:hover .dr-portrait-fixed {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* CONTENT SIDE */
+/* ============================= */
 
 .fil-ds-content {
   flex: 1;
-  padding: 80px 20px 80px 40px;
+
+  padding: 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.9s cubic-bezier(.2,.65,.3,1);
 }
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
 
 .fil-ds-content h2 {
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
-  font-weight: 700;
   margin-bottom: 25px;
   color: #ffffff;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
 .fil-ds-content p {
   font-family: 'Georgia', serif;
   font-size: 1.15rem;
   line-height: 1.8;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   color: #e2e8f0;
-}
 
-/* ============================== */
-/* 🔥 ANIMATIONS */
-/* ============================== */
-
-.animate {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
-  will-change: transform, opacity;
 }
 
-.animate-show {
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+.fil-ds-image.animate-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fil-ds-content.animate-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* stagger text */
+.fil-ds-content.animate-show h2 {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.2s;
 }
 
-/* Slide */
-.animate-slide-left {
-  transform: translateX(-60px);
-}
-
-.animate-slide-right {
-  transform: translateX(60px);
-}
-
-.animate-show.animate-slide-left,
-.animate-show.animate-slide-right {
-  transform: translateX(0) translateY(0);
-}
-
-/* ============================== */
-/* 🔥 FRAME + IMAGE REVEAL */
-/* ============================== */
-
-.animate-show .frame-outer {
+.fil-ds-content.animate-show p:nth-of-type(1) {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.4s;
 }
 
-.animate-show .dr-portrait-fixed {
+.fil-ds-content.animate-show p:nth-of-type(2) {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 
-/* ============================== */
-/* BACKGROUND ENTRY */
-/* ============================== */
-
-.zoom-bg {
-  animation: zoomDark 2.5s ease forwards;
-}
-
-@keyframes zoomDark {
-  from {
-    transform: scale(1.2);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-/* ============================== */
+/* ============================= */
 /* RESPONSIVE */
-/* ============================== */
+/* ============================= */
 
 @media (max-width: 900px) {
   .fil-dark-container {
@@ -515,14 +561,14 @@
   }
 
   .fil-ds-content {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
 
   .fil-ds-image {
     justify-content: center;
+    align-items: center;
   }
 }
-
 
 /* ============================== */
 /* HEXAGON SECTION */

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Lock } from 'lucide-react';
-import './AdminStyles.css';
+import './AdminLogin.css';
 
 const AdminLogin = () => {
   const [username, setUsername] = useState('');
@@ -10,16 +9,22 @@ const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Override the global dark body background for this page only
+  // Reset any global body backgrounds when entering login specifically
   useEffect(() => {
-    const prev = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = '#f4f7f6';
-    document.body.style.backgroundImage = 'none';
+    document.title = "Admin Login | 32 Signature Smilez";
+    const prevBg = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = '#1a1a1a';
+    
+    // Check if user is already logged in
+    const adminInfo = localStorage.getItem('adminInfo');
+    if (adminInfo) {
+      navigate('/admin/dashboard');
+    }
+
     return () => {
-      document.body.style.backgroundColor = prev;
-      document.body.style.backgroundImage = '';
+      document.body.style.backgroundColor = prevBg;
     };
-  }, []);
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -42,54 +47,65 @@ const AdminLogin = () => {
         setError(data.message || 'Login failed');
       }
     } catch (err) {
-      setError('Cannot connect to server');
+      setError('Cannot connect to server. Please try again later.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="admin-login-container">
-      <div className="login-card fade-in">
-        <div className="login-header">
-          <div className="icon-wrapper">
-            <Lock size={32} color="var(--primary-gold)" />
+    <div className="admin-login-wrapper">
+      <div className="admin-login-bg"></div>
+      <div className="admin-login-overlay"></div>
+      
+      <div className="admin-login-content">
+        <div className="admin-login-card">
+          
+          <div className="admin-login-header">
+            <Link to="/">
+              <img src="/logo.png" alt="32 Signature Smilez Logo" className="admin-login-logo" />
+            </Link>
+            <h2>Admin Portal</h2>
+            <p>Authorized access only</p>
           </div>
-          <h2>Admin Portal</h2>
-          <p>32 Signature Smilez</p>
-        </div>
 
-        {error && <div className="error-message">{error}</div>}
+          {error && <div className="admin-error-msg">{error}</div>}
 
-        <form onSubmit={handleLogin}>
-          <div className="form-group">
-            <label>Email / Username</label>
-            <input 
-              type="text" 
-              className="admin-input" 
-              value={username} 
-              onChange={(e) => setUsername(e.target.value)} 
-              required 
-            />
+          <form onSubmit={handleLogin}>
+            <div className="login-form-group">
+              <label>Username or Email</label>
+              <input 
+                type="text" 
+                className="login-form-input" 
+                value={username} 
+                onChange={(e) => setUsername(e.target.value)} 
+                placeholder="Enter admin username"
+                required 
+              />
+            </div>
+            
+            <div className="login-form-group">
+              <label>Password</label>
+              <input 
+                type="password" 
+                className="login-form-input" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
+                placeholder="Enter password"
+                required 
+              />
+            </div>
+
+            <button type="submit" className="admin-btn-submit" disabled={loading}>
+              {loading ? 'Authenticating...' : 'Secure Login'}
+            </button>
+          </form>
+          
+          <div className="admin-login-footer">
+            <Link to="/" className="admin-back-link">← Return to Website</Link>
           </div>
           
-          <div className="form-group">
-            <label>Password</label>
-            <input 
-              type="password" 
-              className="admin-input" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
-              required 
-            />
-          </div>
-
-          <button type="submit" className="btn-primary login-btn" disabled={loading}>
-            {loading ? 'Authenticating...' : 'Secure Login'}
-          </button>
-        </form>
-        
-        <p className="return-link"><Link to="/">← Return to Website</Link></p>
+        </div>
       </div>
     </div>
   );

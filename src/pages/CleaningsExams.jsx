@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import FAQ from "../components/FAQ";
 import "./CleaningsExams.css";
+import { Heart, Shield, Sparkles } from "lucide-react";
 
 const cleaningFaqs = [
   {
@@ -144,7 +145,7 @@ const CleaningsExams = () => {
 
     <div className="ce-split-image animate animate-slide-right">
       <img
-        src="/media__1774675904915.png"
+        src="/Gemini_Generated_Image_p5ogtpp5ogtpp5og.png"
         alt="Happy Dental Patient"
         className="shaped-image"
       />
@@ -155,43 +156,40 @@ const CleaningsExams = () => {
 
       {/* 6. HEXAGONS SECTION */}
       <section className="ce-redefining bg-white">
-        <div className="container">
-          <h2>Preventative Focus</h2>
-          
-          <div className="ce-ook-grid">
-            <div className="ce-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    <path d="M12 21.23l-3.5-3.5"></path>
-                 </svg>
-              </div>
-              <h3>Plaque Control</h3>
-            </div>
-            <div className="ce-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <rect x="2" y="8" width="20" height="8" rx="2" ry="2"></rect>
-                    <path d="M6 16v4"></path>
-                    <path d="M18 16v4"></path>
-                    <path d="M4 8V4h16v4"></path>
-                 </svg>
-              </div>
-              <h3>Complete Comfort</h3>
-            </div>
-            <div className="ce-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M12 21H8c-2 0-3.5-1-4-3L3 13c-.5-2 1-4 3-4s3.5 1 4 3 2 3 4 3 4-1 6-3 3-2 3 4l-1 5c-.5 2-2 3-4 3Z"></path>
-                    <path d="M18 5c1 1 1.5 2.5 1 4"></path>
-                    <path d="M14 6c.5 1.5 0 3-1 4"></path>
-                 </svg>
-              </div>
-              <h3>Long-term Health</h3>
-            </div>
-          </div>
+  <div className="container">
+
+    {/* TITLE */}
+    <h2 className="fade-up">Preventative Focus</h2>
+    
+    <div className="ce-ook-grid">
+
+      {/* Card 1 */}
+      <div className="ce-ook-card animate">
+        <div className="hex-icon-vector">
+          <Heart size={50} strokeWidth={1.5} color="#c57b43" />
         </div>
-      </section>
+        <h3>Plaque Control</h3>
+      </div>
+
+      {/* Card 2 */}
+      <div className="ce-ook-card animate">
+        <div className="hex-icon-vector">
+          <Shield size={50} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Complete Comfort</h3>
+      </div>
+
+      {/* Card 3 */}
+      <div className="ce-ook-card animate">
+        <div className="hex-icon-vector">
+          <Sparkles size={50} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Long-term Health</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* 7. FAQ */}
       <FAQ faqsData={cleaningFaqs} customTitle="Questions? We've Got Answers!" />

@@ -88,6 +88,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/treatment/:slug" element={<TreatmentPage />} />
           <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/blogs" element={<AdminBlogList />} />
           <Route path="/admin/blog/new" element={<AdminBlogCreate />} />

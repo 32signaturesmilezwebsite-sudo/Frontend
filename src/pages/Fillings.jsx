@@ -30,27 +30,39 @@ const fillingFaqs = [
 ];
 
 const Fillings = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Dental Fillings | 32 Signature Smilez";
+ useEffect(() => {
+  window.scrollTo(0, 0);
+  document.title = "Dental Fillings | 32 Signature Smilez";
 
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+          // fade-up animation
+          if (entry.target.classList.contains("fade-up")) {
             entry.target.classList.add("active");
-            obs.unobserve(entry.target);
           }
-        });
-      },
-      { threshold: 0.2 }
-    );
 
-    document
-      .querySelectorAll(".fade-up")
-      .forEach((el) => observer.observe(el));
-  }, []);
+          // general animation (cards, split sections, etc.)
+          if (entry.target.classList.contains("animate")) {
+            entry.target.classList.add("animate-show");
+          }
 
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // 🔥 observe BOTH types
+  const elements = document.querySelectorAll(".fade-up, .animate");
+
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
   return (
     <div className="fil-wrapper">
       <Header />
@@ -124,7 +136,7 @@ const Fillings = () => {
       <div className="frame-outer">
         <div className="frame-inner">
           <img
-            src="/deep-datta.png"
+            src="/Deep Datta.PNG"
             alt="Dr. Deep Datta"
             className="dr-portrait-fixed"
           />
@@ -185,7 +197,7 @@ const Fillings = () => {
 
     <div className="fil-split-image animate animate-slide-left">
       <img
-        src="/teeth-grinding.png"
+        src="/Gemini_Generated_Image_3zlodd3zlodd3zlo.png"
         alt="Happy Dental Patient"
         className="shaped-image img-zoom"
       />
@@ -200,7 +212,7 @@ const Fillings = () => {
 
     <div className="fil-split-image pr-large animate animate-slide-left">
       <img
-        src="/filling-process.jpg"
+        src="/What-are-Dental-Fillings-A-Quick-Guide.png"
         alt="Dentist Filling Cavity"
         className="shaped-image img-zoom"
       />
