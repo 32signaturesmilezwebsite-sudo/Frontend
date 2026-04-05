@@ -29,24 +29,38 @@ const emergencyFaqs = [
 ];
 
 const EmergencyDentistry = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Emergency Dentistry | 32 Signature Smilez";
+ useEffect(() => {
+  window.scrollTo(0, 0);
+  document.title = "Emergency Dentistry | 32 Signature Smilez";
 
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+          // fade-up (text, headings)
+          if (entry.target.classList.contains("fade-up")) {
             entry.target.classList.add("active");
-            obs.unobserve(entry.target);
           }
-        });
-      },
-      { threshold: 0.2 }
-    );
 
-    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
-  }, []);
+          // animate (cards, images, sections)
+          if (entry.target.classList.contains("animate")) {
+            entry.target.classList.add("animate-show");
+          }
+
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // observe all animated elements
+  const elements = document.querySelectorAll(".fade-up, .animate");
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
 
 
   return (
@@ -113,7 +127,7 @@ const EmergencyDentistry = () => {
       <div className="frame-outer">
         <div className="frame-inner">
           <img
-            src="/deep-datta.png"
+            src="/Deep Datta.PNG"
             alt="Dr. Deep Datta"
             className="dr-portrait-fixed"
           />
@@ -126,16 +140,21 @@ const EmergencyDentistry = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        In an emergency, the last thing you should have to stress over is the
-        budget. Delaying urgent treatment due to cost fears often leads to
-        significantly more expensive complications later on. We actively assist
-        emergency patients in navigating their insurance coverages and
-        identifying rapid, flexible financing options!
-      </p>
+  In a dental emergency, the last thing you should worry about is cost. 
+  Delaying urgent treatment due to financial concerns can lead to more 
+  serious complications, increased pain, and significantly higher expenses later on. 
 
-      <a href="tel:+919077770586" className="btn-solid-orange">
-        Call For Assistance
-      </a>
+  At our clinic, we prioritize your comfort and immediate care. Our team 
+  actively assists emergency patients in understanding their insurance 
+  coverage, handling claims quickly, and exploring flexible, fast-track 
+  financing options. 
+
+  Whether it’s sudden tooth pain, a broken tooth, infection, or injury, 
+  we ensure you receive prompt, high-quality treatment without unnecessary 
+  delays—so you can focus on relief and recovery, not stress.
+</p>
+
+      
     </div>
 
   </div>
@@ -171,7 +190,7 @@ const EmergencyDentistry = () => {
 
     <div className="em-split-image animate animate-slide-left">
       <img
-        src="/media__1774670146017.png"
+        src="/Gemini_Generated_Image_n31xawn31xawn31x.png"
         alt="Dentist rapidly assisting patient"
         className="shaped-image img-zoom"
       />
@@ -186,7 +205,7 @@ const EmergencyDentistry = () => {
 
     <div className="em-split-image pr-large animate animate-slide-left">
       <img
-        src="/tooth-pain.png"
+        src="/Emergency-Dental.jpg"
         alt="Dental Emergency Examination"
         className="shaped-image img-zoom"
       />
