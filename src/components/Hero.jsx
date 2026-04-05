@@ -76,19 +76,31 @@ const Hero = () => {
 
         {/* RIGHT IMAGE */}
         <motion.div
-          className="hero-light-image"
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <div className="doctor-frame">
-            <img
-              src="/Deep Datta.PNG"
-              alt="Dr. Deep Datta"
-              className="doctor-hero-img"
-            />
-          </div>
-        </motion.div>
+  className="hero-light-image"
+  initial={{ opacity: 0, x: 80 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+>
+  <div className="doctor-card">
+    
+    <div className="doctor-frame">
+      <img
+        src="/Deep Datta.PNG"
+        alt="Dr. Deep Datta"
+        className="doctor-hero-img"
+      />
+    </div>
+
+    {/* NEW TEXT */}
+    <div className="doctor-info">
+      <h3>Dr. Deep Datta</h3>
+        <div className="doctor-divider"></div>
+
+      <p>MDS Oral Maxillofacial Surgeon<br/>& Implantologist</p>
+    </div>
+
+  </div>
+</motion.div>
 
       </div>
     </section>
