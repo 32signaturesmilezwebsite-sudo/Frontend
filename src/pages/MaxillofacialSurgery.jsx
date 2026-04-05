@@ -126,7 +126,7 @@ const MaxillofacialSurgery = () => {
             </ul>
           </div>
           <div className="ms-split-image animate animate-slide-right">
-            <img src="/what-is-a-maxillofacial-surgeon.jpg" alt="Maxillofacial Surgery Process" className="shaped-image" />
+            <img src="/Oral-Maxillofacial-Surgery.jpg" alt="Maxillofacial Surgery Process" className="shaped-image" />
           </div>
         </div>
       </section>

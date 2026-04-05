@@ -126,7 +126,7 @@ const ToothExtractions = () => {
             </ul>
           </div>
           <div className="te-split-image animate animate-slide-right">
-            <img src="/dental-sealants.jpg" alt="Gentle Tooth Extraction Process" className="shaped-image" />
+            <img src="/reasons-for-tooth-extraction.jpg" alt="Gentle Tooth Extraction Process" className="shaped-image" />
           </div>
         </div>
       </section>

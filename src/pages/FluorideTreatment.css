@@ -170,15 +170,152 @@
   }
 }
 
-.flu-dark-split { position: relative; background-color: #1a1a1a; color: #ffffff; }
-.flu-dark-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.7; z-index: 1; }
-.flu-dark-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(33, 41, 33, 0.4), rgba(10, 15, 10, 0.9)); z-index: 2; }
-.flu-dark-container { display: flex; align-items: center; position: relative; z-index: 3; max-width: 1200px; margin: 0 auto; }
-.flu-ds-image { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px; }
-.flu-ds-content { flex: 1; padding: 80px 20px 80px 40px; }
-.flu-ds-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #ffffff; }
-.flu-ds-content p { font-family: 'Georgia', serif; font-size: 1.15rem; line-height: 1.8; margin-bottom: 35px; color: #e2e8f0; }
+/* ============================= */
+/* SECTION */
+/* ============================= */
+.flu-dark-split {
+  position: relative;
+  min-height: 100vh; /* 🔥 FIX: ensures full height */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
 
+/* ============================= */
+/* BACKGROUND IMAGE */
+/* ============================= */
+.flu-dark-bg {
+  position: absolute;
+  inset: 0; /* 🔥 replaces top/left/width/height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* ============================= */
+/* DARK OVERLAY */
+/* ============================= */
+.flu-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20, 30, 20, 0.5),
+    rgba(10, 15, 10, 0.92)
+  );
+  z-index: 2;
+}
+
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
+.flu-dark-container {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+.flu-ds-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.flu-image-frame {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 18px;
+
+  border: 6px solid rgba(255,255,255,0.15);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+
+  transition: all 0.4s ease;
+}
+
+.flu-image-frame:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.flu-ds-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.flu-ds-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.flu-ds-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #e2e8f0;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+.animate {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+@media (max-width: 900px) {
+  .flu-dark-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flu-ds-content {
+    max-width: 100%;
+  }
+}
 .flu-redefining { padding: 100px 20px 40px; text-align: center; }
 .flu-redefining h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 60px; }
 .flu-ook-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }

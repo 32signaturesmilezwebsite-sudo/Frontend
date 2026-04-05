@@ -126,7 +126,7 @@ const SpecialNeedsDentistry = () => {
             </ul>
           </div>
           <div className="snd-split-image animate animate-slide-right">
-            <img src="/dental-sealants.jpg" alt="Special Needs Dental Care" className="shaped-image" />
+            <img src="/Gemini_Generated_Image_slg5f9slg5f9slg5.png" alt="Special Needs Dental Care" className="shaped-image" />
           </div>
         </div>
       </section>

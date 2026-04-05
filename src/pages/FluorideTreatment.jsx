@@ -11,11 +11,43 @@ import "./FluorideTreatment.css";
 const fluorideFaqs = [
   {
     question: "Is professional fluoride better than my toothpaste?",
-    answer: "Absolutely. The fluoride varnish we apply in-office is significantly more concentrated than over-the-counter toothpaste. It adheres to the teeth longer, providing a massive boost to the remineralization process."
+    answer: "Absolutely. The fluoride varnish we apply in-office is much more concentrated than over-the-counter toothpaste and remains on the teeth longer, providing enhanced protection and remineralization."
   },
   {
     question: "Do adults need fluoride?",
-    answer: "Yes! While children benefit tremendously, adults experiencing gum recession, dry mouth (which decreases protective saliva), or a sudden high rate of cavities are excellent candidates for professional fluoride."
+    answer: "Yes. Adults with gum recession, dry mouth, frequent cavities, or weakened enamel can benefit greatly from professional fluoride treatments."
+  },
+  {
+    question: "How does fluoride protect my teeth?",
+    answer: "Fluoride strengthens tooth enamel and helps repair early stages of decay by promoting remineralization, making teeth more resistant to acid attacks from bacteria and food."
+  },
+  {
+    question: "Is fluoride treatment safe?",
+    answer: "Yes, professional fluoride treatments are safe when applied by dental professionals. The amount used is carefully controlled and widely recommended for both children and adults."
+  },
+  {
+    question: "How often should I get fluoride treatment?",
+    answer: "Most patients benefit from fluoride treatments every 3 to 6 months, depending on their risk of tooth decay and overall oral health."
+  },
+  {
+    question: "How long does a fluoride treatment take?",
+    answer: "The procedure is quick and typically takes only a few minutes. The fluoride is applied directly to the teeth and begins working immediately."
+  },
+  {
+    question: "Can I eat or drink after fluoride treatment?",
+    answer: "It is usually recommended to avoid eating or drinking for at least 30 minutes after treatment to allow the fluoride to fully absorb and provide maximum benefit."
+  },
+  {
+    question: "Does fluoride help with tooth sensitivity?",
+    answer: "Yes, fluoride can reduce tooth sensitivity by strengthening enamel and protecting exposed areas of the teeth."
+  },
+  {
+    question: "Is fluoride treatment suitable for children?",
+    answer: "Yes, fluoride is especially beneficial for children as it helps strengthen developing teeth and prevents cavities during their early years."
+  },
+  {
+    question: "Is fluoride covered by insurance?",
+    answer: "Many dental insurance plans cover fluoride treatments, especially for children. Our team can help you understand your coverage and available options."
   }
 ];
 
@@ -126,7 +158,7 @@ const FluorideTreatment = () => {
             </ul>
           </div>
           <div className="flu-split-image animate animate-slide-right">
-            <img src="/dental-sealants.jpg" alt="Fluoride Treatment application" className="shaped-image" />
+            <img src="/how fluoride works.jpg" alt="Fluoride Treatment application" className="shaped-image" />
           </div>
         </div>
       </section>

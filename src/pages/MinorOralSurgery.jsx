@@ -126,7 +126,7 @@ const MinorOralSurgery = () => {
             </ul>
           </div>
           <div className="mo-split-image animate animate-slide-right">
-            <img src="/Minor-Surgery.png" alt="Minor Oral Surgery" className="shaped-image" />
+            <img src="/surgery1.jpg" alt="Minor Oral Surgery" className="shaped-image" />
           </div>
         </div>
       </section>
