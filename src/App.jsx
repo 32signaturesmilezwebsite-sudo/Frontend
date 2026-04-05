@@ -26,6 +26,7 @@ import BlogPost from './pages/BlogPost';
 import ClinicGallery from './pages/ClinicGallery';
 import AboutUs from './pages/AboutUs';
 import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
 import NewPatientsPage from './pages/NewPatientsPage';
 import ProblemsWeTreat from './pages/ProblemsWeTreat';
 import BadBreath from './pages/BadBreath';
@@ -98,6 +99,7 @@ function App() {
           <Route path="/clinic" element={<ClinicGallery />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/new-patients" element={<NewPatientsPage />} />
           <Route path="/problems-we-treat" element={<ProblemsWeTreat />} />
           <Route path="/bad-breath" element={<BadBreath />} />

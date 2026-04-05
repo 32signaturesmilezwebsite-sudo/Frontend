@@ -1,0 +1,362 @@
+
+/* ============================================================ */
+/* SERVICES PAGE STYLES                                         */
+/* ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --services-bg: #fdf6f0; /* Light cream/beige */
+  --services-text: #3b4657; /* Dark slate */
+  --services-accent: #c57b43; /* Gold/Bronze */
+  --services-white: #ffffff;
+  --services-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.services-page-wrapper {
+  background-color: var(--services-bg);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--services-text);
+  overflow-x: hidden;
+}
+
+/* ---------------------------------- */
+/* HERO SECTION                       */
+/* ---------------------------------- */
+
+.services-hero {
+  position: relative;
+  padding: 160px 20px 100px;
+  text-align: center;
+  background-color: var(--services-bg);
+  overflow: hidden;
+}
+
+.services-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--services-text);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.services-hero .subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--services-accent);
+  margin-bottom: 40px;
+}
+
+.services-hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-services {
+  padding: 16px 36px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.btn-services-primary {
+  background-color: var(--services-accent);
+  color: white;
+}
+
+.btn-services-primary:hover {
+  background-color: #aa6a39;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(197, 123, 67, 0.2);
+}
+
+.btn-services-outline {
+  border: 2px solid var(--services-text);
+  color: var(--services-text);
+}
+
+.btn-services-outline:hover {
+  background-color: var(--services-text);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Background trees matching screenshot */
+.hero-trees {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url('/trees-pattern.png'); /* Placeholder for tree pattern */
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------------------------------- */
+/* REDEFINING DENTAL VISITS           */
+/* ---------------------------------- */
+
+.redefining-section {
+  padding: 100px 20px;
+  background-color: var(--services-white);
+  text-align: center;
+}
+
+.section-title-large {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 60px;
+  color: var(--services-text);
+}
+
+.features-hexagon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-hex-card {
+  padding: 60px 40px;
+  background-color: var(--services-bg); /* Use cream bg for cards to pop on white */
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.feature-hex-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--services-shadow);
+}
+
+.feature-hex-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+}
+
+.feature-hex-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--services-accent);
+  margin-bottom: 20px;
+}
+
+.feature-hex-card p {
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* ---------------------------------- */
+/* WELCOME / SPLIT SECTIONS           */
+/* ---------------------------------- */
+
+.split-section {
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+}
+
+.split-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-image {
+  flex: 1;
+  height: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.split-content {
+  flex: 1;
+  padding: 80px;
+  max-width: 700px;
+}
+
+.split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+
+.split-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.btn-text-link {
+  color: var(--services-accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------- */
+/* COMPLETE SMILE CARE KIT (GRID)     */
+/* ---------------------------------- */
+
+.services-kit-section {
+  padding: 100px 20px;
+  background-color: var(--services-bg);
+  text-align: center;
+}
+
+.services-kit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-kit-card {
+  text-align: left;
+}
+
+.kit-card-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: var(--services-shadow);
+}
+
+.kit-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-kit-card:hover .kit-card-image img {
+  transform: scale(1.05);
+}
+
+.service-kit-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--services-accent);
+}
+
+.service-kit-card p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.link-see-more {
+  color: var(--services-accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.link-see-more:hover {
+  border-bottom-color: var(--services-accent);
+}
+
+/* ---------------------------------- */
+/* EMERGENCY BANNER                  */
+/* ---------------------------------- */
+
+.emergency-banner-section {
+  padding: 100px 20px;
+  background-color: var(--services-white);
+}
+
+.emergency-banner-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 2px solid var(--services-accent);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.emergency-banner-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.emergency-banner-box p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.emergency-call-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--services-accent);
+  text-decoration: none;
+}
+
+/* ---------------------------------- */
+/* RESPONSIVE                        */
+/* ---------------------------------- */
+
+@media (max-width: 1024px) {
+  .split-section {
+    flex-direction: column !important;
+  }
+  .split-image {
+    width: 100%;
+    min-height: 400px;
+  }
+  .split-content {
+    padding: 60px 40px;
+    width: 100%;
+    text-align: center;
+  }
+  .services-hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title-large, 
+  .split-content h2, 
+  .emergency-banner-box h2 {
+    font-size: 2.5rem;
+  }
+  .services-hero h1 {
+    font-size: 2.8rem;
+  }
+  .services-hero-buttons {
+    flex-direction: column;
+  }
+}

@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import FAQ from "../components/FAQ";
 import "./InlaysOnlays.css";
+import { Leaf, Smile, Sparkles } from "lucide-react";
 
 const inlaysFaqs = [
   {
@@ -98,28 +99,39 @@ const InlaysOnlays = () => {
 
       {/* 3. SAVE AND SMILE */}
       <section className="io-dark-split">
-        <div className="io-dark-bg" style={{ backgroundImage: "url('/Background.png')" }}></div>
-        <div className="io-dark-overlay"></div>
-        <div className="container io-dark-container">
-          <div className="io-ds-image animate animate-slide-left">
-             
-            <div className="frame-outer">
-              <div className="frame-inner">
-                <img src="/Deep Datta.PNG" alt="Dr. Deep Datta" className="dr-portrait-fixed" />
-              </div>
-            </div>
-          </div>
-          <div className="io-ds-content animate animate-slide-right">
-            <h2>Save and Smile</h2>
-            <p>
-              Preventing severe tooth fractures with an inlay or onlay today can save you thousands of dollars in root canals or extractions tomorrow. We strive to provide elite preventative and restorative dentistry while maximizing your existing insurance benefits and offering interest-free payment solutions.
-            </p>
-            <Link to="/contact" className="btn-solid-orange">
-              Review Payment Options
-            </Link>
-          </div>
+  <div
+    className="io-dark-bg"
+    style={{ backgroundImage: "url('/Background.png')" }}
+  ></div>
+
+  <div className="io-dark-overlay"></div>
+
+  <div className="container io-dark-container">
+
+    {/* IMAGE */}
+    <div className="io-ds-image animate animate-slide-left">
+      <div className="frame-outer">
+        <div className="frame-inner">
+          <img
+            src="/Deep Datta.PNG"   // ✅ fixed (no space + lowercase)
+            alt="Dr. Deep Datta"
+            className="dr-portrait-fixed"
+          />
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* CONTENT */}
+    <div className="io-ds-content animate animate-slide-right">
+      <h2>Save and Smile</h2>
+
+      <p>
+        Preventing severe tooth fractures with an inlay or onlay today can save you thousands of dollars in root canals or extractions tomorrow. We strive to provide elite preventative and restorative dentistry while maximizing your existing insurance benefits and offering interest-free payment solutions.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* 4. WHY CHOOSE INLAYS/ONLAYS */}
 <section className="io-split-section bg-cream">
@@ -171,7 +183,7 @@ const InlaysOnlays = () => {
 
     <div className="io-split-image animate animate-slide-left">
       <img
-        src="/media__1774670112226.png"
+        src="/inlays-and-onlays-img.png"
         alt="Dentist Consultation"
         className="shaped-image"
       />
@@ -196,44 +208,40 @@ const InlaysOnlays = () => {
 </section>
 
       {/* 6. HEXAGONS SECTION */}
-      <section className="io-redefining bg-white">
-        <div className="container">
-          <h2>Conservative Dental Care</h2>
-          
-          <div className="io-ook-grid">
-            <div className="io-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    <path d="M12 21.23l-3.5-3.5"></path>
-                 </svg>
-              </div>
-              <h3>Preserve Enamel</h3>
-            </div>
-            <div className="io-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <rect x="2" y="8" width="20" height="8" rx="2" ry="2"></rect>
-                    <path d="M6 16v4"></path>
-                    <path d="M18 16v4"></path>
-                    <path d="M4 8V4h16v4"></path>
-                 </svg>
-              </div>
-              <h3>Painless Placement</h3>
-            </div>
-            <div className="io-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M12 21H8c-2 0-3.5-1-4-3L3 13c-.5-2 1-4 3-4s3.5 1 4 3 2 3 4 3 4-1 6-3 3-2 3 4l-1 5c-.5 2-2 3-4 3Z"></path>
-                    <path d="M18 5c1 1 1.5 2.5 1 4"></path>
-                    <path d="M14 6c.5 1.5 0 3-1 4"></path>
-                 </svg>
-              </div>
-              <h3>Aesthetic Fusion</h3>
-            </div>
-          </div>
+     <section className="io-redefining bg-white">
+  <div className="container">
+    
+    <h2 className="fade-up">Conservative Dental Care</h2>
+    
+    <div className="io-ook-grid">
+
+      {/* CARD 1 */}
+      <div className="io-ook-card animate delay-1">
+        <div className="hex-icon-vector">
+          <Leaf size={42} strokeWidth={1.5} />
         </div>
-      </section>
+        <h3>Preserve Enamel</h3>
+      </div>
+
+      {/* CARD 2 */}
+      <div className="io-ook-card animate delay-2">
+        <div className="hex-icon-vector">
+          <Smile size={42} strokeWidth={1.5} />
+        </div>
+        <h3>Painless Placement</h3>
+      </div>
+
+      {/* CARD 3 */}
+      <div className="io-ook-card animate delay-3">
+        <div className="hex-icon-vector">
+          <Sparkles size={42} strokeWidth={1.5} />
+        </div>
+        <h3>Aesthetic Fusion</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* 7. FAQ */}
       <FAQ faqsData={inlaysFaqs} customTitle="Questions? We've Got Answers!" />

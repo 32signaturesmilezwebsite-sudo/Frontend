@@ -9,24 +9,54 @@ import "./GeneralDentistry.css";
 
 const GeneralDentistry = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "General Dentist | 32 Signature Smilez";
-  }, []);
+  window.scrollTo(0, 0);
+  document.title = "General Dentist | 32 Signature Smilez";
+
+  // 🔥 select BOTH animation types
+  const elements = document.querySelectorAll(".fade-up, .animate");
+
+  const reveal = () => {
+    const trigger = window.innerHeight * 0.85;
+
+    elements.forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        el.classList.add("active");         // for fade-up
+        el.classList.add("animate-show");   // for slide animations
+      }
+    });
+  };
+
+  window.addEventListener("scroll", reveal);
+  reveal();
+
+  return () => window.removeEventListener("scroll", reveal);
+}, []);
 
   return (
     <div className="gd-wrapper">
       <Header />
 
       {/* 1. HERO SECTION */}
-      <section className="gd-hero">
-        <div className="gd-hero-bg" style={{ backgroundImage: "url('/istockphoto-510081750-612x612.jpg')" }}></div>
+       <section className="gd-hero">
+        <div
+          className="gd-hero-bg"
+          style={{ backgroundImage: "url('/istockphoto-510081750-612x612.jpg')" }}
+        ></div>
+
         <div className="container gd-hero-content">
-          <h1>32 Signature Smilez General Dentist</h1>
-          <p className="gd-hero-subtitle">Smile more, live more!</p>
-          <div className="gd-hero-buttons">
+          <h1 className="fade-up">32 Signature Smilez General Dentist</h1>
+
+          <p className="gd-hero-subtitle fade-up delay-1">
+            Smile more, live more!
+          </p>
+
+          <div className="gd-hero-buttons fade-up delay-2">
             <Link to="/contact" className="btn-solid-orange">
               Request Appointment
             </Link>
+
             <a href="tel:+919077770586" className="btn-outline-dark">
               Call: +91 90777 70586
             </a>
@@ -35,40 +65,68 @@ const GeneralDentistry = () => {
       </section>
 
       {/* 2. CENTERED TYPOGRAPHY BLOCK */}
-      <section className="gd-centered-text">
-        <div className="container gd-ct-container">
-          <h2>Caring for your oral health with a smile</h2>
-          <p>
-            We provide comprehensive general dental care for your entire family, in a comfortable and positive environment. Our doors are always open to new smiles, and we pride ourselves on creating a cozy, welcoming atmosphere.
-          </p>
-          <p>
-            As your trusted Agartala general dentist, Dr. Datta is dedicated to delivering personalized care and adapting to your unique needs. We get to know you and your teeth, so every treatment feels just right. Visit us and see for yourself! Call: <a href="tel:+919077770586" className="txt-orange">+91 90777 70586</a>.
-          </p>
-        </div>
-      </section>
+     <section className="gd-centered-text">
+  <div className="container gd-ct-container">
+    
+    <h2 className="fade-up">
+      Caring for your oral health with a smile
+    </h2>
+
+    <p className="fade-up delay-1">
+      We provide comprehensive general dental care for your entire family, in a comfortable and positive environment. Our doors are always open to new smiles, and we pride ourselves on creating a cozy, welcoming atmosphere.
+    </p>
+
+    <p className="fade-up delay-2">
+      As your trusted Agartala general dentist, Dr. Datta is dedicated to delivering personalized care and adapting to your unique needs. We get to know you and your teeth, so every treatment feels just right. Visit us and see for yourself! Call:{" "}
+      <a href="tel:+919077770586" className="txt-orange">
+        +91 90777 70586
+      </a>.
+    </p>
+
+  </div>
+</section>
 
       {/* 3. SAVE AND SMILE (Dark Section) */}
-      <section className="gd-dark-split">
-        <div className="gd-dark-bg" style={{ backgroundImage: "url('/Background.png')" }}></div>
-        <div className="gd-dark-overlay"></div>
-        <div className="container gd-dark-container">
-          <div className="gd-ds-image">
-             <img src="/Deep Datta.PNG" alt="Dr. Deep Datta" className="dr-portrait-fixed" />
-          </div>
-          <div className="gd-ds-content">
-            <h2>Save and Smile</h2>
-            <p>
-              At 32 Signature Smilez, we believe that your oral health shouldn't come with financial stress. 
-            </p>
-            <p>
-              We provide affordable general dentist services with flexible payment plans and work with various insurance providers. Ask our team about our payment options!
-            </p>
-            <Link to="/contact" className="btn-solid-orange">
-              Check My Insurance
-            </Link>
-          </div>
-        </div>
-      </section>
+     <section className="gd-dark-split">
+  <div
+    className="gd-dark-bg"
+    style={{ backgroundImage: "url('/Background.png')" }}
+  ></div>
+
+  <div className="gd-dark-overlay"></div>
+
+  <div className="container gd-dark-container">
+    
+    {/* IMAGE */}
+<div className="gd-ds-image animate animate-slide-left">
+  <div className="frame-outer">
+    <div className="frame-inner">
+      <img
+        src="/Deep Datta.PNG"
+        alt="Dr. Deep Datta"
+        className="dr-portrait-fixed"
+      />
+    </div>
+  </div>
+</div>
+
+    {/* CONTENT */}
+    <div className="gd-ds-content animate animate-slide-right">
+      <h2 className="fade-up">Save and Smile</h2>
+
+      <p className="fade-up delay-1">
+        At 32 Signature Smilez, we believe that your oral health shouldn't come with financial stress.
+      </p>
+
+      <p className="fade-up delay-2">
+        We provide affordable general dentist services with flexible payment plans and work with various insurance providers. Ask our team about our payment options!
+      </p>
+
+     
+    </div>
+
+  </div>
+</section>
 
       {/* 4. GENERAL DENTAL CARE (Grid) */}
       <section className="gd-treatments-grid-section bg-cream">

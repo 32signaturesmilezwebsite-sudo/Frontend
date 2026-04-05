@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="footer-nav-row main-nav">
             <Link to="/about">About</Link>
             <span className="line-divider">|</span>
-            <Link to="#">Services</Link>
+            <Link to="/services">Services</Link>
             <span className="line-divider">|</span>
             <Link to="/new-patients">New Patients</Link>
             <span className="line-divider">|</span>

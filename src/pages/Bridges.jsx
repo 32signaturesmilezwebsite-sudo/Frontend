@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import FAQ from "../components/FAQ";
 import "./Bridges.css";
+import { Heart, LayoutGrid, ShieldCheck } from "lucide-react";
 
 const bridgesFaqs = [
   {
@@ -29,29 +30,39 @@ const bridgesFaqs = [
 
 const Bridges = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Dental Bridges | 32 Signature Smilez";
+  window.scrollTo(0, 0);
+  document.title = "Dental Bridges | 32 Signature Smilez";
 
-    // Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.fade-up');
+  const fadeElements = document.querySelectorAll('.fade-up');
+  const animateElements = document.querySelectorAll('.animate');
 
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
 
-      revealElements.forEach((el) => {
-        const boxTop = el.getBoundingClientRect().top;
+    // Fade-up animation
+    fadeElements.forEach((el) => {
+      const boxTop = el.getBoundingClientRect().top;
 
-        if (boxTop < triggerBottom) {
-          el.classList.add('active');
-        }
-      });
-    };
+      if (boxTop < triggerBottom) {
+        el.classList.add('active');
+      }
+    });
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+    // Animate (your image + content)
+    animateElements.forEach((el) => {
+      const boxTop = el.getBoundingClientRect().top;
 
-    return () => window.removeEventListener('scroll', revealOnScroll);
-  }, []);
+      if (boxTop < triggerBottom) {
+        el.classList.add('animate-show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
+  return () => window.removeEventListener('scroll', revealOnScroll);
+}, []);
 
 
   return (
@@ -134,9 +145,7 @@ const Bridges = () => {
         Don't let financial anxiety prevent you from restoring missing teeth. Leaving a gap untreated can lead to bone loss and teeth shifting. At 32 Signature Smilez, we proudly accept numerous insurance layouts and offer flexible, interest-free payment models to protect your health.
       </p>
 
-      <Link to="/contact" className="btn-solid-orange">
-        Check My Insurance
-      </Link>
+      
     </div>
 
   </div>
@@ -177,7 +186,7 @@ const Bridges = () => {
 
     <div className="br-split-image animate animate-slide-right">
       <img
-        src="/media__1774513251008.jpg"
+        src="/Gemini_Generated_Image_b1jlfbb1jlfbb1jl.png"
         alt="Dentist checking patient"
         className="shaped-image"
       />
@@ -193,7 +202,7 @@ const Bridges = () => {
 
     <div className="br-split-image animate animate-slide-left">
       <img
-        src="/Missing Tooth.png"
+        src="/10921-dental-bridge.jpg"
         alt="Dental Model Bridge Check"
         className="shaped-image"
       />
@@ -219,43 +228,38 @@ const Bridges = () => {
 
       {/* 6. FEATURES (Hexagons) */}
       <section className="br-redefining bg-white">
-        <div className="container">
-          <h2>Advanced Restorative Dentistry</h2>
-          
-          <div className="br-ook-grid">
-            <div className="br-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    <path d="M12 21.23l-3.5-3.5"></path>
-                 </svg>
-              </div>
-              <h3>Tailored to You</h3>
-            </div>
-            <div className="br-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <rect x="2" y="8" width="20" height="8" rx="2" ry="2"></rect>
-                    <path d="M6 16v4"></path>
-                    <path d="M18 16v4"></path>
-                    <path d="M4 8V4h16v4"></path>
-                 </svg>
-              </div>
-              <h3>Seamless Fit</h3>
-            </div>
-            <div className="br-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M12 21H8c-2 0-3.5-1-4-3L3 13c-.5-2 1-4 3-4s3.5 1 4 3 2 3 4 3 4-1 6-3 3-2 3 4l-1 5c-.5 2-2 3-4 3Z"></path>
-                    <path d="M18 5c1 1 1.5 2.5 1 4"></path>
-                    <path d="M14 6c.5 1.5 0 3-1 4"></path>
-                 </svg>
-              </div>
-              <h3>Lasting Durability</h3>
-            </div>
-          </div>
+  <div className="container">
+    <h2 className="fade-up">Advanced Restorative Dentistry</h2>
+    
+    <div className="br-ook-grid">
+      
+      {/* CARD 1 */}
+      <div className="br-ook-card animate delay-1">
+        <div className="hex-icon-vector">
+          <Heart size={40} strokeWidth={1.5} />
         </div>
-      </section>
+        <h3>Tailored to You</h3>
+      </div>
+
+      {/* CARD 2 */}
+      <div className="br-ook-card animate delay-2">
+        <div className="hex-icon-vector">
+          <LayoutGrid size={40} strokeWidth={1.5} />
+        </div>
+        <h3>Seamless Fit</h3>
+      </div>
+
+      {/* CARD 3 */}
+      <div className="br-ook-card animate delay-3">
+        <div className="hex-icon-vector">
+          <ShieldCheck size={40} strokeWidth={1.5} />
+        </div>
+        <h3>Lasting Durability</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* 7. FAQ */}
       <FAQ faqsData={bridgesFaqs} customTitle="Questions? We've Got Answers!" />

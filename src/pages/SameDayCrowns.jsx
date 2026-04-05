@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import FAQ from "../components/FAQ";
 import "./SameDayCrowns.css";
+import { Cpu, Clock, ShieldCheck } from "lucide-react";
 
 const sameDayFaqs = [
   {
@@ -99,29 +100,43 @@ const SameDayCrowns = () => {
       </section>
 
       {/* 3. SAVE AND SMILE (Dark Section) */}
-      <section className="sd-dark-split">
-        <div className="sd-dark-bg" style={{ backgroundImage: "url('/Background.png')" }}></div>
-        <div className="sd-dark-overlay"></div>
-        <div className="container sd-dark-container">
-          <div className="sd-ds-image animate animate-slide-left">
-             
-            <div className="frame-outer">
-              <div className="frame-inner">
-                <img src="/Deep Datta.PNG" alt="Dr. Deep Datta" className="dr-portrait-fixed" />
-              </div>
-            </div>
-          </div>
-          <div className="sd-ds-content animate animate-slide-right">
-            <h2>Save and Smile</h2>
-            <p>
-              Experiencing the speed and luxury of same-day digital dentistry doesn't mean you have to stretch your budget. We believe advanced restorative care should be accessible, which is why we proudly partner with most major insurance panels and provide seamless financing options to protect your peace of mind.
-            </p>
-            <Link to="/contact" className="btn-solid-orange">
-              Explore Financing
-            </Link>
-          </div>
+      <section className="br-dark-split">
+  <div
+    className="br-dark-bg"
+    style={{ backgroundImage: "url('/Background.png')" }}
+  ></div>
+
+  <div className="br-dark-overlay"></div>
+
+  <div className="container br-dark-container">
+
+    {/* IMAGE */}
+    <div className="br-ds-image animate animate-slide-left">
+      <div className="frame-outer">
+        <div className="frame-inner">
+          <img
+            src="/Deep Datta.PNG"   // ✅ fixed name (no space + lowercase)
+            alt="Dr.Deep Datta"
+            className="dr-portrait-fixed"
+          />
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* CONTENT */}
+    <div className="br-ds-content animate animate-slide-right">
+      <h2>Save and Smile</h2>
+
+      <p>
+        Don't let financial anxiety prevent you from restoring missing teeth.
+        Leaving a gap untreated can lead to bone loss and teeth shifting.
+        At 32 Signature Smilez, we proudly accept numerous insurance layouts
+        and offer flexible, interest-free payment models to protect your health.
+      </p>
+    </div>
+
+  </div>
+</section>
 
      {/* 4. WHY CHOOSE */}
 <section className="sd-split-section bg-cream">
@@ -157,7 +172,7 @@ const SameDayCrowns = () => {
 
     <div className="sd-split-image animate animate-slide-right">
       <img
-        src="/media__1774675276734.png"
+        src="/Gemini_Generated_Image_dyze4vdyze4vdyze (1).png"
         alt="Dentist Reviewing Digital Scan"
         className="shaped-image"
       />
@@ -173,7 +188,7 @@ const SameDayCrowns = () => {
 
     <div className="sd-split-image animate animate-slide-left">
       <img
-        src="/Missing Tooth.png"
+        src="/same.png"
         alt="Digital Dental Milling"
         className="shaped-image"
       />
@@ -199,43 +214,39 @@ const SameDayCrowns = () => {
 
       {/* 6. FEATURES (Hexagons) */}
       <section className="sd-redefining bg-white">
-        <div className="container">
-          <h2>State-of-the-Art Restorative Care</h2>
-          
-          <div className="sd-ook-grid">
-            <div className="sd-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    <path d="M12 21.23l-3.5-3.5"></path>
-                 </svg>
-              </div>
-              <h3>Digital Accuracy</h3>
-            </div>
-            <div className="sd-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <rect x="2" y="8" width="20" height="8" rx="2" ry="2"></rect>
-                    <path d="M6 16v4"></path>
-                    <path d="M18 16v4"></path>
-                    <path d="M4 8V4h16v4"></path>
-                 </svg>
-              </div>
-              <h3>Single Visit</h3>
-            </div>
-            <div className="sd-ook-card">
-              <div className="hex-icon-vector">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c57b43" strokeWidth="1.2">
-                    <path d="M12 21H8c-2 0-3.5-1-4-3L3 13c-.5-2 1-4 3-4s3.5 1 4 3 2 3 4 3 4-1 6-3 3-2 3 4l-1 5c-.5 2-2 3-4 3Z"></path>
-                    <path d="M18 5c1 1 1.5 2.5 1 4"></path>
-                    <path d="M14 6c.5 1.5 0 3-1 4"></path>
-                 </svg>
-              </div>
-              <h3>Superior Strength</h3>
-            </div>
-          </div>
+  <div className="container">
+    
+    <h2 className="fade-up">State-of-the-Art Restorative Care</h2>
+    
+    <div className="sd-ook-grid">
+      
+      {/* CARD 1 */}
+      <div className="sd-ook-card animate delay-1">
+        <div className="hex-icon-vector">
+          <Cpu size={42} strokeWidth={1.5} />
         </div>
-      </section>
+        <h3>Digital Accuracy</h3>
+      </div>
+
+      {/* CARD 2 */}
+      <div className="sd-ook-card animate delay-2">
+        <div className="hex-icon-vector">
+          <Clock size={42} strokeWidth={1.5} />
+        </div>
+        <h3>Single Visit</h3>
+      </div>
+
+      {/* CARD 3 */}
+      <div className="sd-ook-card animate delay-3">
+        <div className="hex-icon-vector">
+          <ShieldCheck size={42} strokeWidth={1.5} />
+        </div>
+        <h3>Superior Strength</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* 7. FAQ */}
       <FAQ faqsData={sameDayFaqs} customTitle="Questions? We've Got Answers!" />

@@ -116,7 +116,7 @@ const ServicesGrid = () => {
           className="services-grid-action"
           variants={fadeUp}
         >
-          <Link to="/clinic" className="btn btn-primary">
+          <Link to="/services" className="btn btn-primary">
             More Services
           </Link>
         </motion.div>
