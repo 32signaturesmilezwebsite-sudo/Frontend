@@ -32,26 +32,37 @@ const familyFaqs = [
 
 const FamilyDentistry = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Family Dentistry | 32 Signature Smilez";
+  window.scrollTo(0, 0);
+  document.title = "Family Dentistry | 32 Signature Smilez";
 
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+          // fade-up elements
+          if (entry.target.classList.contains("fade-up")) {
             entry.target.classList.add("active");
-            obs.unobserve(entry.target);
           }
-        });
-      },
-      { threshold: 0.2 }
-    );
 
-    document
-      .querySelectorAll(".fade-up")
-      .forEach((el) => observer.observe(el));
-  }, []);
+          // general animations (cards, images, split sections)
+          if (entry.target.classList.contains("animate")) {
+            entry.target.classList.add("animate-show");
+          }
 
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // observe all animated elements
+  const elements = document.querySelectorAll(".fade-up, .animate");
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
 
   return (
     <div className="fam-wrapper">
@@ -125,7 +136,7 @@ const FamilyDentistry = () => {
       <div className="frame-outer">
         <div className="frame-inner">
           <img
-            src="/deep-datta.png"
+            src="/Deep Datta.PNG"
             alt="Dr. Deep Datta"
             className="dr-portrait-fixed"
           />
@@ -144,9 +155,7 @@ const FamilyDentistry = () => {
         covered seamlessly!
       </p>
 
-      <Link to="/contact" className="btn-solid-orange">
-        Explore Payment Options
-      </Link>
+      
     </div>
 
   </div>
@@ -189,7 +198,7 @@ const FamilyDentistry = () => {
 
     <div className="fam-split-image animate animate-slide-left">
       <img
-        src="/kids-dentistry.png"
+        src="/Gemini_Generated_Image_106trx106trx106t.png"
         alt="Happy dental patient"
         className="shaped-image img-zoom"
       />
@@ -204,7 +213,7 @@ const FamilyDentistry = () => {
 
     <div className="fam-split-image pr-large animate animate-slide-left">
       <img
-        src="/family-dental-exam.png"
+        src="/family-dentist-2104.jpg"
         alt="Family friendly dental exam"
         className="shaped-image img-zoom"
       />

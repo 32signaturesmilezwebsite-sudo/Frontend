@@ -191,7 +191,8 @@
   font-family: 'Georgia', serif;
 }
 
-.mega-menu-links li a:hover {
+.mega-menu-links li a:hover,
+.mega-menu-links li a.active {
   color: #c57b43;
 }
 

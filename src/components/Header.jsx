@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Calendar, Menu, X } from 'lucide-react';
 import './Header.css';
 
@@ -70,14 +70,14 @@ const Header = () => {
               <div className="mega-menu-col">
                 <h3 className="mega-col-title">About</h3>
                 <ul className="mega-menu-links">
-                  <li><Link to="/about" onClick={handleNavClick}>About Us</Link></li>
-                  <li><Link to="/problems-we-treat" onClick={handleNavClick}>Problems We Treat</Link></li>
-                  <li><Link to="/bad-breath" onClick={handleNavClick}>Bad Breath</Link></li>
+                  <li><NavLink to="/about" onClick={handleNavClick}>About Us</NavLink></li>
+                  <li><NavLink to="/problems-we-treat" onClick={handleNavClick}>Problems We Treat</NavLink></li>
+                  <li><NavLink to="/bad-breath" onClick={handleNavClick}>Bad Breath</NavLink></li>
                 </ul>
                 
                 <h3 className="mega-col-title" style={{marginTop: '40px'}}>New Patients</h3>
                 <ul className="mega-menu-links mb-4">
-                  <li><Link to="/new-patients" onClick={handleNavClick}>New Patient Info</Link></li>
+                  <li><NavLink to="/new-patients" onClick={handleNavClick}>New Patient Info</NavLink></li>
                   
                 </ul>
                 
@@ -90,20 +90,20 @@ const Header = () => {
               <div className="mega-menu-col">
                 <h3 className="mega-col-title">Cosmetic</h3>
                 <ul className="mega-menu-links">
-                  <li><Link to="/cosmetic-dentistry" onClick={handleNavClick}>Cosmetic Dentistry</Link></li>
-                  <li><Link to="/veneers" onClick={handleNavClick}>Veneers</Link></li>
-                  <li><Link to="/teeth-whitening" onClick={handleNavClick}>Teeth Whitening</Link></li>
-                  <li><Link to="/dental-bonding" onClick={handleNavClick}>Bonding</Link></li>
+                  <li><NavLink to="/cosmetic-dentistry" onClick={handleNavClick}>Cosmetic Dentistry</NavLink></li>
+                  <li><NavLink to="/veneers" onClick={handleNavClick}>Veneers</NavLink></li>
+                  <li><NavLink to="/teeth-whitening" onClick={handleNavClick}>Teeth Whitening</NavLink></li>
+                  <li><NavLink to="/dental-bonding" onClick={handleNavClick}>Bonding</NavLink></li>
                 </ul>
 
                 <h3 className="mega-col-title" style={{marginTop: '40px'}}>Restorative</h3>
                 <ul className="mega-menu-links">
-                  <li><Link to="/treatment/restorative" onClick={handleNavClick}>Restorative Dentistry</Link></li>
-                  <li><Link to="/treatment/bridges" onClick={handleNavClick}>Bridges</Link></li>
-                  <li><Link to="/dental-crowns" onClick={handleNavClick}>Traditional Crowns</Link></li>
-                  <li><Link to="/treatment/same-day-crowns" onClick={handleNavClick}>Same-Day Crowns</Link></li>
-                  <li><Link to="/treatment/implant-restoration" onClick={handleNavClick}>Implant Restoration</Link></li>
-                  <li><Link to="/treatment/inlays-onlays" onClick={handleNavClick}>Inlays Onlays</Link></li>
+                  <li><NavLink to="/treatment/restorative" onClick={handleNavClick}>Restorative Dentistry</NavLink></li>
+                  <li><NavLink to="/treatment/bridges" onClick={handleNavClick}>Bridges</NavLink></li>
+                  <li><NavLink to="/dental-crowns" onClick={handleNavClick}>Traditional Crowns</NavLink></li>
+                  <li><NavLink to="/treatment/same-day-crowns" onClick={handleNavClick}>Same-Day Crowns</NavLink></li>
+                  <li><NavLink to="/treatment/implant-restoration" onClick={handleNavClick}>Implant Restoration</NavLink></li>
+                  <li><NavLink to="/treatment/inlays-onlays" onClick={handleNavClick}>Inlays Onlays</NavLink></li>
                 </ul>
               </div>
 
@@ -111,20 +111,20 @@ const Header = () => {
               <div className="mega-menu-col">
                 <h3 className="mega-col-title">General</h3>
                 <ul className="mega-menu-links">
-                  <li><Link to="/treatment/general-dentistry" onClick={handleNavClick}>General Dentistry</Link></li>
-                  <li><Link to="/treatment/cleaning-exams" onClick={handleNavClick}>Cleaning & Exams</Link></li>
-                  <li><Link to="/treatment/fillings" onClick={handleNavClick}>Fillings</Link></li>
-                  <li><Link to="/treatment/mercury-filling-removal" onClick={handleNavClick}>Mercury Filling Removal</Link></li>
-                  <li><Link to="/treatment/sedation" onClick={handleNavClick}>Sedation</Link></li>
-                  <li><Link to="/treatment/family-dentistry" onClick={handleNavClick}>Family Dentistry</Link></li>
-                  <li><Link to="/treatment/pediatric-dentistry" onClick={handleNavClick}>Pediatric Dentistry</Link></li>
-                  <li><Link to="/treatment/emergency-dentistry" onClick={handleNavClick}>Emergency Dentistry</Link></li>
-                  <li><Link to="/treatment/mouthguards" onClick={handleNavClick}>Mouthguards</Link></li>
-                  <li><Link to="/treatment/sealants" onClick={handleNavClick}>Sealants</Link></li>
-                  <li><Link to="/treatment/gum-treatment" onClick={handleNavClick}>Gum Treatment</Link></li>
-                  <li><Link to="/treatment/fluoride-treatment" onClick={handleNavClick}>Fluoride Treatment</Link></li>
-                  <li><Link to="/treatment/tooth-extractions" onClick={handleNavClick}>Tooth Extractions</Link></li>
-                  <li><Link to="/treatment/special-needs-dentistry" onClick={handleNavClick}>Special Needs Dentistry</Link></li>
+                  <li><NavLink to="/treatment/general-dentistry" onClick={handleNavClick}>General Dentistry</NavLink></li>
+                  <li><NavLink to="/treatment/cleaning-exams" onClick={handleNavClick}>Cleaning & Exams</NavLink></li>
+                  <li><NavLink to="/treatment/fillings" onClick={handleNavClick}>Fillings</NavLink></li>
+                  <li><NavLink to="/treatment/mercury-filling-removal" onClick={handleNavClick}>Mercury Filling Removal</NavLink></li>
+                  <li><NavLink to="/treatment/sedation" onClick={handleNavClick}>Sedation</NavLink></li>
+                  <li><NavLink to="/treatment/family-dentistry" onClick={handleNavClick}>Family Dentistry</NavLink></li>
+                  <li><NavLink to="/treatment/pediatric-dentistry" onClick={handleNavClick}>Pediatric Dentistry</NavLink></li>
+                  <li><NavLink to="/treatment/emergency-dentistry" onClick={handleNavClick}>Emergency Dentistry</NavLink></li>
+                  <li><NavLink to="/treatment/mouthguards" onClick={handleNavClick}>Mouthguards</NavLink></li>
+                  <li><NavLink to="/treatment/sealants" onClick={handleNavClick}>Sealants</NavLink></li>
+                  <li><NavLink to="/treatment/gum-treatment" onClick={handleNavClick}>Gum Treatment</NavLink></li>
+                  <li><NavLink to="/treatment/fluoride-treatment" onClick={handleNavClick}>Fluoride Treatment</NavLink></li>
+                  <li><NavLink to="/treatment/tooth-extractions" onClick={handleNavClick}>Tooth Extractions</NavLink></li>
+                  <li><NavLink to="/treatment/special-needs-dentistry" onClick={handleNavClick}>Special Needs Dentistry</NavLink></li>
                 </ul>
               </div>
 

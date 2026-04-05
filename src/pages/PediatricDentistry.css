@@ -12,20 +12,31 @@
 .ped-ct-container h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 40px; }
 .ped-ct-container p { font-family: 'Georgia', serif; font-size: 1.25rem; line-height: 1.8; color: #4a5568; margin-bottom: 30px; }
 
+/* ============================= */
 /* SECTION */
+/* ============================= */
+
 .ped-split-section {
   padding: 100px 20px;
   overflow: hidden;
 }
 
+/* ============================= */
 /* LAYOUT */
+/* ============================= */
+
 .ped-split-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
 
 .ped-split-content {
   flex: 1;
@@ -39,15 +50,20 @@
   color: #3b4657;
   margin-bottom: 25px;
 
-  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
 .ped-split-content h2:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   letter-spacing: 1px;
 }
 
+/* ============================= */
 /* BULLETS */
+/* ============================= */
+
 .ped-bullet-list {
   padding-left: 25px;
   margin-bottom: 30px;
@@ -56,22 +72,33 @@
 .ped-bullet-list li {
   font-family: 'Georgia', serif;
   font-size: 1.15rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: #4a5568;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s cubic-bezier(.2,.65,.3,1);
 }
 
+/* hover */
 .ped-bullet-list li:hover {
-  transform: translateX(6px);
+  transform: translateX(8px);
+  color: #2d3748;
 }
 
+/* ============================= */
 /* IMAGE */
+/* ============================= */
+
 .ped-split-image {
   flex: 1;
   display: flex;
   justify-content: center;
+
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.9s cubic-bezier(.2,.65,.3,1);
 }
 
 /* IMAGE STYLE */
@@ -81,12 +108,12 @@
   border-radius: 20px;
 
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
 }
 
 .shaped-image:hover {
-  transform: scale(1.05) translateY(-8px);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+  transform: scale(1.06) translateY(-10px);
+  box-shadow: 0 45px 90px rgba(0,0,0,0.25);
 }
 
 /* ============================= */
@@ -104,20 +131,14 @@
   transform: translateY(0);
 }
 
-/* STAGGER */
-.delay-1 { transition-delay: 0.15s; }
-.delay-2 { transition-delay: 0.3s; }
-.delay-3 { transition-delay: 0.45s; }
-.delay-4 { transition-delay: 0.6s; }
-
 /* ============================= */
-/* SLIDE ANIMATION */
+/* ANIMATE SYSTEM */
 /* ============================= */
 
 .animate {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 0.8s cubic-bezier(.2,.65,.3,1);
 }
 
 .animate-show {
@@ -125,6 +146,7 @@
   transform: translateY(0);
 }
 
+/* SLIDE */
 .animate-slide-left {
   transform: translateX(-60px);
 }
@@ -136,6 +158,29 @@
 .animate-show.animate-slide-left,
 .animate-show.animate-slide-right {
   transform: translateX(0) translateY(0);
+}
+
+/* ============================= */
+/* STAGGER (UPDATED FOR 6 ITEMS) */
+/* ============================= */
+
+.ped-split-content.fade-up.active h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.ped-split-content.fade-up.active li:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.25s; }
+.ped-split-content.fade-up.active li:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.ped-split-content.fade-up.active li:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.55s; }
+.ped-split-content.fade-up.active li:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
+.ped-split-content.fade-up.active li:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.85s; }
+.ped-split-content.fade-up.active li:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 1s; }
+
+.ped-split-image.animate-show {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
 }
 
 /* ============================= */
@@ -151,8 +196,15 @@
   .ped-bullet-list {
     text-align: left;
   }
+
+  .ped-split-image {
+    transform: translateY(40px);
+  }
 }
 
+/* ============================= */
+/* DARK SPLIT */
+/* ============================= */
 .ped-dark-split { position: relative; background-color: #1a1a1a; color: #ffffff; }
 .ped-dark-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center bottom; background-repeat: no-repeat; opacity: 0.7; z-index: 1; }
 .ped-dark-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(33, 41, 33, 0.4), rgba(10, 15, 10, 0.9)); z-index: 2; }
