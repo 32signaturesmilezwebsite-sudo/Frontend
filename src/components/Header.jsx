@@ -125,6 +125,8 @@ const Header = () => {
                   <li><NavLink to="/treatment/fluoride-treatment" onClick={handleNavClick}>Fluoride Treatment</NavLink></li>
                   <li><NavLink to="/treatment/tooth-extractions" onClick={handleNavClick}>Tooth Extractions</NavLink></li>
                   <li><NavLink to="/treatment/special-needs-dentistry" onClick={handleNavClick}>Special Needs Dentistry</NavLink></li>
+                  <li><NavLink to="/treatment/maxillofacial-surgery" onClick={handleNavClick}>Maxillofacial Surgery</NavLink></li>
+                  <li><NavLink to="/treatment/minor-oral-surgery" onClick={handleNavClick}>Minor Oral Surgery</NavLink></li>
                 </ul>
               </div>
 

@@ -12,62 +12,99 @@
 .gum-ct-container h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #3b4657; margin-bottom: 40px; }
 .gum-ct-container p { font-family: 'Georgia', serif; font-size: 1.25rem; line-height: 1.8; color: #4a5568; margin-bottom: 30px; }
 
+/* ============================= */
 /* SECTION */
+/* ============================= */
 .gum-split-section {
-  padding: 100px 20px;
+  padding: 110px 20px;
   overflow: hidden;
+  background: #f7f4ef; /* subtle cream enhancement */
 }
 
+/* ============================= */
 /* LAYOUT */
+/* ============================= */
 .gum-split-container {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 70px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .gum-split-content {
   flex: 1;
+  max-width: 620px; /* better readability */
 }
 
+/* ============================= */
 /* TITLE */
+/* ============================= */
 .gum-split-content h2 {
   font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   font-weight: 700;
   color: #3b4657;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   transition: all 0.4s ease;
 }
 
 .gum-split-content h2:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   letter-spacing: 1px;
 }
 
-/* BULLETS */
-.gum-bullet-list {
-  padding-left: 25px;
+/* ============================= */
+/* INTRO PARAGRAPH */
+/* ============================= */
+.gum-intro {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #4a5568;
   margin-bottom: 30px;
+
+  background: rgba(255, 255, 255, 0.6);
+  padding: 18px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* ============================= */
+/* BULLETS */
+/* ============================= */
+.gum-bullet-list {
+  padding-left: 20px;
+  margin-bottom: 40px;
 }
 
 .gum-bullet-list li {
   font-family: 'Georgia', serif;
   font-size: 1.15rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: #4a5568;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 14px 16px;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.gum-bullet-list li strong {
+  color: #3b4657;
 }
 
 .gum-bullet-list li:hover {
-  transform: translateX(6px);
+  transform: translateX(8px);
+  background: rgba(255, 255, 255, 0.8);
 }
 
+/* ============================= */
 /* IMAGE */
+/* ============================= */
 .gum-split-image {
   flex: 1;
   display: flex;
@@ -77,22 +114,21 @@
 /* IMAGE STYLE */
 .shaped-image {
   width: 100%;
-  max-width: 480px;
-  border-radius: 20px;
+  max-width: 500px;
+  border-radius: 22px;
 
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
   transition: all 0.4s ease;
 }
 
 .shaped-image:hover {
-  transform: scale(1.05) translateY(-8px);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+  transform: scale(1.06) translateY(-10px);
+  box-shadow: 0 45px 90px rgba(0,0,0,0.25);
 }
 
 /* ============================= */
 /* SCROLL REVEAL */
 /* ============================= */
-
 .fade-up {
   opacity: 0;
   transform: translateY(50px);
@@ -109,11 +145,12 @@
 .delay-2 { transition-delay: 0.3s; }
 .delay-3 { transition-delay: 0.45s; }
 .delay-4 { transition-delay: 0.6s; }
+.delay-5 { transition-delay: 0.75s; }
+.delay-6 { transition-delay: 0.9s; }
 
 /* ============================= */
 /* SLIDE ANIMATION */
 /* ============================= */
-
 .animate {
   opacity: 0;
   transform: translateY(40px);
@@ -141,7 +178,6 @@
 /* ============================= */
 /* MOBILE */
 /* ============================= */
-
 @media (max-width: 900px) {
   .gum-split-container {
     flex-direction: column;
@@ -150,6 +186,10 @@
 
   .gum-bullet-list {
     text-align: left;
+  }
+
+  .gum-split-content {
+    max-width: 100%;
   }
 }
 

@@ -35,7 +35,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: 'Outfit', sans-serif;
   color: var(--text-main);
   background-color: var(--bg-main);
@@ -206,5 +206,80 @@ button {
 @media (max-width: 900px) {
   .pr-large {
     padding-right: 0;
+  }
+}
+
+/* ============================= */
+/* 🖼️ GLOBAL PREMIUM FRAME */
+/* ============================= */
+
+.frame-outer {
+  position: relative;
+  width: 420px;
+  aspect-ratio: 1 / 1;
+  padding: 14px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+}
+
+/* inner white frame */
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.frame-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dr-portrait-fixed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* hover */
+.frame-outer:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.25);
+}
+
+/* glow */
+.frame-outer::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  z-index: -1;
+}
+
+@media (max-width: 900px) {
+  .frame-outer {
+    width: 320px;
   }
 }
