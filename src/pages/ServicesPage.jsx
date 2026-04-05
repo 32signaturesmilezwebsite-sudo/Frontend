@@ -42,7 +42,7 @@ const ServicesPage = () => {
       id: 1,
       title: 'Stay One Step Ahead',
       desc: 'Revitalize your teeth with our thorough checkups and cleanings, leaving your pearly whites shining like a diamond.',
-      image: '/Cleaning-Exams.png',
+      image: '/dental-cleaning.webp',
       link: '/treatment/cleaning-exams',
       linkText: 'See Cleanings'
     },
@@ -50,7 +50,7 @@ const ServicesPage = () => {
       id: 2,
       title: 'Traditional Crowns',
       desc: 'Meticulously crafted to restore your tooth\'s strength and beauty — goodbye damaged teeth, hello healthy smile!',
-      image: '/Traditional-Crowns.png',
+      image: '/understanding-dental-crowns-and-bridges-what-they-are-and-how-they-work.jpg',
       link: '/dental-crowns',
       linkText: 'See Crowns'
     },
@@ -58,7 +58,7 @@ const ServicesPage = () => {
       id: 3,
       title: 'Dental Bridges',
       desc: 'Our dental bridges seamlessly fill spaces left by missing teeth, giving you a complete and confident smile.',
-      image: '/Dental-Bridges.png',
+      image: '/dental-bridge.jpg',
       link: '/treatment/bridges',
       linkText: 'See Bridges'
     },
@@ -66,7 +66,7 @@ const ServicesPage = () => {
       id: 4,
       title: 'Same-Day Crowns',
       desc: 'Witness the transformation as we restore your smile to its former glory with CEREC same-day crowns that blend artistry and efficiency.',
-      image: '/Same-Day-Crowns.png',
+      image: '/what-are-same-day-crowns (1).png',
       link: '/treatment/same-day-crowns',
       linkText: 'See CEREC Crowns'
     },
@@ -74,7 +74,7 @@ const ServicesPage = () => {
       id: 5,
       title: 'Implant Restorations',
       desc: 'Our expert team will restore your implant with precision, providing a natural-looking tooth that renews your confidence.',
-      image: '/Implant-Restoration.png',
+      image: '/dental-implant-in-gumline.webp',
       link: '/treatment/implant-restoration',
       linkText: 'See Restorations'
     },
@@ -82,7 +82,7 @@ const ServicesPage = () => {
       id: 6,
       title: 'Nitrous Oxide',
       desc: 'Forget about dental anxiety — enjoy a relaxed dental experience while we work our magic with nitrous oxide sedation.',
-      image: '/Nitrous-Oxide.png',
+      image: '/shutterstock_1573121605+(1).webp',
       link: '/treatment/sedation',
       linkText: 'See Sedation'
     },
@@ -178,7 +178,7 @@ const ServicesPage = () => {
             <div className="frame-outer">
               <div className="frame-inner">
                 <img
-                  src="/DRN_0707.jpg"
+                  src="/Deep Datta.PNG"
                   alt="Save and Smile"
                   className="dr-portrait-fixed"
                 />
