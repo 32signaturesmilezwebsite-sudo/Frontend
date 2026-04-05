@@ -129,87 +129,89 @@ const GeneralDentistry = () => {
 </section>
 
       {/* 4. GENERAL DENTAL CARE (Grid) */}
-      <section className="gd-treatments-grid-section bg-cream">
-        <div className="container">
-          <h2 className="gd-section-title">General Dental Care</h2>
-          <div className="gd-grid">
-            
-            {/* Card 1: Cleanings */}
-            <div className="gd-card">
-              <div className="gd-card-img-wrapper">
-                <img src="/media__1774675904915.png" alt="Cleanings & Exams" />
-              </div>
-              <div className="gd-card-text">
-                <h3>Cleanings & Exams</h3>
-                <p>Regular cleanings and exams are key for maintaining your teeth in tip-top shape. Our gentle preventative approach will help keep cavities away.</p>
-                <Link to="/treatment/cleaning-exams" className="gd-action-link">See Cleanings</Link>
-              </div>
-            </div>
+     <section className="gd-treatments-grid-section bg-cream">
+  <div className="container">
+    
+    {/* TITLE */}
+    <h2 className="gd-section-title fade-up">General Dental Care</h2>
 
-            {/* Card 2: Fillings */}
-            <div className="gd-card">
-              <div className="gd-card-img-wrapper">
-                <img src="/media__1774513251008.jpg" alt="Dental Fillings" />
-              </div>
-              <div className="gd-card-text">
-                <h3>Dental Fillings</h3>
-                <p>We use high-quality materials for fillings. This makes them last longer and matches the natural color of your teeth for a seamless restoration.</p>
-                <Link to="/treatment/fillings" className="gd-action-link">See Fillings</Link>
-              </div>
-            </div>
-
-            {/* Card 3: Crowns */}
-            <div className="gd-card">
-              <div className="gd-card-img-wrapper">
-                <img src="/Missing Tooth.png" alt="Traditional Crowns" />
-              </div>
-              <div className="gd-card-text">
-                <h3>Traditional Crowns</h3>
-                <p>Don't hide your smile. Our crowns restore the strength and appearance of damaged teeth, crafted with precision for a perfect bite.</p>
-                <Link to="/dental-crowns" className="gd-action-link">See Crowns</Link>
-              </div>
-            </div>
-
-            {/* Card 4: Emergency */}
-            <div className="gd-card">
-              <div className="gd-card-img-wrapper">
-                <img src="/Teeth Grinding.png" alt="Emergency Care" />
-              </div>
-              <div className="gd-card-text">
-                <h3>Emergency Care</h3>
-                <p>Dental emergency? Rely on us for quick, compassionate care to address your needs effectively. Same-day appointments are available!</p>
-                <Link to="/treatment/emergency-dentistry" className="gd-action-link">See Emergency Care</Link>
-              </div>
-            </div>
-
-            {/* Card 5: Family Dentistry */}
-            <div className="gd-card">
-              <div className="gd-card-img-wrapper">
-                <img src="/Kids-Dentistry.png" alt="Family Dentistry" />
-              </div>
-              <div className="gd-card-text">
-                <h3>Family Dentistry</h3>
-                <p>As a family-focused general dentist, we offer comprehensive care for all ages. We help your family's smiles stay healthy and bright!</p>
-                <Link to="/treatment/family-dentistry" className="gd-action-link">See Family Care</Link>
-              </div>
-            </div>
-
-            {/* Card 6: Sedation */}
-            <div className="gd-card">
-              <div className="gd-card-img-wrapper">
-                <img src="/media__1774675276734.png" alt="Nitrous Oxide" />
-              </div>
-              <div className="gd-card-text">
-                <h3>Nitrous Oxide</h3>
-                <p>Dental anxiety? We offer nitrous oxide sedation — a safe, effective way to help you unwind during dental procedures.</p>
-                <Link to="/treatment/sedation" className="gd-action-link">See Sedation</Link>
-              </div>
-            </div>
-
-          </div>
+    <div className="gd-grid">
+      
+      {/* Card 1 */}
+      <div className="gd-card animate">
+        <div className="gd-card-img-wrapper">
+          <img src="/Gemini_Generated_Image_p5ogtpp5ogtpp5og.png" alt="Cleanings & Exams" />
         </div>
-      </section>
+        <div className="gd-card-text">
+          <h3>Cleanings & Exams</h3>
+          <p>Regular cleanings and exams are key for maintaining your teeth in tip-top shape.</p>
+          <Link to="/treatment/cleaning-exams" className="gd-action-link">See Cleanings →</Link>
+        </div>
+      </div>
 
+      {/* Card 2 */}
+      <div className="gd-card animate">
+        <div className="gd-card-img-wrapper">
+          <img src="/media__1774513251008.jpg" alt="Dental Fillings" />
+        </div>
+        <div className="gd-card-text">
+          <h3>Dental Fillings</h3>
+          <p>We use high-quality materials for fillings for a seamless restoration.</p>
+          <Link to="/treatment/fillings" className="gd-action-link">See Fillings →</Link>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="gd-card animate">
+        <div className="gd-card-img-wrapper">
+          <img src="/Missing Tooth.png" alt="Traditional Crowns" />
+        </div>
+        <div className="gd-card-text">
+          <h3>Traditional Crowns</h3>
+          <p>Restore strength and appearance of damaged teeth.</p>
+          <Link to="/dental-crowns" className="gd-action-link">See Crowns →</Link>
+        </div>
+      </div>
+
+      {/* Card 4 */}
+      <div className="gd-card animate">
+        <div className="gd-card-img-wrapper">
+          <img src="/Teeth Grinding.png" alt="Emergency Care" />
+        </div>
+        <div className="gd-card-text">
+          <h3>Emergency Care</h3>
+          <p>Quick, compassionate same-day dental care when you need it.</p>
+          <Link to="/treatment/emergency-dentistry" className="gd-action-link">See Emergency →</Link>
+        </div>
+      </div>
+
+      {/* Card 5 */}
+      <div className="gd-card animate">
+        <div className="gd-card-img-wrapper">
+          <img src="/Kids-Dentistry.png" alt="Family Dentistry" />
+        </div>
+        <div className="gd-card-text">
+          <h3>Family Dentistry</h3>
+          <p>Comprehensive care for all ages to keep smiles healthy.</p>
+          <Link to="/treatment/family-dentistry" className="gd-action-link">See Family Care →</Link>
+        </div>
+      </div>
+
+      {/* Card 6 */}
+      <div className="gd-card animate">
+        <div className="gd-card-img-wrapper">
+          <img src="/Gemini_Generated_Image_xsga3sxsga3sxsga.png" alt="Nitrous Oxide" />
+        </div>
+        <div className="gd-card-text">
+          <h3>Nitrous Oxide</h3>
+          <p>A safe, effective way to reduce dental anxiety.</p>
+          <Link to="/treatment/sedation" className="gd-action-link">See Sedation →</Link>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* 5. EMERGENCY CALLOUT */}
       <section className="gd-emergency-section bg-white">
         <div className="container">

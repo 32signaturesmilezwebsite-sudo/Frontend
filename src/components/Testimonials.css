@@ -200,16 +200,37 @@
 
 @media (max-width: 768px) {
   .testimonials-title {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
   }
   .testimonial-slider-area {
-    gap: 10px;
+    position: relative;
+    gap: 0;
   }
   .slider-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 35px;
     height: 35px;
+    z-index: 2;
+  }
+  .slider-nav-btn.prev {
+    left: -15px;
+  }
+  .slider-nav-btn.next {
+    right: -15px;
   }
   .testimonial-bubble {
-    padding: 25px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0 10px; /* Slight margin so bubble doesn't touch screen edge */
+    min-height: 200px;
+  }
+  .testimonial-bubble::after {
+    left: 40px; /* Adjust tail position */
+  }
+  .testimonial-text {
+    font-size: 0.95rem; /* Better fit for small screens */
   }
 }

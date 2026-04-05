@@ -143,15 +143,14 @@ button {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: #fdf6f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-gold);
+  background: #c57b43;
   border-radius: 5px;
-  box-shadow: 0 0 6px var(--neon-glow);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-gold-hover);
+  background: #aa6a39;
 }
 
 /* Global Mobile Responsiveness */

@@ -78,8 +78,7 @@ const Header = () => {
                 <h3 className="mega-col-title" style={{marginTop: '40px'}}>New Patients</h3>
                 <ul className="mega-menu-links mb-4">
                   <li><Link to="/new-patients" onClick={handleNavClick}>New Patient Info</Link></li>
-                  <li><Link to="#" onClick={handleNavClick}>Payment Options</Link></li>
-                  <li><Link to="#" onClick={handleNavClick}>Refer a Friend</Link></li>
+                  
                 </ul>
                 
                 <div className="menu-btn-wrapper">

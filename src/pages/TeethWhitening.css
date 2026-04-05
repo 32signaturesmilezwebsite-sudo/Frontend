@@ -732,7 +732,12 @@
   .tw-ds-image { padding-top: 0; justify-content: center; }
 
   .tw-ook-grid { gap: 20px; }
-  .tw-ook-card { width: 240px; height: 230px; }
+  .tw-ook-card { 
+    min-width: unset;
+    width: 100%;
+    max-width: 400px; 
+    padding: 50px 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -741,7 +746,17 @@
     font-size: 2.5rem;
   }
 
-  .tw-ook-card { width: 200px; height: 200px; }
+  .tw-ook-card {
+    padding: 40px 15px;
+    clip-path: polygon(
+      50% 0%,
+      100% 6%,
+      100% 94%,
+      50% 100%,
+      0%  94%,
+      0%  6%
+    ); /* Less aggressive cut on small screens */
+  }
 }
 /* ======================================
    SHARED: SCROLL ANIMATIONS & PREMIUM FRAME

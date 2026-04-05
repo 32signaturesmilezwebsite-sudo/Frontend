@@ -310,7 +310,8 @@
 /* BULLET LIST (UPGRADED) */
 /* ============================= */
 .ir-bullet-list {
-  list-style: none;   /* ✅ removes default bullets */
+  list-style-type: none !important;   /* ✅ overrides global index.css disc !important */
+  list-style: none;
   padding: 0;         /* ✅ removes extra left spacing */
   margin-bottom: 30px;
 }
