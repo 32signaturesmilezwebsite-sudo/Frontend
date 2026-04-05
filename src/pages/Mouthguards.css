@@ -47,10 +47,22 @@
   letter-spacing: 1px;
 }
 
+.mg-intro, .mg-split-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+.pr-large {
+  padding-right: 40px;
+}
+
 /* BULLETS */
 .mg-bullet-list {
-  padding-left: 25px;
-  margin-bottom: 30px;
+  padding-left: 20px;
+  margin-bottom: 40px;
 }
 
 .mg-bullet-list li {
@@ -58,9 +70,13 @@
   font-size: 1.15rem;
   line-height: 1.7;
   color: #4a5568;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 
   transition: transform 0.3s ease;
+}
+
+.mg-bullet-list li strong {
+  color: #3b4657; /* give strong tags a darker sophisticated slate */
 }
 
 .mg-bullet-list li:hover {
