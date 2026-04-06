@@ -80,16 +80,7 @@ const AdminDashboard = () => {
           <h2>32 Signature Smilez</h2>
           <span>Admin Panel - Appointments</span>
         </div>
-        <div style={{display: 'flex', gap: '15px'}}>
-          <Link to="/admin/blogs" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
-             Blogs
-          </Link>
-          <Link to="/admin/gallery" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
-             Clinic Gallery
-          </Link>
-          <Link to="/admin/reviews" className="btn-dark" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
-             Reviews
-          </Link>
+        <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
           <button onClick={logout} className="logout-btn">
             <LogOut size={18} /> Logout
           </button>
@@ -138,24 +129,30 @@ const AdminDashboard = () => {
                 <tr>
                   <th>Date</th>
                   <th>Patient Name</th>
-                  <th>Phone</th>
-                  <th>Location (State/City/Clinic)</th>
+                  <th>Contact Info</th>
+                  <th>Message / Request</th>
                   <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 {appointments.map((apt) => (
                   <tr key={apt._id}>
-                    <td>{new Date(apt.createdAt).toLocaleString()}</td>
+                    <td>
+                      {new Date(apt.createdAt).toLocaleDateString()}
+                      <br/>
+                      <span className="sub-text">{new Date(apt.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                    </td>
                     <td><strong>{apt.firstName} {apt.lastName}</strong></td>
-                    <td>{apt.phone}<br/><span className="sub-text">{apt.email}</span></td>
-                    <td>{apt.state} - {apt.city}<br/><span className="sub-text">{apt.location}</span></td>
+                    <td>
+                      {apt.phone}
+                      <br/>
+                      <span className="sub-text">{apt.email}</span>
+                    </td>
+                    <td className="msg-cell">{apt.message || <span className="sub-text">No message provided...</span>}</td>
                     <td>
                       <button 
                         onClick={() => toggleStatus(apt._id, apt.status || 'Pending')}
                         className={`status-badge ${apt.status && apt.status.toLowerCase() === 'approved' ? 'approved' : 'pending'}`}
-                        style={{cursor: 'pointer', border: 'none'}}
-                        title="Click to toggle status"
                       >
                         {apt.status || 'Pending'}
                       </button>
