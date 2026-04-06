@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { LogOut, Calendar, Users, Activity } from 'lucide-react';
+import { LogOut, Calendar, Users, Activity, CheckCircle, Clock, Phone, Mail } from 'lucide-react';
 import './AdminStyles.css';
 
 const AdminDashboard = () => {
@@ -144,16 +144,24 @@ const AdminDashboard = () => {
                     </td>
                     <td><strong>{apt.firstName} {apt.lastName}</strong></td>
                     <td>
-                      {apt.phone}
+                      <a href={`tel:${apt.phone}`} className="contact-link phone-link">
+                        <Phone size={13} style={{ marginRight: '6px' }} />
+                        {apt.phone}
+                      </a>
                       <br/>
-                      <span className="sub-text">{apt.email}</span>
+                      <a href={`mailto:${apt.email}`} className="sub-text contact-link email-link">
+                        <Mail size={12} style={{ marginRight: '6px' }} />
+                        {apt.email}
+                      </a>
                     </td>
                     <td className="msg-cell">{apt.message || <span className="sub-text">No message provided...</span>}</td>
                     <td>
                       <button 
                         onClick={() => toggleStatus(apt._id, apt.status || 'Pending')}
                         className={`status-badge ${apt.status && apt.status.toLowerCase() === 'approved' ? 'approved' : 'pending'}`}
+                        title="Click to toggle status"
                       >
+                        {apt.status && apt.status.toLowerCase() === 'approved' ? <CheckCircle size={14}/> : <Clock size={14}/>}
                         {apt.status || 'Pending'}
                       </button>
                     </td>

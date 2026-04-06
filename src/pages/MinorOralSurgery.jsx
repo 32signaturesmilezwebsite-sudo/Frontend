@@ -16,6 +16,46 @@ const faqs = [
   { 
     question: "How long is the recovery?", 
     answer: "Recovery depends entirely on the specific procedure, but for minor surgeries like uncomplicated extractions or biopsies, it typically ranges from a few days to a couple of weeks for full mucosal healing." 
+  },
+  { 
+    question: "What is considered minor oral surgery?", 
+    answer: "Minor oral surgery includes procedures like tooth extractions, wisdom tooth removal, cyst removal, biopsies, and minor gum surgeries performed under local anesthesia." 
+  },
+  { 
+    question: "Do I need to prepare before the procedure?", 
+    answer: "Preparation is usually minimal. We may advise you to eat lightly beforehand (unless sedation is planned) and inform us about any medications or medical conditions." 
+  },
+  { 
+    question: "Will there be swelling after the procedure?", 
+    answer: "Mild swelling is normal and usually peaks within 24–48 hours. Applying ice packs and following post-operative instructions helps reduce it quickly." 
+  },
+  { 
+    question: "Is bleeding normal after surgery?", 
+    answer: "Slight bleeding or oozing is normal for the first few hours. We provide gauze and clear instructions to manage it effectively." 
+  },
+  { 
+    question: "What should I eat after minor oral surgery?", 
+    answer: "Soft foods like yogurt, smoothies, soups, and mashed items are recommended for the first few days to avoid disturbing the surgical site." 
+  },
+  { 
+    question: "When can I brush my teeth again?", 
+    answer: "You can resume gentle brushing the next day, avoiding the surgical area initially. Maintaining oral hygiene is important for faster healing." 
+  },
+  { 
+    question: "Can I go back to work the same day?", 
+    answer: "Most patients can return to normal activities within 24 hours, depending on the procedure and individual comfort level." 
+  },
+  { 
+    question: "Are stitches always required?", 
+    answer: "Not always. Some procedures require dissolvable stitches, while others heal naturally without sutures." 
+  },
+  { 
+    question: "Are there any risks involved?", 
+    answer: "Minor oral surgeries are very safe, but like any procedure, there can be minimal risks such as infection, swelling, or delayed healing, which we carefully manage." 
+  },
+  { 
+    question: "How do I care for the surgical site?", 
+    answer: "We provide detailed aftercare instructions including avoiding rinsing for 24 hours, maintaining oral hygiene, taking prescribed medications, and avoiding smoking or using straws." 
   }
 ];
 

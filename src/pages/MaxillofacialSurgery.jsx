@@ -16,9 +16,48 @@ const faqs = [
   { 
     question: "How long is the recovery?", 
     answer: "Recovery depends entirely on the specific procedure, but typically ranges from a few days for minor surgeries to a couple of weeks for full healing and swelling reduction in complex procedures." 
+  },
+  { 
+    question: "What is maxillofacial surgery?", 
+    answer: "Maxillofacial surgery is a specialized field that focuses on treating conditions related to the face, jaw, mouth, and neck. It includes procedures like wisdom tooth removal, jaw correction, facial trauma repair, and dental implants." 
+  },
+  { 
+    question: "When do I need maxillofacial surgery?", 
+    answer: "You may need maxillofacial surgery if you have impacted teeth, jaw misalignment, facial injuries, cysts, tumors, or require dental implants or corrective jaw surgery." 
+  },
+  { 
+    question: "Will I be put to sleep during the surgery?", 
+    answer: "Depending on the complexity of the procedure, we offer local anesthesia, sedation, or general anesthesia to ensure maximum comfort and safety during treatment." 
+  },
+  { 
+    question: "How long does the surgery take?", 
+    answer: "The duration varies depending on the procedure. Simple procedures may take 30–60 minutes, while more complex surgeries can take several hours." 
+  },
+  { 
+    question: "Are there any risks involved?", 
+    answer: "Like any surgical procedure, there are minimal risks such as swelling, bleeding, or infection. However, we follow strict safety protocols to minimize complications." 
+  },
+  { 
+    question: "Will there be visible scars?", 
+    answer: "Most maxillofacial procedures are performed inside the mouth, leaving no visible scars. If external incisions are needed, they are carefully placed to minimize visibility." 
+  },
+  { 
+    question: "What can I eat after surgery?", 
+    answer: "A soft diet is usually recommended after surgery. Foods like soups, smoothies, mashed potatoes, and yogurt are ideal during the initial healing phase." 
+  },
+  { 
+    question: "How soon can I return to normal activities?", 
+    answer: "Most patients can resume normal daily activities within a few days, but strenuous activities should be avoided for at least 1–2 weeks depending on the procedure." 
+  },
+  { 
+    question: "Do I need follow-up visits?", 
+    answer: "Yes, follow-up visits are important to monitor healing, remove stitches if needed, and ensure there are no complications." 
+  },
+  { 
+    question: "Is maxillofacial surgery safe?", 
+    answer: "Yes, when performed by a qualified oral and maxillofacial surgeon, the procedures are highly safe and follow strict medical protocols." 
   }
 ];
-
 const MaxillofacialSurgery = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -101,35 +140,63 @@ const MaxillofacialSurgery = () => {
       </section>
 
       <section className="ms-split-section bg-cream">
-        <div className="container ms-split-container">
-          <div className="ms-split-content pr-large fade-up">
-            <h2 className="fade-up">Why choose us for surgery?</h2>
-            <p className="ms-intro fade-up delay-1">
-              Precision, safety, and comfort lay the foundation of our surgical department. Our team handles your procedure with the utmost care, ensuring predictable and successful outcomes. 
-            </p>
-            <ul className="ms-bullet-list">
-              <li className="fade-up delay-2">
-                <strong>Advanced 3D Planning:</strong> We rely on state-of-the-art CBCT scanners to create highly accurate 3D models of your skull and jaw to plot the procedure with sub-millimeter precision.
-              </li>
-              <li className="fade-up delay-3">
-                <strong>Minimally Invasive:</strong> We constantly adapt our techniques to utilize the smallest possible incisions, preserving maximum bone structure and reducing postoperative swelling.
-              </li>
-              <li className="fade-up delay-4">
-                <strong>Advanced Sedation Protocols:</strong> IV sedation and deep anesthesia options are available to put you completely to sleep, ensuring zero anxiety or pain during complex surgeries.
-              </li>
-              <li className="fade-up delay-5">
-                <strong>Expansive Expertise:</strong> Our surgical team holds years of dedicated hospital-based residency training in both medicine and dentistry, properly equipping them to handle any complication.
-              </li>
-              <li className="fade-up delay-6">
-                <strong>Comprehensive Aftercare:</strong> You'll receive direct emergency contact lines to our surgical team, alongside rigorous follow-up appointments to track your flawless healing.
-              </li>
-            </ul>
-          </div>
-          <div className="ms-split-image animate animate-slide-right">
-            <img src="/Oral-Maxillofacial-Surgery.jpg" alt="Maxillofacial Surgery Process" className="shaped-image" />
-          </div>
-        </div>
-      </section>
+  <div className="container ms-split-container">
+    
+    <div className="ms-split-content pr-large fade-up">
+      
+      <h2 className="fade-up">Why choose us for maxillofacial surgery?</h2>
+
+      <p className="ms-intro fade-up delay-1">
+        Maxillofacial surgery demands an exceptional blend of precision, experience, and advanced technology. At 32 Signature Smilez, we go beyond routine care—delivering hospital-grade surgical expertise in a safe, comfortable, and patient-focused environment. Every procedure is meticulously planned to ensure optimal function, aesthetics, and long-term success.
+      </p>
+
+      <ul className="ms-bullet-list">
+
+        <li className="fade-up delay-2">
+          <strong>Precision 3D Surgical Planning:</strong> Using advanced CBCT imaging and digital workflow, we create highly accurate 3D models of your jaw and facial structures—allowing us to simulate and perfect your surgery before it even begins.
+        </li>
+
+        <li className="fade-up delay-3">
+          <strong>Minimally Invasive, Maximum Preservation:</strong> Our modern techniques focus on smaller incisions, preserving bone and soft tissue integrity, reducing swelling, and significantly speeding up recovery time.
+        </li>
+
+        <li className="fade-up delay-4">
+          <strong>Pain-Free Sedation & Anxiety Control:</strong> From local anesthesia to IV sedation and general anesthesia, we tailor sedation protocols to ensure a completely relaxed, stress-free, and pain-free surgical experience.
+        </li>
+
+        <li className="fade-up delay-5">
+          <strong>Specialized Surgical Expertise:</strong> Our maxillofacial surgeons are extensively trained in managing complex cases—ranging from impacted wisdom teeth and jaw corrections to facial trauma and implant rehabilitation.
+        </li>
+
+        <li className="fade-up delay-6">
+          <strong>Advanced Infection Control & Sterility:</strong> We follow strict surgical protocols with hospital-grade sterilization standards, ensuring maximum safety and minimizing any risk of complications.
+        </li>
+
+        <li className="fade-up delay-7">
+          <strong>Faster Healing & Guided Recovery:</strong> With precision techniques and personalized post-operative care plans, we ensure quicker healing, reduced discomfort, and smooth recovery.
+        </li>
+
+        <li className="fade-up delay-8">
+          <strong>Comprehensive Aftercare & 24/7 Support:</strong> Your care doesn’t end after surgery. We provide continuous monitoring, emergency support access, and scheduled follow-ups to guarantee flawless healing.
+        </li>
+
+        <li className="fade-up delay-9">
+          <strong>Functional + Aesthetic Excellence:</strong> We don’t just treat the problem—we restore proper function while enhancing facial harmony, ensuring results that look as good as they feel.
+        </li>
+
+      </ul>
+    </div>
+
+    <div className="ms-split-image animate animate-slide-right">
+      <img 
+        src="/Oral-Maxillofacial-Surgery.jpg" 
+        alt="Advanced Maxillofacial Surgery Planning and Treatment" 
+        className="shaped-image" 
+      />
+    </div>
+
+  </div>
+</section>
 
       <FAQ faqsData={faqs} customTitle="Questions? We've Got Answers!" />
       <Testimonials />
