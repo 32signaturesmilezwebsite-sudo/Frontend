@@ -70,22 +70,7 @@ const ServicesPage = () => {
       link: '/treatment/same-day-crowns',
       linkText: 'See CEREC Crowns'
     },
-    {
-      id: 5,
-      title: 'Implant Restorations',
-      desc: 'Our expert team will restore your implant with precision, providing a natural-looking tooth that renews your confidence.',
-      image: '/dental-implant-in-gumline.webp',
-      link: '/treatment/implant-restoration',
-      linkText: 'See Restorations'
-    },
-    {
-      id: 6,
-      title: 'Nitrous Oxide',
-      desc: 'Forget about dental anxiety — enjoy a relaxed dental experience while we work our magic with nitrous oxide sedation.',
-      image: '/shutterstock_1573121605+(1).webp',
-      link: '/treatment/sedation',
-      linkText: 'See Sedation'
-    },
+
     {
       id: 7,
       title: 'Dental Implants',
@@ -106,7 +91,7 @@ const ServicesPage = () => {
       id: 9,
       title: 'Kids Dentistry',
       desc: 'Gentle, fun, and educational dental care designed specifically to give your little ones a reason to smile.',
-      image: '/Kids-Dentistry.png',
+      image: '/IMG_0591.jpeg',
       link: '/treatment/pediatric-dentistry',
       linkText: 'See Pediatric Care'
     }
