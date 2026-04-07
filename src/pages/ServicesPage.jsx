@@ -125,7 +125,7 @@ const ServicesPage = () => {
 
         <div className="container sp-hero-content">
           <h1 className="fade-up delay-1">
-            32 Signature Smilez Dental Services
+            32 Signature Smilez Multi speciality Dental Clinic & Implant Centre
           </h1>
 
           <p className="sp-hero-subtitle fade-up delay-2">

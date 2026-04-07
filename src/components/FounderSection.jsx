@@ -65,7 +65,7 @@ const FounderSection = () => {
           variants={fadeRight}
         >
           <motion.h2 className="founder-headline" variants={fadeRight}>
-            Your Agartala Family Dentist
+             Tripura's Family Dentist
           </motion.h2>
 
           <motion.p className="founder-paragraph" variants={fadeRight}>

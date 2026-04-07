@@ -81,6 +81,12 @@ const AdminDashboard = () => {
           <span>Admin Panel - Appointments</span>
         </div>
         <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
+          <Link to="/admin/gallery" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+             Gallery
+          </Link>
+          <Link to="/admin/blogs" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+             Blogs
+          </Link>
           <button onClick={logout} className="logout-btn">
             <LogOut size={18} /> Logout
           </button>

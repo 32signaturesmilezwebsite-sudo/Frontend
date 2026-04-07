@@ -66,7 +66,7 @@ const Header = () => {
           <div className="container">
             <div className="mega-menu-grid">
               
-              {/* Column 1: About & New Patients */}
+              {/* Column 1: About, New Patients, & Explore */}
               <div className="mega-menu-col">
                 <h3 className="mega-col-title">About</h3>
                 <ul className="mega-menu-links">
@@ -76,9 +76,14 @@ const Header = () => {
                 </ul>
                 
                 <h3 className="mega-col-title" style={{marginTop: '40px'}}>New Patients</h3>
-                <ul className="mega-menu-links mb-4">
+                <ul className="mega-menu-links">
                   <li><NavLink to="/new-patients" onClick={handleNavClick}>New Patient Info</NavLink></li>
-                  
+                </ul>
+
+                <h3 className="mega-col-title" style={{marginTop: '40px'}}>Explore</h3>
+                <ul className="mega-menu-links mb-4">
+                  <li><NavLink to="/clinic" onClick={handleNavClick}>Clinic Gallery</NavLink></li>
+                  <li><NavLink to="/blog" onClick={handleNavClick}>Our Blogs</NavLink></li>
                 </ul>
                 
                 <div className="menu-btn-wrapper">
@@ -86,31 +91,23 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* Column 2: Cosmetic & Restorative */}
-              <div className="mega-menu-col">
-                <h3 className="mega-col-title">Cosmetic</h3>
-                <ul className="mega-menu-links">
+              {/* Column 2 & 3 Combined: Services (All Treatments) */}
+              <div className="mega-menu-col services-col">
+                <h3 className="mega-col-title">Services</h3>
+                <ul className="mega-menu-links service-multi-col">
+                  {/* Cosmetic */}
                   <li><NavLink to="/cosmetic-dentistry" onClick={handleNavClick}>Cosmetic Dentistry</NavLink></li>
                   <li><NavLink to="/veneers" onClick={handleNavClick}>Veneers</NavLink></li>
                   <li><NavLink to="/teeth-whitening" onClick={handleNavClick}>Teeth Whitening</NavLink></li>
                   <li><NavLink to="/dental-bonding" onClick={handleNavClick}>Bonding</NavLink></li>
-                </ul>
-
-                <h3 className="mega-col-title" style={{marginTop: '40px'}}>Restorative</h3>
-                <ul className="mega-menu-links">
+                  {/* Restorative */}
                   <li><NavLink to="/treatment/restorative" onClick={handleNavClick}>Restorative Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/bridges" onClick={handleNavClick}>Bridges</NavLink></li>
                   <li><NavLink to="/dental-crowns" onClick={handleNavClick}>Traditional Crowns</NavLink></li>
                   <li><NavLink to="/treatment/same-day-crowns" onClick={handleNavClick}>Same-Day Crowns</NavLink></li>
                   <li><NavLink to="/treatment/implant-restoration" onClick={handleNavClick}>Implant Restoration</NavLink></li>
                   <li><NavLink to="/treatment/inlays-onlays" onClick={handleNavClick}>Inlays Onlays</NavLink></li>
-                </ul>
-              </div>
-
-              {/* Column 3: General */}
-              <div className="mega-menu-col">
-                <h3 className="mega-col-title">General</h3>
-                <ul className="mega-menu-links">
+                  {/* General */}
                   <li><NavLink to="/treatment/general-dentistry" onClick={handleNavClick}>General Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/cleaning-exams" onClick={handleNavClick}>Cleaning & Exams</NavLink></li>
                   <li><NavLink to="/treatment/fillings" onClick={handleNavClick}>Fillings</NavLink></li>

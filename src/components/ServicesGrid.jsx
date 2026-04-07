@@ -32,7 +32,7 @@ const servicesData = [
     id: 4,
     title: 'Kids Dentistry',
     desc: 'Gentle, fun, and educational dental care designed specifically to give your little ones a reason to smile.',
-    image: '/Kids-Dentistry.png',
+    image: '/IMG_0591.jpeg',
     linkText: 'See Pediatric Care',
     linkUrl: '/treatment/pediatric-dentistry'
   },

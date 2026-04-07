@@ -44,14 +44,17 @@
 }
 
 .brand-logo-img {
-  max-height: 130px; /* Noticeably larger for "badge" effect */
+  max-height: 160px;
   width: auto;
-  transform: translateY(35px); /* Forces it to hang half out of the navbar */
+  transform: translateY(18px);
   position: relative;
-  z-index: 1001; /* Ensure it stays above the border */
-  transition: all 0.3s ease;
+  z-index: 1001;
+  transition: transform 0.3s ease;
 }
 
+.brand-logo-img:hover {
+  transform: translateY(18px) scale(1.05);
+}
 .site-header.scrolled .brand-logo-img {
   /* Maintain original large size on scroll */
   transform: translateY(20px); 
@@ -263,10 +266,27 @@
 .inline-block { display: inline-block; }
 
 /* REsponsive Overrides */
+.services-col {
+  grid-column: span 2;
+}
+
+.service-multi-col {
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.service-multi-col li {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
 @media (max-width: 1024px) {
   .mega-menu-grid {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 50px;
+  }
+  .services-col {
+    grid-column: span 2;
   }
   .mega-menu-footer {
     grid-template-columns: 1fr;
@@ -276,6 +296,9 @@
 }
 
 @media (max-width: 768px) {
+  .service-multi-col {
+    column-count: 1;
+  }
   .header-actions {
     gap: 15px;
   }

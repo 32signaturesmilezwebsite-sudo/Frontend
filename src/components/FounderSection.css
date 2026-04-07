@@ -6,7 +6,9 @@
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 80px; /* Space above text */
-  margin-top: 30px;
+  margin-top: 0; /* REMOVED THE 30PX GAP THAT CAUSED THE SOLID BAR */
+
+  min-height: 100vh; 
 }
 
 .founder-overlay {

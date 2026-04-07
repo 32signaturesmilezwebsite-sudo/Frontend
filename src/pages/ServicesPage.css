@@ -53,15 +53,63 @@
 .sp-dark-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.7; z-index: 1; transform: scale(1.05); animation: bgZoom 2s ease forwards; }
 .sp-dark-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(33,41,33,0.4), rgba(10,15,10,0.9)); z-index: 2; }
 .sp-dark-container { display: flex; align-items: center; position: relative; z-index: 3; max-width: 1200px; margin: 0 auto; padding: 100px 20px; gap: 60px; }
-.sp-ds-image { flex: 1; display: flex; justify-content: center; }
-.sp-ds-content { flex: 1; }
+/* EXACT COPY OF FOUNDER SECTION IMAGE CSS */
+.sp-ds-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  padding: 40px 0;
+}
 
-.frame-outer { position: relative; width: 420px; aspect-ratio: 1 / 1; padding: 14px; border-radius: 20px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); box-shadow: 0 25px 60px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; }
-.frame-outer::before { content: ""; position: absolute; inset: 6px; border-radius: 14px; background: #ffffff; z-index: 1; }
-.frame-inner { position: relative; z-index: 2; width: 100%; height: 100%; border-radius: 12px; overflow: hidden; }
-.dr-portrait-fixed { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
-.frame-outer:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 35px 80px rgba(0,0,0,0.6), 0 0 30px rgba(197,123,67,0.25); }
-.frame-outer::after { content: ""; position: absolute; inset: -30px; border-radius: 30px; background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%); z-index: -1; }
+.frame-outer {
+  position: relative;
+  padding: 12px;
+  border-radius: 20px;
+  width: 100%;
+  
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.4),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  transition: all 0.4s ease;
+}
+
+.frame-outer::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 14px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.frame-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.dr-portrait-fixed {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 12px;
+  display: block;
+}
+
+.frame-outer:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.6),
+    0 0 30px rgba(197,123,67,0.3);
+}
 
 .sp-ds-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #ffffff; letter-spacing: 1px; transition: letter-spacing 0.5s ease; }
 .sp-ds-content h2.animate-show { letter-spacing: 2px; }

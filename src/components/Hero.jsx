@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Background */}
       <div
         className="hero-light-bg"
-        style={{ backgroundImage: "url('/Background.png')" }}
+        style={{ backgroundImage: "url('/Background.jpg')" }}
       ></div>
 
       <div className="container hero-light-container">
