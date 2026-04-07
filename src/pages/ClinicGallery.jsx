@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ClinicGallery.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ArrowLeft, Folder } from 'lucide-react';
+import { ArrowLeft, Folder, Play, Video } from 'lucide-react';
 
 const staticGalleryImages = [
   { id: 0, src: '/clinic-gallery/uploaded_media_0_1774511569819.jpg', alt: 'Clinic Interior 1', size: 'large' },
@@ -57,7 +57,10 @@ const ClinicGallery = () => {
             alt: img.title || `Clinic Image ${index + 1}`,
             title: img.title,
             description: img.description,
-            size: sizes[index % 5]
+            size: sizes[index % 5],
+            mediaType: img.mediaType || 'image',
+            videoUrl: img.videoUrl,
+            videoLinkUrl: img.videoLinkUrl
           };
         });
         setDynamicImages(formatted);
@@ -126,7 +129,7 @@ const ClinicGallery = () => {
                         <span className="view-text">View Gallery</span>
                       </div>
                       <div className="folder-card-meta">
-                        <Folder size={24} color="var(--primary-gold)" />
+                        {folder.folderType === 'video' ? <Video size={24} color="var(--primary-gold)" /> : <Folder size={24} color="var(--primary-gold)" />}
                         <h3>{folder.name}</h3>
                       </div>
                     </div>
@@ -151,7 +154,13 @@ const ClinicGallery = () => {
                     <div className="image-wrapper">
                       <img src={image.src} alt={image.alt} loading="lazy" />
                       <div className="image-overlay">
-                        <span className="view-text">Reveal Image</span>
+                        {image.mediaType === 'image' ? (
+                          <span className="view-text">Reveal Image</span>
+                        ) : (
+                          <span className="view-text" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <Play size={18} /> Play Video
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -171,8 +180,20 @@ const ClinicGallery = () => {
           <div className="lightbox" onClick={closeLightbox}>
             <span className="close-btn" onClick={closeLightbox}>&times;</span>
             <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-              <img src={selectedImage.src} alt={selectedImage.alt} />
-              <div className="lightbox-metadata">
+              
+              {(!selectedImage.mediaType || selectedImage.mediaType === 'image') && (
+                <img src={selectedImage.src} alt={selectedImage.alt} />
+              )}
+
+              {selectedImage.mediaType === 'video-upload' && (
+                <video src={selectedImage.videoUrl} controls autoPlay style={{ width: '100%', maxHeight: '85vh', display: 'block', background: '#000' }} />
+              )}
+
+              {selectedImage.mediaType === 'video-link' && (
+                <iframe src={selectedImage.videoLinkUrl} allow="autoplay; encrypted-media" allowFullScreen style={{ width: '85vw', maxWidth: '1000px', height: '65vh', border: 'none', display: 'block', background: '#000' }} />
+              )}
+
+              <div className="lightbox-metadata" style={{ position: selectedImage.mediaType !== 'image' ? 'relative' : 'absolute', transform: selectedImage.mediaType !== 'image' ? 'none' : undefined }}>
                 <h3>{selectedImage.title}</h3>
                 <p>{selectedImage.description}</p>
               </div>

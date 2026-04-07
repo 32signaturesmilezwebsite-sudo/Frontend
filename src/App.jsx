@@ -19,6 +19,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import TreatmentPage from './pages/TreatmentPage';
 import AdminBlogList from './pages/AdminBlogList';
 import AdminBlogCreate from './pages/AdminBlogCreate';
+import AdminBlogEdit from './pages/AdminBlogEdit';
 import AdminGallery from './pages/AdminGallery';
 import AdminReviews from './pages/AdminReviews';
 import BlogList from './pages/BlogList';
@@ -92,6 +93,7 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/blogs" element={<AdminBlogList />} />
           <Route path="/admin/blog/new" element={<AdminBlogCreate />} />
+          <Route path="/admin/blog/edit/:id" element={<AdminBlogEdit />} />
           <Route path="/admin/gallery" element={<AdminGallery />} />
           <Route path="/admin/reviews" element={<AdminReviews />} />
           
