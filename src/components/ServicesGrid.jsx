@@ -8,7 +8,7 @@ const servicesData = [
     id: 1,
     title: 'Maxillofacial Surgery',
     desc: 'Expert care for complex facial and jaw conditions. Trust our specialized surgical expertise for optimal outcomes.',
-    image: '/what-is-a-maxillofacial-surgeon.jpg',
+    image: '/ChatGPT Image Feb 12, 2026, 08_11_02 PM.png',
     linkText: 'See Surgery',
     linkUrl: '/treatment/maxillofacial-surgery'
   },

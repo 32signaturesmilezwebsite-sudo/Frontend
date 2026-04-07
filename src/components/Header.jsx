@@ -93,7 +93,11 @@ const Header = () => {
 
               {/* Column 2 & 3 Combined: Services (All Treatments) */}
               <div className="mega-menu-col services-col">
-                <h3 className="mega-col-title">Services</h3>
+                <h3 className="mega-col-title">
+                  <NavLink to="/services" onClick={handleNavClick} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    Services
+                  </NavLink>
+                </h3>
                 <ul className="mega-menu-links service-multi-col">
                   {/* Cosmetic */}
                   <li><NavLink to="/cosmetic-dentistry" onClick={handleNavClick}>Cosmetic Dentistry</NavLink></li>

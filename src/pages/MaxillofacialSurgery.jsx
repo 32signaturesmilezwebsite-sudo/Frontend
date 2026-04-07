@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import FAQ from "../components/FAQ";
 import "./MaxillofacialSurgery.css";
+import { Microscope, HeartPulse, ClipboardList, ShieldCheck } from "lucide-react";
 
 const faqs = [
   { 
@@ -109,12 +110,17 @@ const MaxillofacialSurgery = () => {
 
       <section className="ms-centered-text">
         <div className="container ms-ct-container">
-          <h2>State-of-the-art surgical care</h2>
-          <p>
-            When standard dental interventions are not enough to treat complex conditions of the face, jaw, and mouth, our highly specialized maxillofacial team is ready to intervene. We combine advanced imaging technology with a gentle, patient-first approach to provide transformative results.
+          <h2 className="fade-up">What is Maxillofacial Surgery?</h2>
+          <p className="fade-up delay-1" style={{ fontSize: '1.15rem' }}>
+            Maxillofacial surgery is a specialized branch of dentistry that focuses on treating problems related to the face, jaw, mouth, and teeth. It combines dental knowledge with surgical expertise to manage both simple and complex conditions affecting these areas.
           </p>
-          <p>
-            We manage a wide spectrum of surgical issues—from reconstructive jaw surgery and severe facial trauma to complex impacted teeth and pathological cyst removals. Your safety, comfort, and ultimate recovery are our absolute highest priorities.
+          <p className="fade-up delay-2" style={{ fontSize: '1.15rem', marginBottom: '40px' }}>
+            At 32 Signature Smilez Dental Clinic, our maxillofacial care is designed to restore not just your oral health, but also your comfort, function, and facial appearance.
+          </p>
+
+          <h3 className="fade-up delay-3" style={{ color: '#c57b43', fontFamily: 'Playfair Display, serif', fontSize: '2rem', marginBottom: '20px' }}>Why is it important?</h3>
+          <p className="fade-up delay-4" style={{ fontSize: '1.15rem' }}>
+            Problems in the jaw and facial region can affect eating, speaking, breathing, and appearance. Maxillofacial surgery helps restore normal function and enhances confidence by improving facial harmony.
           </p>
         </div>
       </section>
@@ -140,63 +146,85 @@ const MaxillofacialSurgery = () => {
       </section>
 
       <section className="ms-split-section bg-cream">
-  <div className="container ms-split-container">
-    
-    <div className="ms-split-content pr-large fade-up">
-      
-      <h2 className="fade-up">Why choose us for maxillofacial surgery?</h2>
+        <div className="container ms-split-container">
+          
+          <div className="ms-split-content pr-large animate animate-slide-right">
+            <h2 className="animate">What does a Maxillofacial Surgeon do?</h2>
+            <p className="animate delay-1" style={{ marginBottom: '25px', fontSize: '1.1rem' }}>
+              A maxillofacial surgeon is trained to diagnose and perform surgeries for a wide range of conditions, including:
+            </p>
 
-      <p className="ms-intro fade-up delay-1">
-        Maxillofacial surgery demands an exceptional blend of precision, experience, and advanced technology. At 32 Signature Smilez, we go beyond routine care—delivering hospital-grade surgical expertise in a safe, comfortable, and patient-focused environment. Every procedure is meticulously planned to ensure optimal function, aesthetics, and long-term success.
-      </p>
+            <ul className="ms-bullet-list">
+              <li className="animate delay-2"><strong>Wisdom Tooth Removal:</strong> Safe and painless removal of impacted or painful wisdom teeth.</li>
+              <li className="animate delay-3"><strong>Facial Trauma Treatment:</strong> Management of injuries like jaw fractures, facial cuts, or accidents affecting the face.</li>
+              <li className="animate delay-4"><strong>Jaw Correction (Orthognathic Surgery):</strong> Correcting improper jaw alignment to improve chewing, speech, and facial balance.</li>
+              <li className="animate delay-5"><strong>Dental Implants:</strong> Surgically placing implants to replace missing teeth with strong, natural-looking alternatives.</li>
+              <li className="animate delay-6"><strong>Cyst & Tumor Removal:</strong> Diagnosis and removal of abnormal growths in the mouth or jaw.</li>
+              <li className="animate delay-7"><strong>TMJ Disorders Treatment:</strong> Treating jaw joint pain, clicking, or difficulty in opening/closing the mouth.</li>
+              <li className="animate delay-8"><strong>Facial Pain & Infections:</strong> Managing severe infections or unexplained facial pain.</li>
+            </ul>
+          </div>
 
-      <ul className="ms-bullet-list">
+          <div className="ms-split-image animate animate-slide-left">
+            <img 
+              src="/Oral-Maxillofacial-Surgery.jpg" 
+              alt="Advanced Maxillofacial Surgery" 
+              className="shaped-image img-zoom" 
+            />
+          </div>
 
-        <li className="fade-up delay-2">
-          <strong>Precision 3D Surgical Planning:</strong> Using advanced CBCT imaging and digital workflow, we create highly accurate 3D models of your jaw and facial structures—allowing us to simulate and perfect your surgery before it even begins.
-        </li>
+        </div>
+      </section>
 
-        <li className="fade-up delay-3">
-          <strong>Minimally Invasive, Maximum Preservation:</strong> Our modern techniques focus on smaller incisions, preserving bone and soft tissue integrity, reducing swelling, and significantly speeding up recovery time.
-        </li>
+      <section className="ms-centered-text bg-white" style={{ borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div className="container ms-ct-container" style={{ maxWidth: '1400px' }}>
+          <h2 className="fade-up">Our Approach</h2>
+          <p className="fade-up delay-1" style={{ marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', fontSize: '1.15rem' }}>
+            At 32 Signature Smilez, we ensure hospital-grade surgical expertise is delivered in a safe, comfortable, and deeply personalized way:
+          </p>
 
-        <li className="fade-up delay-4">
-          <strong>Pain-Free Sedation & Anxiety Control:</strong> From local anesthesia to IV sedation and general anesthesia, we tailor sedation protocols to ensure a completely relaxed, stress-free, and pain-free surgical experience.
-        </li>
+          <div className="ms-ook-grid fade-up delay-2">
+            <div className="ms-ook-card">
+              <div className="hex-icon">
+                <Microscope size={48} strokeWidth={1.5} />
+              </div>
+              <h4>Advanced Tech</h4>
+              <p>Advanced and safe surgical techniques</p>
+            </div>
+            <div className="ms-ook-card">
+              <div className="hex-icon">
+                <HeartPulse size={48} strokeWidth={1.5} />
+              </div>
+              <h4>Faster Healing</h4>
+              <p>Minimal pain and faster recovery</p>
+            </div>
+            <div className="ms-ook-card">
+              <div className="hex-icon">
+                <ClipboardList size={48} strokeWidth={1.5} />
+              </div>
+              <h4>Custom Care</h4>
+              <p>Personalized treatment plans</p>
+            </div>
+            <div className="ms-ook-card">
+              <div className="hex-icon">
+                <ShieldCheck size={48} strokeWidth={1.5} />
+              </div>
+              <h4>Comfort First</h4>
+              <p>A comfortable and caring environment</p>
+            </div>
+          </div>
 
-        <li className="fade-up delay-5">
-          <strong>Specialized Surgical Expertise:</strong> Our maxillofacial surgeons are extensively trained in managing complex cases—ranging from impacted wisdom teeth and jaw corrections to facial trauma and implant rehabilitation.
-        </li>
+          <p className="fade-up delay-3" style={{ fontWeight: '600', color: '#c57b43', fontSize: '1.25rem', maxWidth: '850px', margin: '0 auto 30px' }}>
+            If you're experiencing jaw pain, facial swelling, difficulty in chewing, or have been advised surgery, our team is here to help you every step of the way.
+          </p>
 
-        <li className="fade-up delay-6">
-          <strong>Advanced Infection Control & Sterility:</strong> We follow strict surgical protocols with hospital-grade sterilization standards, ensuring maximum safety and minimizing any risk of complications.
-        </li>
-
-        <li className="fade-up delay-7">
-          <strong>Faster Healing & Guided Recovery:</strong> With precision techniques and personalized post-operative care plans, we ensure quicker healing, reduced discomfort, and smooth recovery.
-        </li>
-
-        <li className="fade-up delay-8">
-          <strong>Comprehensive Aftercare & 24/7 Support:</strong> Your care doesn’t end after surgery. We provide continuous monitoring, emergency support access, and scheduled follow-ups to guarantee flawless healing.
-        </li>
-
-        <li className="fade-up delay-9">
-          <strong>Functional + Aesthetic Excellence:</strong> We don’t just treat the problem—we restore proper function while enhancing facial harmony, ensuring results that look as good as they feel.
-        </li>
-
-      </ul>
-    </div>
-
-    <div className="ms-split-image animate animate-slide-right">
-      <img 
-        src="/Oral-Maxillofacial-Surgery.jpg" 
-        alt="Advanced Maxillofacial Surgery Planning and Treatment" 
-        className="shaped-image" 
-      />
-    </div>
-
-  </div>
-</section>
+          <div className="fade-up delay-4">
+            <Link to="/contact" className="btn-solid-orange">
+              Book Your Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <FAQ faqsData={faqs} customTitle="Questions? We've Got Answers!" />
       <Testimonials />
