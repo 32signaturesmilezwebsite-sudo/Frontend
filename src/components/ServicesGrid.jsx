@@ -14,10 +14,10 @@ const servicesData = [
   },
   {
     id: 2,
-    title: 'Minor Oral Surgery',
-    desc: 'Safe and painless procedures for extractions and minor corrections, ensuring your absolute comfort.',
+    title: 'Orthodontics',
+    desc: 'Straighten your teeth and correct your bite with modern braces, clear aligners, and customised treatment plans for all ages.',
     image: '/Minor-Surgery.png',
-    linkText: 'See Oral Surgery',
+    linkText: 'See Orthodontics',
     linkUrl: '/treatment/minor-oral-surgery'
   },
   {

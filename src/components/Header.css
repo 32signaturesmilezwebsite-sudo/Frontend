@@ -30,8 +30,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 40px;
-  max-width: 1400px;
+  padding: 0 20px; /* Reduced to push content closer to edges */
+  max-width: 100%; /* Override the global .container max-width of 1280px */
   margin: 0 auto;
 }
 

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './IntroSection.css';
 import { PlayCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const IntroSection = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const container = {
     hidden: {},
@@ -57,19 +58,32 @@ const IntroSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+        {/* RIGHT IMAGE / VIDEO */}
         <motion.div className="intro-media-wrapper" variants={fadeRight}>
-          <div className="intro-media-container">
-            <img 
-              src="/After-Hero-image.png" 
-              alt="A fresh take on dentistry at 32 Signature Smilez" 
-              className="intro-video-thumbnail" 
-            />
+          <div className="intro-media-container" onClick={() => !isPlaying && setIsPlaying(true)}>
+            {!isPlaying ? (
+              <>
+                <img 
+                  src="/After-Hero-image.png" 
+                  alt="A fresh take on dentistry at 32 Signature Smilez" 
+                  className="intro-video-thumbnail" 
+                />
 
-            {/* Play Button */}
-            <div className="play-button-overlay">
-              <PlayCircle size={80} color="#ffffff" strokeWidth={1} />
-            </div>
+                {/* Play Button */}
+                <div className="play-button-overlay">
+                  <PlayCircle size={80} color="#ffffff" strokeWidth={1} />
+                </div>
+              </>
+            ) : (
+                <iframe
+                  className="intro-video-iframe"
+                  src="https://www.youtube.com/embed/PDdf5Rjj5cc?autoplay=1"
+                  title="32 Signature Smilez Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+            )}
           </div>
         </motion.div>
 
