@@ -88,58 +88,61 @@ const NewPatientsPage = () => {
 
         {/* 3. YOUR FIRST VISIT */}
         <section className="np-first-visit">
-          <div className="container np-first-visit-content">
-            <h2 className="animate fade-up">Your First Visit</h2>
-            <p className="visit-desc animate fade-up">
-              Your first appointment will take 60–90 minutes. During this time, we will give you our undivided attention to understand your needs and address your concerns. Get ready for:
-            </p>
-            
-            <div className="np-hexagon-grid">
-              
-              <div className="np-hex-card animate zoom-in" style={{ transitionDelay: '0.1s' }}>
-                <div className="hex-icon-vector">
-                  <Sparkles size={60} strokeWidth={1.5} color="#c57b43" />
-                </div>
-                <h3>Gentle Dental Cleaning</h3>
-              </div>
-              
-              <div className="np-hex-card animate zoom-in" style={{ transitionDelay: '0.2s' }}>
-                <div className="hex-icon-vector">
-                  <Eye size={60} strokeWidth={1.5} color="#c57b43" />
-                </div>
-                <h3>Full-Mouth Examination</h3>
-              </div>
-              
-              <div className="np-hex-card animate zoom-in" style={{ transitionDelay: '0.3s' }}>
-                <div className="hex-icon-vector">
-                  <MessageCircle size={60} strokeWidth={1.5} color="#c57b43" />
-                </div>
-                <h3>Answers To Your Questions</h3>
-              </div>
-              
-              <div className="np-hex-card animate zoom-in" style={{ transitionDelay: '0.4s' }}>
-                <div className="hex-icon-vector">
-                  <Star size={60} strokeWidth={1.5} color="#c57b43" />
-                </div>
-                <h3>Personalized Recommendations</h3>
-              </div>
+  <div className="container np-first-visit-content">
+    
+    <h2>Your First Visit</h2>
 
-              <div className="np-hex-card animate zoom-in" style={{ transitionDelay: '0.5s' }}>
-                <div className="hex-icon-vector">
-                  <Home size={60} strokeWidth={1.5} color="#c57b43" />
-                </div>
-                <h3>Cozy, Welcoming Environment</h3>
-              </div>
-              
-            </div>
+    <p className="visit-desc">
+      Your first appointment will take 60–90 minutes. During this time, we will give you our undivided attention to understand your needs and address your concerns. Get ready for:
+    </p>
 
-            <div className="np-visit-btn">
-              <Link to="/contact" className="rough-btn rough-btn-primary">
-                <span className="btn-text">Request an Appointment</span>
-              </Link>
-            </div>
-          </div>
-        </section>
+    <div className="np-hexagon-grid">
+
+      <div className="np-hex-card" style={{ animationDelay: "0.1s" }}>
+        <div className="hex-icon-vector">
+          <Sparkles size={60} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Gentle Dental Cleaning</h3>
+      </div>
+
+      <div className="np-hex-card" style={{ animationDelay: "0.2s" }}>
+        <div className="hex-icon-vector">
+          <Eye size={60} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Full-Mouth Examination</h3>
+      </div>
+
+      <div className="np-hex-card" style={{ animationDelay: "0.3s" }}>
+        <div className="hex-icon-vector">
+          <MessageCircle size={60} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Answers To Your Questions</h3>
+      </div>
+
+      <div className="np-hex-card" style={{ animationDelay: "0.4s" }}>
+        <div className="hex-icon-vector">
+          <Star size={60} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Personalized Recommendations</h3>
+      </div>
+
+      <div className="np-hex-card" style={{ animationDelay: "0.5s" }}>
+        <div className="hex-icon-vector">
+          <Home size={60} strokeWidth={1.5} color="#c57b43" />
+        </div>
+        <h3>Cozy, Welcoming Environment</h3>
+      </div>
+
+    </div>
+
+    <div className="np-visit-btn">
+      <Link to="/contact" className="rough-btn rough-btn-primary">
+        <span className="btn-text">Request an Appointment</span>
+      </Link>
+    </div>
+
+  </div>
+</section>
 
         {/* 4. WHAT TO BRING */}
         <section className="np-what-to-bring split-section reverse-on-mobile section-bg-cream">

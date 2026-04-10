@@ -107,17 +107,23 @@
 }
 
 .contact-link {
-  color: #c57b43;
+  color: #c57b43 !important;
   font-size: 1.05rem;
   text-decoration: none;
   font-family: 'Georgia', serif;
   font-weight: 700;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 8px;
+  border: 1.5px solid #c57b43;
+  border-radius: 30px;
+  padding: 5px 18px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .contact-link:hover {
-  text-decoration: underline;
+  background: #c57b43;
+  color: #ffffff !important;
+  text-decoration: none;
 }
 .premium-btn {
   display: inline-block;
