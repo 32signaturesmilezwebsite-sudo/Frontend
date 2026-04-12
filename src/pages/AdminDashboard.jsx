@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { LogOut, Calendar, Users, Activity, CheckCircle, Clock, Phone, Mail } from 'lucide-react';
+import { LogOut, Calendar, Users, Activity, CheckCircle, Clock, Phone, Mail, HelpCircle } from 'lucide-react';
 import './AdminStyles.css';
 
 const AdminDashboard = () => {
@@ -74,18 +74,37 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="admin-dashboard">
-      <header className="dashboard-header">
+    <div className="admin-dashboard" style={{
+      position: 'relative',
+      minHeight: '100vh',
+      backgroundImage: "url('/istockphoto-510081750-612x612.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed',
+      overflowY: 'auto'
+    }}>
+      {/* Dark overlay */}
+      <div style={{ position: 'fixed', inset: 0, background: 'rgba(10,14,20,0.6)', zIndex: 0, pointerEvents: 'none' }} />
+
+      {/* Right-side scroll indicator track */}
+      <div style={{ position: 'fixed', right: 0, top: 0, bottom: 0, width: '6px', background: 'rgba(197,123,67,0.2)', zIndex: 200 }}>
+        <div style={{ width: '100%', height: '40%', background: '#c57b43', borderRadius: '3px' }} />
+      </div>
+
+      <header className="dashboard-header" style={{ position: 'sticky', top: 0, zIndex: 100 }}>
         <div className="header-brand">
           <h2>32 Signature Smilez</h2>
           <span>Admin Panel - Appointments</span>
         </div>
-        <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
-          <Link to="/admin/gallery" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+        <div style={{display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap'}}>
+          <Link to="/admin/gallery" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #555'}}>
              Gallery
           </Link>
-          <Link to="/admin/blogs" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #333'}}>
+          <Link to="/admin/blogs" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #555'}}>
              Blogs
+          </Link>
+          <Link to="/admin/how-to-use" className="btn-dark logout-btn" style={{padding: '8px 15px', fontSize: '0.9rem', border: '1px solid #c57b43', color: '#c57b43', display: 'flex', alignItems: 'center', gap: '6px'}}>
+             <HelpCircle size={16} /> How to Use
           </Link>
           <button onClick={logout} className="logout-btn">
             <LogOut size={18} /> Logout
@@ -93,7 +112,7 @@ const AdminDashboard = () => {
         </div>
       </header>
 
-      <div className="dashboard-content container">
+      <div className="dashboard-content container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="stats-row fade-in">
           <div className="stat-card">
             <div className="stat-icon"><Calendar color="var(--primary-gold)" size={24} /></div>

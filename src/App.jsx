@@ -59,6 +59,7 @@ import MaxillofacialSurgery from "./pages/MaxillofacialSurgery";
 import MinorOralSurgery from "./pages/MinorOralSurgery";
 import DentalImplants from "./pages/DentalImplants";
 import SmileMakeover from "./pages/SmileMakeover";
+import AdminHowToUse from "./pages/AdminHowToUse";
 
 function Home() {
   return (
@@ -96,6 +97,7 @@ function App() {
           <Route path="/admin/blog/edit/:id" element={<AdminBlogEdit />} />
           <Route path="/admin/gallery" element={<AdminGallery />} />
           <Route path="/admin/reviews" element={<AdminReviews />} />
+          <Route path="/admin/how-to-use" element={<AdminHowToUse />} />
           
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:id" element={<BlogPost />} />
