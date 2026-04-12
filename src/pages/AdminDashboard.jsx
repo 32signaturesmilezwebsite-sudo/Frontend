@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { LogOut, Calendar, Users, Activity, CheckCircle, Clock, Phone, Mail, HelpCircle } from 'lucide-react';
+import { LogOut, Calendar, Users, Activity, CheckCircle, Clock, Phone, Mail, HelpCircle, Trash2 } from 'lucide-react';
 import './AdminStyles.css';
 
 const AdminDashboard = () => {
@@ -70,6 +70,24 @@ const AdminDashboard = () => {
       }
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const deleteAppointment = async (id, name) => {
+    if (!window.confirm(`Delete booking for ${name}? This cannot be undone.`)) return;
+    const adminInfo = getAdminInfo();
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments/${id}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${adminInfo.token}` },
+      });
+      if (res.ok) {
+        setAppointments(prev => prev.filter(a => a._id !== id));
+      } else {
+        alert('Failed to delete appointment.');
+      }
+    } catch (err) {
+      alert('Server error. Could not delete.');
     }
   };
 
@@ -157,6 +175,7 @@ const AdminDashboard = () => {
                   <th>Contact Info</th>
                   <th>Message / Request</th>
                   <th>Status</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -188,6 +207,30 @@ const AdminDashboard = () => {
                       >
                         {apt.status && apt.status.toLowerCase() === 'approved' ? <CheckCircle size={14}/> : <Clock size={14}/>}
                         {apt.status || 'Pending'}
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        onClick={() => deleteAppointment(apt._id, `${apt.firstName} ${apt.lastName}`)}
+                        title="Delete entry"
+                        style={{
+                          background: 'rgba(239,68,68,0.15)',
+                          border: '1px solid rgba(239,68,68,0.4)',
+                          borderRadius: '6px',
+                          color: '#ef4444',
+                          padding: '6px 10px',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '5px',
+                          fontSize: '0.8rem',
+                          fontWeight: 600,
+                          transition: 'all 0.2s',
+                        }}
+                        onMouseOver={e => e.currentTarget.style.background = 'rgba(239,68,68,0.3)'}
+                        onMouseOut={e => e.currentTarget.style.background = 'rgba(239,68,68,0.15)'}
+                      >
+                        <Trash2 size={13} /> Delete
                       </button>
                     </td>
                   </tr>
