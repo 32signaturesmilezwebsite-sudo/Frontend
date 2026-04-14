@@ -194,7 +194,7 @@ const Fillings = () => {
 
     <div className="fil-split-image animate animate-slide-left">
       <img
-        src="/Gemini_Generated_Image_3zlodd3zlodd3zlo.png"
+        src="/composite_restoration_collage.jpg"
         alt="Happy Dental Patient"
         className="shaped-image img-zoom"
       />
@@ -209,7 +209,7 @@ const Fillings = () => {
 
     <div className="fil-split-image pr-large animate animate-slide-left">
       <img
-        src="/What-are-Dental-Fillings-A-Quick-Guide.png"
+        src="/Image_2znf3g2znf3g2znf.png"
         alt="Dentist Filling Cavity"
         className="shaped-image img-zoom"
       />
