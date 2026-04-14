@@ -16,7 +16,7 @@ const servicesData = [
     id: 2,
     title: 'Orthodontics',
     desc: 'Straighten your teeth and correct your bite with modern braces, clear aligners, and customised treatment plans for all ages.',
-    image: '/Minor-Surgery.png',
+    image: '/Orthodontic-Treatment-and-Its-Impact-on-Overall-Health.jpg',
     linkText: 'See Orthodontics',
     linkUrl: '/treatment/minor-oral-surgery'
   },

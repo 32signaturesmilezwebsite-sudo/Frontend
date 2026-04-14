@@ -83,7 +83,7 @@ const ServicesPage = () => {
       id: 8,
       title: 'Smile Makeover',
       desc: 'Complete cosmetic transformations meticulously tailored to give you the perfect, radiant smile you deserve.',
-      image: '/IMG_4514 (1).jpg',
+      image: '/Complete-Smile-Makeover-Transforming-Smiles-with-Cosmetic-Dental-Veneers.png',
       link: '/treatment/smile-makeover',
       linkText: 'See Makeovers'
     },
