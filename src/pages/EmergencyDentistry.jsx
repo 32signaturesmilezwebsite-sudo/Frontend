@@ -189,7 +189,7 @@ const EmergencyDentistry = () => {
 
     <div className="em-split-image animate animate-slide-left">
       <img
-        src="/Gemini_Generated_Image_n31xawn31xawn31x.png"
+        src="/Gemini_Generated_Image_rl3blmrl3blmrl3b.png"
         alt="Dentist rapidly assisting patient"
         className="shaped-image img-zoom"
       />
