@@ -87,7 +87,7 @@ const AboutUs = () => {
               className="grid-img"
             />
             <img
-              src="/IMG_0591.jpeg"
+              src="/IMG_2775.JPG.jpeg"
               alt="Dentist Treatment 3"
               className="grid-img"
             />
