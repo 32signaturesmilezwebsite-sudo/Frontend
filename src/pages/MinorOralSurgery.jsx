@@ -167,7 +167,27 @@ const Orthodontics = () => {
             </ul>
           </div>
           <div className="mo-split-image animate animate-slide-right">
-            <img src="/Minor-Surgery.png" alt="Orthodontics at 32 Signature Smilez" className="shaped-image" />
+            <div className="mo-image-gallery">
+              <div className="mo-gallery-main">
+                <img
+                  src="/Gemini_Generated_Image_mcd1m1mcd1m1mcd1.png"
+                  alt="Orthodontics at 32 Signature Smilez"
+                  className="shaped-image"
+                />
+              </div>
+              <div className="mo-gallery-thumbs">
+                <img
+                  src="/Recreate_the_provided_dental_clinic_promotional_po-1775803759872.png"
+                  alt="Orthodontic Treatment"
+                  className="mo-thumb"
+                />
+                <img
+                  src="/Gemini_Generated_Image_aqngpcaqngpcaqng (1).png"
+                  alt="Orthodontic Results"
+                  className="mo-thumb"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
