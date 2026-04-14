@@ -192,12 +192,19 @@ const Fillings = () => {
       </Link>
     </div>
 
-    <div className="fil-split-image animate animate-slide-left">
-      <img
-        src="/composite_restoration_collage.jpg"
-        alt="Happy Dental Patient"
-        className="shaped-image img-zoom"
-      />
+    <div className="fil-split-image fil-split-image-gallery animate animate-slide-left">
+      <div className="fil-img-stack">
+        <img
+          src="/composite_restoration_collage.jpg"
+          alt="Composite Resin Filing"
+          className="fil-img-top img-zoom"
+        />
+        <img
+          src="/Dec 28, 2025, 12_58_04 PM.png"
+          alt="Dental Filling Result"
+          className="fil-img-bottom img-zoom"
+        />
+      </div>
     </div>
 
   </div>

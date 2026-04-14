@@ -182,12 +182,19 @@ const TeethWhitening = () => {
     </div>
 
     {/* IMAGE — animate slides in from left */}
-    <div className="tw-split-image animate animate-slide-left">
-      <img
-        src="/271997434_1762637817260466_4433929669717644270_n.jpg"
-        alt="Teeth Whitening"
-        className="shaped-image"
-      />
+    <div className="tw-split-image tw-split-image-gallery animate animate-slide-left">
+      <div className="tw-img-stack">
+        <img
+          src="/2522403.jpg"
+          alt="Teeth Whitening"
+          className="tw-img-top img-zoom"
+        />
+        <img
+          src="/Untitledeceedcec.png"
+          alt="Teeth Whitening Results"
+          className="tw-img-bottom img-zoom"
+        />
+      </div>
     </div>
 
   </div>
@@ -201,7 +208,7 @@ const TeethWhitening = () => {
     {/* IMAGE — animate slides in */}
     <div className="tw-split-image pr-large animate animate-slide-right">
       <img
-        src="/Kids-Dentistry.png"
+        src="/ace47533-5a88-4e3f-8feb-511fa0185f33-how-long-does-teeth-whitening-last-scaled_vMsNn_EqNg.jpg"
         alt="Dentist Consulting"
         className="shaped-image"
       />

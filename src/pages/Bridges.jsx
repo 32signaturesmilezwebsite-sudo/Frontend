@@ -186,7 +186,7 @@ const Bridges = () => {
 
     <div className="br-split-image animate animate-slide-right">
       <img
-        src="/Gemini_Generated_Image_b1jlfbb1jlfbb1jl.png"
+        src="/Captura-de-pantalla-2023-11-21-091225.png"
         alt="Dentist checking patient"
         className="shaped-image"
       />
@@ -202,7 +202,7 @@ const Bridges = () => {
 
     <div className="br-split-image animate animate-slide-left">
       <img
-        src="/10921-dental-bridge.jpg"
+        src="/6735c0561045f6f095c67d59_AdobeStock_357491144-min.jpeg"
         alt="Dental Model Bridge Check"
         className="shaped-image"
       />

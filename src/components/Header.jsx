@@ -72,7 +72,6 @@ const Header = () => {
                 <ul className="mega-menu-links">
                   <li><NavLink to="/about" onClick={handleNavClick}>About Us</NavLink></li>
                   <li><NavLink to="/problems-we-treat" onClick={handleNavClick}>Problems We Treat</NavLink></li>
-                  <li><NavLink to="/bad-breath" onClick={handleNavClick}>Bad Breath</NavLink></li>
                 </ul>
                 
                 <h3 className="mega-col-title" style={{marginTop: '40px'}}>New Patients</h3>
@@ -125,6 +124,7 @@ const Header = () => {
                   <li><NavLink to="/treatment/special-needs-dentistry" onClick={handleNavClick}>Special Needs Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/maxillofacial-surgery" onClick={handleNavClick}>Maxillofacial Surgery</NavLink></li>
                   <li><NavLink to="/treatment/minor-oral-surgery" onClick={handleNavClick}>Orthodontics</NavLink></li>
+                  <li><NavLink to="/bad-breath" onClick={handleNavClick}>Bad Breath</NavLink></li>
                 </ul>
               </div>
 

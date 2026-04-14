@@ -143,12 +143,19 @@ const CleaningsExams = () => {
       </Link>
     </div>
 
-    <div className="ce-split-image animate animate-slide-right">
-      <img
-        src="/Gemini_Generated_Image_p5ogtpp5ogtpp5og.png"
-        alt="Happy Dental Patient"
-        className="shaped-image"
-      />
+    <div className="ce-split-image ce-split-image-gallery animate animate-slide-right">
+      <div className="ce-img-stack">
+        <img
+          src="/r 14, 2026, 02_56_48 PM.png"
+          alt="Happy Dental Patient"
+          className="ce-img-top img-zoom"
+        />
+        <img
+          src="/scaling.jpg"
+          alt="Teeth Scaling"
+          className="ce-img-bottom img-zoom"
+        />
+      </div>
     </div>
 
   </div>

@@ -107,6 +107,44 @@
   box-shadow: 0 40px 80px rgba(0,0,0,0.25);
 }
 
+/* === Section 4: Two-image stacked gallery === */
+.ce-split-image-gallery {
+  align-items: flex-start;
+}
+
+.ce-img-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.ce-img-top,
+.ce-img-bottom {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ce-img-top {
+  transform-origin: bottom left;
+}
+
+.ce-img-bottom {
+  transform-origin: top right;
+}
+
+.ce-img-top:hover,
+.ce-img-bottom:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
+}
+
+
 /* ============================= */
 /* SCROLL REVEAL */
 /* ============================= */

@@ -523,6 +523,43 @@
   transform: scale(1.03);
 }
 
+/* === Section 4: Two-image stacked gallery === */
+.tw-split-image-gallery {
+  align-items: flex-start;
+}
+
+.tw-img-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.tw-img-top,
+.tw-img-bottom {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tw-img-top {
+  transform-origin: bottom left;
+}
+
+.tw-img-bottom {
+  transform-origin: top right;
+}
+
+.tw-img-top:hover,
+.tw-img-bottom:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
+}
+
 .pr-large {
   padding-right: 40px;
 }

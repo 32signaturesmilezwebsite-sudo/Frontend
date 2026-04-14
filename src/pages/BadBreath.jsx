@@ -185,7 +185,7 @@ const BadBreath = () => {
     </div>
 
     <div className="bb-split-image animate animate-slide-right">
-      <img src="/media__1774513230942.jpg" alt="Dental Patient Process" />
+      <img src="/1165c70791c25f3bd1b8d6be00b3acad.jpg" alt="Dental Patient Process" />
     </div>
 
   </div>
@@ -196,7 +196,7 @@ const BadBreath = () => {
   <div className="container bb-split-container reverse-mobile">
 
     <div className="bb-split-image pr-large animate animate-slide-left">
-      <img src="/media__1774513251008.jpg" alt="Dentist Consultation" />
+      <img src="/Teeth-Scaling-Polishing.png" alt="Dentist Consultation" />
     </div>
 
     <div className="bb-split-content animate animate-slide-right">
