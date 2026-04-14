@@ -39,20 +39,17 @@ import Veneers from "./pages/Veneers";
 import RestorativeDentistry from "./pages/RestorativeDentistry";
 import ImplantRestoration from "./pages/ImplantRestoration";
 import Bridges from "./pages/Bridges";
-import SameDayCrowns from "./pages/SameDayCrowns";
-import InlaysOnlays from "./pages/InlaysOnlays";
+import RootCanalTreatment from "./pages/RootCanalTreatment";
+
 import GeneralDentistry from "./pages/GeneralDentistry";
 import CleaningsExams from "./pages/CleaningsExams";
 import Fillings from "./pages/Fillings";
-import MercuryFillingRemoval from "./pages/MercuryFillingRemoval";
-import Sedation from "./pages/Sedation";
+
 import FamilyDentistry from "./pages/FamilyDentistry";
 import PediatricDentistry from "./pages/PediatricDentistry";
 import EmergencyDentistry from "./pages/EmergencyDentistry";
 import Mouthguards from "./pages/Mouthguards";
-import Sealants from "./pages/Sealants";
 import GumTreatment from "./pages/GumTreatment";
-import FluorideTreatment from "./pages/FluorideTreatment";
 import ToothExtractions from "./pages/ToothExtractions";
 import SpecialNeedsDentistry from "./pages/SpecialNeedsDentistry";
 import MaxillofacialSurgery from "./pages/MaxillofacialSurgery";
@@ -116,20 +113,15 @@ function App() {
           <Route path="/treatment/restorative" element={<RestorativeDentistry />} />
           <Route path="/treatment/implant-restoration" element={<ImplantRestoration />} />
           <Route path="/treatment/bridges" element={<Bridges />} />
-          <Route path="/treatment/same-day-crowns" element={<SameDayCrowns />} />
-          <Route path="/treatment/inlays-onlays" element={<InlaysOnlays />} />
+          <Route path="/treatment/root-canal-treatment" element={<RootCanalTreatment />} />
           <Route path="/treatment/general-dentistry" element={<GeneralDentistry />} />
           <Route path="/treatment/cleaning-exams" element={<CleaningsExams />} />
           <Route path="/treatment/fillings" element={<Fillings />} />
-          <Route path="/treatment/mercury-filling-removal" element={<MercuryFillingRemoval />} />
-          <Route path="/treatment/sedation" element={<Sedation />} />
           <Route path="/treatment/family-dentistry" element={<FamilyDentistry />} />
           <Route path="/treatment/pediatric-dentistry" element={<PediatricDentistry />} />
           <Route path="/treatment/emergency-dentistry" element={<EmergencyDentistry />} />
           <Route path="/treatment/mouthguards" element={<Mouthguards />} />
-          <Route path="/treatment/sealants" element={<Sealants />} />
           <Route path="/treatment/gum-treatment" element={<GumTreatment />} />
-          <Route path="/treatment/fluoride-treatment" element={<FluorideTreatment />} />
           <Route path="/treatment/tooth-extractions" element={<ToothExtractions />} />
           <Route path="/treatment/special-needs-dentistry" element={<SpecialNeedsDentistry />} />
           <Route path="/treatment/maxillofacial-surgery" element={<MaxillofacialSurgery />} />

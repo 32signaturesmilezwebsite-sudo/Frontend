@@ -117,9 +117,7 @@ const SpecialNeedsDentistry = () => {
               <li className="fade-up delay-4">
                 <strong>Show-Tell-Do Method:</strong> We narrate exactly what we are going to do before we do it, letting the patient safely feel the instruments to alleviate fear.
               </li>
-              <li className="fade-up delay-5">
-                <strong>Safe Sedation:</strong> For extreme anxiety, we offer mild, safe nitrous oxide (laughing gas) which works rapidly to keep the patient entirely calm and compliant.
-              </li>
+              
               <li className="fade-up delay-6">
                 <strong>Mobility Friendly:</strong> Our hallways and operatory rooms are extra wide. We can perform checkups directly in the patient's wheelchair without transferring them.
               </li>

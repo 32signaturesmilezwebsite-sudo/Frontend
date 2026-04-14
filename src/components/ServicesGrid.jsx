@@ -38,11 +38,11 @@ const servicesData = [
   },
   {
     id: 5,
-    title: 'Teeth Whitening',
-    desc: 'Brighten your smile instantly with our professional, safe, and highly effective whitening treatments.',
-    image: '/Teeth-Whitening.png',
-    linkText: 'See Whitening',
-    linkUrl: '/teeth-whitening'
+    title: 'Root Canal Treatment',
+    desc: 'Gentle and effective root canal therapy to relieve tooth pain, eliminate infection, and save your natural tooth.',
+    image: '/gettyimages-1543511026.jpg',
+    linkText: 'See Root Canal',
+    linkUrl: '/treatment/root-canal-treatment'
   },
   {
     id: 6,

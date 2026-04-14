@@ -1,0 +1,488 @@
+/* ================================================================
+   ROOT CANAL TREATMENT PAGE — mirrors MaxillofacialSurgery.css
+   ================================================================ */
+
+.rct-wrapper { background-color: #ffffff; }
+
+/* ── HERO ── */
+.rct-hero {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.rct-hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.rct-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 20px 100px;
+}
+
+.rct-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #3b4657;
+  margin-bottom: 25px;
+}
+
+.rct-hero-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #c57b43;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.rct-hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ── CENTERED TEXT SECTIONS ── */
+.rct-centered-text {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.rct-ct-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.rct-ct-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 40px;
+}
+
+.rct-ct-container p {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+/* ── SIGNS LIST ── */
+.rct-signs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 30px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.rct-signs-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  padding: 10px 0 10px 32px;
+  border-bottom: 1px solid #f0ece6;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.rct-signs-list li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 1rem;
+}
+
+.rct-signs-list li:hover {
+  transform: translateX(6px);
+}
+
+/* ── DARK SPLIT SECTION ── */
+.rct-dark-split {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.rct-dark-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.rct-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20, 30, 20, 0.5),
+    rgba(10, 15, 10, 0.92)
+  );
+  z-index: 2;
+}
+
+.rct-dark-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.rct-ds-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rct-ds-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.rct-ds-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.rct-ds-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #e2e8f0;
+}
+
+/* ── SPLIT SECTION (Procedure) ── */
+.rct-split-section {
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.rct-split-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rct-split-content {
+  flex: 1;
+}
+
+.pr-large { padding-right: 40px; }
+
+.rct-split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+}
+
+.rct-split-content h2:hover {
+  transform: translateY(-3px);
+  letter-spacing: 1px;
+}
+
+.rct-split-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+/* BULLET LIST */
+.rct-bullet-list {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.rct-bullet-list li {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.rct-bullet-list li strong {
+  color: #3b4657;
+}
+
+.rct-bullet-list li:hover {
+  transform: translateX(6px);
+}
+
+.rct-split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ── IMAGE GALLERY (3-photo layout) ── */
+.rct-image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.rct-gallery-main img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
+}
+
+.rct-gallery-main img:hover {
+  transform: scale(1.03) translateY(-6px);
+  box-shadow: 0 35px 70px rgba(0,0,0,0.22);
+}
+
+.rct-gallery-thumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.rct-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
+}
+
+.rct-thumb:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.2);
+}
+
+/* ── IMAGE STYLES ── */
+.shaped-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+}
+
+.shaped-image:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+}
+
+/* ── ICON CARDS GRID ── */
+.rct-ook-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 40px auto 60px;
+  flex-wrap: wrap;
+}
+
+.rct-ook-card {
+  flex: 1;
+  min-width: 260px;
+  max-width: 320px;
+  padding: 60px 25px;
+  background: #fbf7ee;
+  clip-path: polygon(
+    50% 0%,
+    100% 12%,
+    100% 88%,
+    50% 100%,
+    0% 88%,
+    0% 12%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.rct-ook-card:hover {
+  transform: translateY(-8px);
+}
+
+.rct-ook-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(197,123,67,0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.rct-ook-card:hover::before {
+  opacity: 1;
+}
+
+.hex-icon-rct {
+  margin-bottom: 20px;
+  color: #c57b43;
+  transition: transform 0.3s ease;
+}
+
+.rct-ook-card:hover .hex-icon-rct {
+  transform: scale(1.15);
+}
+
+.rct-ook-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3b4657;
+  margin-bottom: 15px;
+}
+
+.rct-ook-card p {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 240px;
+}
+
+/* ── SCROLL REVEAL ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.30s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.60s; }
+.delay-5 { transition-delay: 0.75s; }
+.delay-6 { transition-delay: 0.90s; }
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-left  { transform: translateX(-60px); }
+.animate-slide-right { transform: translateX(60px); }
+
+.animate-show.animate-slide-left,
+.animate-show.animate-slide-right {
+  transform: translateX(0) translateY(0);
+}
+
+/* ── BACKGROUNDS ── */
+.bg-cream { background-color: #fdf8f3; }
+.bg-white  { background-color: #ffffff; }
+
+/* ── DOCTOR PORTRAIT (shared global styles) ── */
+.frame-outer {
+  width: 320px;
+  height: 400px;
+  border-radius: 18px;
+  border: 6px solid rgba(255,255,255,0.15);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+.frame-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dr-portrait-fixed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .rct-hero-content h1,
+  .rct-ct-container h2,
+  .rct-split-content h2,
+  .rct-ds-content h2 { font-size: 2.8rem; }
+
+  .rct-split-container,
+  .rct-dark-container { flex-direction: column; }
+
+  .reverse-mobile { flex-direction: column-reverse; }
+
+  .rct-ds-content {
+    padding: 60px 20px 40px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .rct-ds-image { justify-content: center; }
+  .rct-ook-grid { flex-direction: column; align-items: center; }
+  .rct-ook-card { max-width: 400px; width: 100%; }
+  .pr-large { padding-right: 0; }
+}
+
+@media (max-width: 768px) {
+  .rct-hero-content h1,
+  .rct-split-content h2 { font-size: 2.5rem; }
+  .rct-hero-subtitle { font-size: 1.2rem; }
+}

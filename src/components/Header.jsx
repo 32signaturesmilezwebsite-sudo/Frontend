@@ -99,31 +99,27 @@ const Header = () => {
                   </NavLink>
                 </h3>
                 <ul className="mega-menu-links service-multi-col">
+                  {/* Restorative — first, right under Services header */}
+                  <li><NavLink to="/treatment/restorative" onClick={handleNavClick}>Restorative Dentistry</NavLink></li>
                   {/* Cosmetic */}
                   <li><NavLink to="/cosmetic-dentistry" onClick={handleNavClick}>Cosmetic Dentistry</NavLink></li>
                   <li><NavLink to="/veneers" onClick={handleNavClick}>Veneers</NavLink></li>
                   <li><NavLink to="/teeth-whitening" onClick={handleNavClick}>Teeth Whitening</NavLink></li>
                   <li><NavLink to="/dental-bonding" onClick={handleNavClick}>Bonding</NavLink></li>
-                  {/* Restorative */}
-                  <li><NavLink to="/treatment/restorative" onClick={handleNavClick}>Restorative Dentistry</NavLink></li>
+                  {/* Restorative sub-items */}
                   <li><NavLink to="/treatment/bridges" onClick={handleNavClick}>Bridges</NavLink></li>
                   <li><NavLink to="/dental-crowns" onClick={handleNavClick}>Traditional Crowns</NavLink></li>
-                  <li><NavLink to="/treatment/same-day-crowns" onClick={handleNavClick}>Same-Day Crowns</NavLink></li>
+                  <li><NavLink to="/treatment/root-canal-treatment" onClick={handleNavClick}>Root Canal Treatment</NavLink></li>
                   <li><NavLink to="/treatment/implant-restoration" onClick={handleNavClick}>Implant Restoration</NavLink></li>
-                  <li><NavLink to="/treatment/inlays-onlays" onClick={handleNavClick}>Inlays Onlays</NavLink></li>
                   {/* General */}
                   <li><NavLink to="/treatment/general-dentistry" onClick={handleNavClick}>General Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/cleaning-exams" onClick={handleNavClick}>Cleaning & Exams</NavLink></li>
                   <li><NavLink to="/treatment/fillings" onClick={handleNavClick}>Fillings</NavLink></li>
-                  <li><NavLink to="/treatment/mercury-filling-removal" onClick={handleNavClick}>Mercury Filling Removal</NavLink></li>
-                  <li><NavLink to="/treatment/sedation" onClick={handleNavClick}>Sedation</NavLink></li>
                   <li><NavLink to="/treatment/family-dentistry" onClick={handleNavClick}>Family Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/pediatric-dentistry" onClick={handleNavClick}>Pediatric Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/emergency-dentistry" onClick={handleNavClick}>Emergency Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/mouthguards" onClick={handleNavClick}>Mouthguards</NavLink></li>
-                  <li><NavLink to="/treatment/sealants" onClick={handleNavClick}>Sealants</NavLink></li>
                   <li><NavLink to="/treatment/gum-treatment" onClick={handleNavClick}>Gum Treatment</NavLink></li>
-                  <li><NavLink to="/treatment/fluoride-treatment" onClick={handleNavClick}>Fluoride Treatment</NavLink></li>
                   <li><NavLink to="/treatment/tooth-extractions" onClick={handleNavClick}>Tooth Extractions</NavLink></li>
                   <li><NavLink to="/treatment/special-needs-dentistry" onClick={handleNavClick}>Special Needs Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/maxillofacial-surgery" onClick={handleNavClick}>Maxillofacial Surgery</NavLink></li>

@@ -77,8 +77,8 @@ const Hero = () => {
         {/* RIGHT IMAGE */}
         <motion.div
   className="hero-light-image"
-  initial={{ opacity: 0, x: 80 }}
-  animate={{ opacity: 1, x: 0 }}
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1, ease: "easeOut" }}
 >
   <div className="doctor-card">

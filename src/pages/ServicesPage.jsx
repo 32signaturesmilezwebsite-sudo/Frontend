@@ -64,11 +64,11 @@ const ServicesPage = () => {
     },
     {
       id: 4,
-      title: 'Same-Day Crowns',
-      desc: 'Witness the transformation as we restore your smile to its former glory with CEREC same-day crowns that blend artistry and efficiency.',
-      image: '/what-are-same-day-crowns (1).png',
-      link: '/treatment/same-day-crowns',
-      linkText: 'See CEREC Crowns'
+      title: 'Root Canal Treatment',
+      desc: 'Gentle and effective root canal therapy to relieve tooth pain, eliminate infection, and save your natural tooth.',
+      image: '/gettyimages-1543511026.jpg',
+      link: '/treatment/root-canal-treatment',
+      linkText: 'See Root Canal'
     },
 
     {
@@ -176,7 +176,7 @@ const ServicesPage = () => {
             <h2>Save and Smile</h2>
 
             <p>
-              We believe that everyone deserves a healthy mouth without breaking the bank. We offer flexible payment options tailored to your needs and budget. Our office also works with various insurance providers to make our dental services affordable for everyone in Krishna Nagar and beyond.
+              We believe that everyone deserves a healthy mouth without breaking the bank. Our office has all payment platforms including online and card transactions for your convenience. We are empanelled with ONGC, making our dental services accessible and affordable for everyone in Tripura and beyond.
             </p>
           </div>
         </div>
