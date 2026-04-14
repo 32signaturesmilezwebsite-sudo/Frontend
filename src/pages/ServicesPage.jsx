@@ -66,7 +66,7 @@ const ServicesPage = () => {
       id: 4,
       title: 'Root Canal Treatment',
       desc: 'Gentle and effective root canal therapy to relieve tooth pain, eliminate infection, and save your natural tooth.',
-      image: '/gettyimages-1543511026.jpg',
+      image: '/Untitledcrecvrgfgrfg.png',
       link: '/treatment/root-canal-treatment',
       linkText: 'See Root Canal'
     },
