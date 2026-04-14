@@ -111,6 +111,7 @@ const Header = () => {
                   <li><NavLink to="/dental-crowns" onClick={handleNavClick}>Traditional Crowns</NavLink></li>
                   <li><NavLink to="/treatment/root-canal-treatment" onClick={handleNavClick}>Root Canal Treatment</NavLink></li>
                   <li><NavLink to="/treatment/implant-restoration" onClick={handleNavClick}>Implant Restoration</NavLink></li>
+                  <li><NavLink to="/treatment/dental-implants" onClick={handleNavClick}>Dental Implants</NavLink></li>
                   {/* General */}
                   <li><NavLink to="/treatment/general-dentistry" onClick={handleNavClick}>General Dentistry</NavLink></li>
                   <li><NavLink to="/treatment/cleaning-exams" onClick={handleNavClick}>Cleaning & Exams</NavLink></li>

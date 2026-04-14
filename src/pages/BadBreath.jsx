@@ -136,11 +136,11 @@ const BadBreath = () => {
 
     <div className="bb-ds-content animate animate-slide-right">
       <h2>Save and Smile</h2>
-      <p>
+          <p>
         We believe your oral health shouldn't come with financial stress.
-        We provide affordable dental services with flexible payment plans
-        and work with various insurance providers. Ask our team about our
-        payment options!
+        Our clinic supports all major payment methods including online and
+        card transactions for your convenience. We are empanelled with ONGC,
+        making our services accessible and affordable for patients across Tripura.
       </p>
     </div>
 

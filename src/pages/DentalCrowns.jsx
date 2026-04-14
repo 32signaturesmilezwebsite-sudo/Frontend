@@ -136,8 +136,8 @@ const DentalCrowns = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        Protecting a vulnerable tooth shouldn't cause financial stress. At 32 Signature Smilez, we ensure that our durable, high-quality crowns remain accessible. We work dynamically with a variety of insurance carriers and proudly offer flexible payment financing.
-      </p>
+  Protecting a vulnerable tooth shouldn't cause financial stress. At 32 Signature Smilez, we ensure that our durable, high-quality crowns remain accessible to everyone. We offer flexible payment options along with convenient online and card transactions, making your treatment smooth and worry-free.
+</p>
     </div>
 
   </div>

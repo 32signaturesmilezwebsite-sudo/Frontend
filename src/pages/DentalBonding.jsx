@@ -147,11 +147,11 @@ const DentalBonding = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        Improving your smile with tooth bonding doesn't have to break the bank.
-        It's one of the most budget-friendly ways to make your smile shine. We
-        accept various insurance plans and offer plenty of payment options to
-        make sure you can get the care you need without any stress.
-      </p>
+  Improving your smile with tooth bonding doesn't have to break the bank.
+  It's one of the most budget-friendly ways to enhance your smile. We offer
+  flexible payment options along with convenient online and card transactions,
+  ensuring you receive the care you need without any financial stress.
+</p>
     </div>
 
   </div>

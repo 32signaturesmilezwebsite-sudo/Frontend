@@ -118,9 +118,9 @@ const CosmeticDentistry = () => {
     <div className="cd-ds-content animate animate-slide-right">
       <h2>Save and Smile</h2>
 
-      <p>
-        Achieving a beautiful smile shouldn't be a financial burden. At 32 Signature Smilez, we provide flexible payment options suited to your financial needs and collaborate with a variety of insurance providers.
-      </p>
+     <p>
+  Achieving a beautiful smile shouldn't be a financial burden. At 32 Signature Smilez, we provide flexible payment options tailored to your needs, along with support for all major online and card transactions. Our goal is to make quality dental care accessible and stress-free for every patient.
+</p>
 
       
     </div>

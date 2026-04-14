@@ -46,8 +46,8 @@ const gumFaqs = [
     answer: "Not always. Many cases can be treated with non-surgical procedures like scaling and root planing. Surgery is only recommended for advanced stages when necessary."
   },
   {
-    question: "Is gum treatment covered by insurance?",
-    answer: "Many dental insurance plans partially cover periodontal treatments. Our team will help you understand your coverage and available options."
+    question: "Is gum treatment affordable?",
+answer: "Yes, gum treatments are designed to be accessible for patients. Our team will guide you through flexible payment options and convenient online and card transactions to ensure your treatment is smooth and stress-free."
   }
 ];
 const GumTreatment = () => {
@@ -151,7 +151,7 @@ useEffect(() => {
 
   Our advanced periodontal care includes deep cleaning procedures such as scaling and root planing to remove harmful bacteria and promote healing. Using modern techniques and gentle care, we help restore gum health, reduce inflammation, and prevent further damage. 
 
-  Whether you are in the early stages of gingivitis or require more advanced treatment, our team provides personalized care plans tailored to your needs. We also guide you on maintaining optimal oral hygiene and offer support with insurance and flexible options, ensuring your treatment is both effective and stress-free.
+  Whether you are in the early stages of gingivitis or require more advanced treatment, our team provides personalized care plans tailored to your needs. We also guide you on maintaining optimal oral hygiene and offer flexible payment options along with convenient online and card transactions, ensuring your treatment is both effective and stress-free.
 </p>
     </div>
 

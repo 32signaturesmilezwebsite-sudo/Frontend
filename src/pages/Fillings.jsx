@@ -148,12 +148,9 @@ const Fillings = () => {
     <div className="fil-ds-content animate animate-slide-right">
       <h2>Save and Smile</h2>
 
-      <p>
-        Repairing a cavity today is incredibly inexpensive compared to repairing
-        a broken or deeply infected tooth tomorrow. If you're concerned about
-        costs, our financing team will happily outline how your dental insurance
-        benefits cover composite fillings to slash your out-of-pocket expenses!
-      </p>
+     <p>
+  Repairing a cavity today is far more affordable than treating a broken or deeply infected tooth later. If you're concerned about costs, our team will guide you through flexible payment options and convenient online and card transactions to keep your treatment simple and stress-free. Taking care of small issues early helps you avoid bigger expenses in the future.
+</p>
     </div>
 
   </div>

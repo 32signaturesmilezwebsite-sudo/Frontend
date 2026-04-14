@@ -210,7 +210,9 @@ const ProblemsWeTreat = () => {
         <div className="container pwt-split-container reverse-mobile">
           <div className="pwt-split-content pr-large animate animate-slide-left">
             <h2>Save and Smile</h2>
-            <p>We’re committed to making dental care accessible. With our flexible payment options and insurance collaborations, we ensure you get the best care without any financial worries.</p>
+            <p>
+  We’re committed to making dental care accessible. With our flexible payment options and support for convenient online and card transactions, we ensure you receive the best care without any financial worries.
+</p>
           </div>
           <div className="pwt-split-image animate animate-slide-right">
             <img src="/326558262_896809911467593_2475934262789262714_n.jpg" alt="Patient Consultation" />

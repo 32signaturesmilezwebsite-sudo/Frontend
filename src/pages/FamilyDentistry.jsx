@@ -149,12 +149,12 @@ const FamilyDentistry = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        Managing a family budget is hard enough; affording premium dental care
-        shouldn't make it harder. We enthusiastically accept a massive array of
-        insurance networks to ensure your family's routine and major care is
-        covered seamlessly!
-      </p>
-
+  Managing a family budget is hard enough; affording premium dental care
+  shouldn't make it harder. We offer flexible payment options along with
+  convenient online and card transactions to make dental care easier for
+  your entire family. Our goal is to ensure quality treatment remains
+  accessible, comfortable, and stress-free for everyone.
+</p>
       
     </div>
 

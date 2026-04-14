@@ -144,8 +144,8 @@ const ImplantRestoration = () => {
       </p>
 
       <p className="animate fade-up delay-3">
-        Explore our diverse array of accepted insurance plans and flexible financing paths to secure your smile today.
-      </p>
+  Explore our flexible payment options and convenient financing solutions to make your dental care easy and stress-free. Take the next step towards a healthier, more confident smile today.
+</p>
 
     </div>
 

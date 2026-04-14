@@ -140,7 +140,9 @@ useEffect(() => {
       <h2>Save and Smile</h2>
 
       <p>
-  Establishing good oral health habits early is one of the most important investments in your child’s long-term well-being. Pediatric dentistry focuses on gentle, preventive care designed specifically for growing smiles. From routine check-ups and cleanings to early cavity prevention and guidance on brushing habits, we ensure your child feels safe, comfortable, and confident at every visit. Our friendly team creates a positive dental experience while helping parents understand treatment options and maximize insurance benefits for affordable, stress-free care.
+  Establishing good oral health habits early is one of the most important investments in your child’s long-term well-being. Pediatric dentistry focuses on gentle, preventive care designed specifically for growing smiles. From routine check-ups and cleanings to early cavity prevention and guidance on brushing habits, we ensure your child feels safe, comfortable, and confident at every visit. 
+
+  Our friendly team creates a positive dental experience while helping parents understand treatment options. We also offer flexible payment options along with convenient online and card transactions, making quality dental care affordable and stress-free for your child.
 </p>
     </div>
 

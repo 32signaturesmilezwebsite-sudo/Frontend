@@ -94,8 +94,10 @@ const ToothExtractions = () => {
           <div className="te-ds-content animate animate-slide-right">
             <h2>Save and Smile</h2>
             <p>
-              We understand that the thought of a tooth extraction can be intimidating both physically and financially. At 32 Signature Smilez, we ensure that necessary extractions are affordable and straightforward. If an extraction is needed to eliminate infection or prepare for restorative implants or bridges, our team will work closely with your insurance provider to maximize your benefits. For patients without coverage, we offer highly flexible payment plans, allowing you to prioritize your health, permanently eliminate dental pain, and focus purely on your recovery—not the bill.
-            </p>
+  We understand that the thought of a tooth extraction can be intimidating both physically and financially. At 32 Signature Smilez, we ensure that necessary extractions are affordable and straightforward. If an extraction is needed to eliminate infection or prepare for restorative implants or bridges, our team will guide you through the entire process with care and clarity. 
+
+  We offer flexible payment plans along with convenient online and card transactions, allowing you to prioritize your health, relieve dental pain, and focus fully on your recovery—not the cost.
+</p>
           </div>
         </div>
       </section>
@@ -111,9 +113,7 @@ const ToothExtractions = () => {
               <li className="fade-up delay-2">
                 <strong>Advanced Anesthetics:</strong> We use high-grade local anesthetics to ensure the entire treatment area is profoundly numb before the procedure even begins.
               </li>
-              <li className="fade-up delay-3">
-                <strong>Sedation Options:</strong> For patients with severe dental anxiety, we offer calming nitrous oxide to keep you completely relaxed during the extraction.
-              </li>
+              
               <li className="fade-up delay-4">
                 <strong>Atraumatic Methods:</strong> We utilize specialized tools to gently elevate the tooth, preserving as much surrounding jawbone and soft tissue as possible.
               </li>

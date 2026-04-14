@@ -104,9 +104,9 @@ const CleaningsExams = () => {
           </div>
           <div className="ce-ds-content animate animate-slide-right">
             <h2>Save and Smile</h2>
-            <p>
-              Did you know that regular cleanings can actually save you money? Almost all major dental insurance plans fully cover two preventative cleanings and exams per year at 100%. Don't let your benefits go to waste—utilize them to protect your smile from expensive future restorations!
-            </p>
+           <p>
+  Did you know that regular cleanings can actually save you money? Preventative care helps avoid costly dental treatments in the future by keeping your teeth and gums healthy. We offer affordable services along with convenient online and card payment options, making it easier to prioritize your oral health. Don’t wait—invest in your smile today to prevent bigger issues tomorrow!
+</p>
             
           </div>
         </div>

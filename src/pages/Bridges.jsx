@@ -142,8 +142,8 @@ const Bridges = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        Don't let financial anxiety prevent you from restoring missing teeth. Leaving a gap untreated can lead to bone loss and teeth shifting. At 32 Signature Smilez, we proudly accept numerous insurance layouts and offer flexible, interest-free payment models to protect your health.
-      </p>
+  Don't let financial anxiety prevent you from restoring missing teeth. Leaving a gap untreated can lead to bone loss and teeth shifting. At 32 Signature Smilez, we offer flexible, interest-free payment options along with support for all major online and card transactions. We are empanelled with ONGC, making quality dental care accessible for patients across Tripura. Our team is always here to guide you with the best treatment plan suited to your needs and budget.
+</p>
 
       
     </div>

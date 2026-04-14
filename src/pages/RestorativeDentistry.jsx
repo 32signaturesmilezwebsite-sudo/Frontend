@@ -123,8 +123,8 @@ const RestorativeDentistry = () => {
       </p>
 
       <p className="animate fade-up delay-3">
-        We work with many insurance providers so that you can get top-notch dental care in Agartala without the stress.
-      </p>
+  We offer flexible payment options along with convenient online and card transactions, so you can receive top-notch dental care in Agartala without any stress.
+</p>
 
     </div>
 

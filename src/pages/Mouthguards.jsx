@@ -46,8 +46,8 @@ const guardFaqs = [
     answer: "Sports guards are designed to absorb impact and prevent injuries during physical activities, while night guards focus on protecting teeth from grinding and reducing jaw strain during sleep."
   },
   {
-    question: "Are mouthguards covered by insurance?",
-    answer: "Many dental insurance plans partially cover custom mouthguards, especially for medical necessity like bruxism. Our team helps you understand and maximize your benefits."
+    question: "Are mouthguards affordable?",
+answer: "Yes, custom mouthguards are an affordable way to protect your teeth from damage caused by grinding or sports activities. We offer flexible payment options along with convenient online and card transactions to make your treatment easy and stress-free."
   }
 ];
 
@@ -147,8 +147,10 @@ const Mouthguards = () => {
     <div className="fil-ds-content animate animate-slide-right">
       <h2>Save and Smile</h2>
 
-      <p>
-  Protecting your smile during sports or from nighttime grinding is essential for long-term oral health. Custom mouthguards are designed to provide superior comfort, durability, and protection compared to over-the-counter options. Whether you’re an athlete or suffer from teeth grinding (bruxism), our precision-fit mouthguards help prevent tooth damage, jaw strain, and unnecessary wear. Crafted using advanced materials, they fit securely and allow you to breathe and speak comfortably. Our team also guides you through insurance coverage and affordable options to ensure your protection is both effective and accessible.
+     <p>
+  Protecting your smile during sports or from nighttime grinding is essential for long-term oral health. Custom mouthguards are designed to provide superior comfort, durability, and protection compared to over-the-counter options. Whether you’re an athlete or suffer from teeth grinding (bruxism), our precision-fit mouthguards help prevent tooth damage, jaw strain, and unnecessary wear. 
+
+  Crafted using advanced materials, they fit securely and allow you to breathe and speak comfortably. Our team also guides you through flexible payment options along with convenient online and card transactions, ensuring your protection is both effective and easily accessible.
 </p>
     </div>
 

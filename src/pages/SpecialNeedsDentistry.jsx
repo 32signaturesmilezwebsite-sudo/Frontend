@@ -63,7 +63,7 @@ const SpecialNeedsDentistry = () => {
           <h1 className="fade-up">Special Needs Dentistry</h1>
           <p className="snd-hero-subtitle fade-up delay-1">Accommodating care for uniquely wonderful patients</p>
           <div className="snd-hero-buttons fade-up delay-2">
-             <a href="tel:+919077770586" className="btn-solid-orange">Call to Discuss Accommodations</a>
+             <a href="tel:+919077770586" className="btn-solid-orange">Call for Consultation</a>
           </div>
         </div>
       </section>
@@ -94,8 +94,10 @@ const SpecialNeedsDentistry = () => {
           <div className="snd-ds-content animate animate-slide-right">
             <h2>Save and Smile</h2>
             <p>
-              Families caring for loved ones with special needs already have enough on their plate. You shouldn't have to worry about excessive dental bills for necessary, compassionate care. Our office proudly works side-by-side with almost all major dental insurance providers to ensure specialized accommodations remain heavily subsidized. Even if you don't have coverage, we will instantly design a low-stress, highly flexible payment plan so you can focus entirely on providing the safe, high-quality healthcare your family deserves.
-            </p>
+  Families caring for loved ones with special needs already have enough on their plate. You shouldn't have to worry about excessive dental costs for necessary, compassionate care. Our clinic is committed to providing gentle, personalized treatment in a comfortable and supportive environment. 
+
+  We offer flexible and low-stress payment options along with convenient online and card transactions, so you can focus entirely on ensuring safe, high-quality care for your loved ones without financial pressure.
+</p>
           </div>
         </div>
       </section>

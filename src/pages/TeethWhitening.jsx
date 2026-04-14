@@ -141,10 +141,11 @@ const TeethWhitening = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        We provide affordable dental services with flexible payment plans
-        and insurance support so you can achieve your dream smile without
-        stress. Ask our team about our payment options!
-      </p>
+  We provide affordable dental services with flexible payment plans
+  and convenient online and card transactions so you can achieve your
+  dream smile without stress. Ask our team about the best payment
+  options available for you!
+</p>
 
     </div>
 

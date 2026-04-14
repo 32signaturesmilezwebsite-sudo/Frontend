@@ -139,8 +139,10 @@ const MaxillofacialSurgery = () => {
           <div className="ms-ds-content animate animate-slide-right">
             <h2>Save and Smile</h2>
             <p>
-              Maxillofacial surgery is a major medical and financial undertaking, but at 32 Signature Smilez, we refuse to let cost bar you from essential, life-changing procedures. We expertly navigate the complex overlap between medical and dental insurance to ensure you receive the absolute maximum coverage possible for your specific surgery. Furthermore, we provide extended, zero-interest payment schedules to break down any remaining out-of-pocket costs into manageable monthly installments, taking the financial stress completely out of your recovery phase.
-            </p>
+  Maxillofacial surgery is a major medical and financial undertaking, but at 32 Signature Smilez, we ensure that cost never becomes a barrier to essential, life-changing procedures. Our team provides clear guidance and support throughout your treatment journey, helping you plan everything with confidence. 
+
+  We offer flexible, zero-interest payment options and convenient online and card transactions to break down costs into manageable steps, making the entire process smoother and stress-free. Our focus is to ensure your recovery is comfortable, supported, and free from financial worries.
+</p>
           </div>
         </div>
       </section>

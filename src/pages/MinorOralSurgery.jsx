@@ -50,8 +50,8 @@ const faqs = [
     answer: "Contact the clinic promptly and we will schedule a repair appointment. Minor wire irritations can be temporarily soothed with orthodontic wax until you come in."
   },
   {
-    question: "Is orthodontic treatment covered by insurance?",
-    answer: "Coverage varies by plan. We work with most major dental insurance providers and offer flexible payment plans to help make your orthodontic journey affordable."
+    question: "Is orthodontic treatment affordable?",
+answer: "Yes, orthodontic treatment is designed to be accessible for patients. We offer flexible payment plans along with convenient online and card transactions to make your orthodontic journey smooth, manageable, and stress-free."
   },
   {
     question: "Will orthodontic treatment affect my speech?",
@@ -134,8 +134,8 @@ const Orthodontics = () => {
           <div className="mo-ds-content animate animate-slide-right">
             <h2>Affordable, Accessible Orthodontics</h2>
             <p>
-              We believe that a beautifully aligned smile should not be a luxury. That is why we offer flexible, interest-free instalment plans and work closely with all major dental insurance providers to maximise your orthodontic coverage. Our in-house orthodontic team eliminates costly external referrals, keeping your treatment journey streamlined, transparent, and genuinely affordable from start to finish.
-            </p>
+  We believe that a beautifully aligned smile should not be a luxury. That is why we offer flexible, interest-free instalment plans along with convenient online and card transactions to make orthodontic care accessible for everyone. Our in-house orthodontic team eliminates costly external referrals, keeping your treatment journey streamlined, transparent, and genuinely affordable from start to finish.
+</p>
           </div>
         </div>
       </section>

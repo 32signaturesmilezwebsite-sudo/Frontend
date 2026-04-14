@@ -158,7 +158,7 @@ const NewPatientsPage = () => {
               <ul className="np-checklist">
                 <li>
                   <div className="check-icon-wrapper"><Check strokeWidth={1.5} size={16} /></div>
-                  Insurance card, if you have one
+                  Valid ID proof (if required)
                 </li>
                 <li>
                   <div className="check-icon-wrapper"><Check strokeWidth={1.5} size={16} /></div>
@@ -244,8 +244,8 @@ const NewPatientsPage = () => {
           a: "Call us immediately. We prioritize emergency cases and will help relieve your pain quickly and effectively."
         },
         {
-          q: "Do you accept insurance?",
-          a: "Yes! We work with most major insurance providers. Contact us and we’ll help you understand your coverage."
+          q: "Do you offer flexible payment options?",
+a: "Yes! We provide flexible payment options along with convenient online and card transactions to make your treatment smooth, affordable, and stress-free. Feel free to contact us for more details."
         },
         {
           q: "What payment options are available?",

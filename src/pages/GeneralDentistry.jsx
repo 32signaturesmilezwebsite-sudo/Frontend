@@ -119,8 +119,8 @@ const GeneralDentistry = () => {
       </p>
 
       <p className="fade-up delay-2">
-        We provide affordable general dentist services with flexible payment plans and work with various insurance providers. Ask our team about our payment options!
-      </p>
+  We provide affordable general dental services with flexible payment plans to suit your needs. Our clinic supports convenient online and card transactions, making your experience smooth and hassle-free. Feel free to ask our team about the best payment options available for you!
+</p>
 
      
     </div>

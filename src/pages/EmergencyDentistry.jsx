@@ -145,9 +145,8 @@ const EmergencyDentistry = () => {
   serious complications, increased pain, and significantly higher expenses later on. 
 
   At our clinic, we prioritize your comfort and immediate care. Our team 
-  actively assists emergency patients in understanding their insurance 
-  coverage, handling claims quickly, and exploring flexible, fast-track 
-  financing options. 
+  guides you through flexible payment options and supports all major online 
+  and card transactions to ensure a smooth, hassle-free experience. 
 
   Whether it’s sudden tooth pain, a broken tooth, infection, or injury, 
   we ensure you receive prompt, high-quality treatment without unnecessary 

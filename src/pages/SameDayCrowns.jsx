@@ -128,11 +128,11 @@ const SameDayCrowns = () => {
       <h2>Save and Smile</h2>
 
       <p>
-        Don't let financial anxiety prevent you from restoring missing teeth.
-        Leaving a gap untreated can lead to bone loss and teeth shifting.
-        At 32 Signature Smilez, we proudly accept numerous insurance layouts
-        and offer flexible, interest-free payment models to protect your health.
-      </p>
+  Don't let financial anxiety prevent you from restoring missing teeth.
+  Leaving a gap untreated can lead to bone loss and teeth shifting.
+  At 32 Signature Smilez, we offer flexible, interest-free payment options
+  along with convenient online and card transactions to support your care.
+</p>
     </div>
 
   </div>
