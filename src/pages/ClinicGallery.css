@@ -375,8 +375,8 @@
   }
 
   .lightbox-metadata {
-    position: relative;
-    transform: none;
+    position: relative !important;
+    transform: none !important;
     bottom: auto;
     background: rgba(10, 10, 10, 0.95);
     border-radius: 0 0 12px 12px;
