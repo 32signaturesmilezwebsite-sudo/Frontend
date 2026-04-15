@@ -40,7 +40,7 @@ const servicesData = [
     id: 5,
     title: 'Root Canal Treatment',
     desc: 'Gentle and effective root canal therapy to relieve tooth pain, eliminate infection, and save your natural tooth.',
-    image: '/gettyimages-1543511026.jpg',
+    image: '/Untitledcrecvrgfgrfg.png',
     linkText: 'See Root Canal',
     linkUrl: '/treatment/root-canal-treatment'
   },
@@ -48,7 +48,7 @@ const servicesData = [
     id: 6,
     title: 'Smile Makeover',
     desc: 'Complete cosmetic transformations meticulously tailored to give you the perfect, radiant smile you deserve.',
-    image: '/IMG_4514 (1).jpg',
+    image: '/Complete-Smile-Makeover-Transforming-Smiles-with-Cosmetic-Dental-Veneers.png',
     linkText: 'See Makeovers',
     linkUrl: '/treatment/smile-makeover'
   }
