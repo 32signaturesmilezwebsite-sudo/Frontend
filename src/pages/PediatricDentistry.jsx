@@ -187,7 +187,7 @@ useEffect(() => {
 
     <div className="ped-split-image animate animate-slide-right">
       <img
-        src="/Kids-Dentistry.png"
+        src="/IMG_2775.JPG.jpeg"
         alt="Happy child at dentist"
         className="shaped-image"
       />
