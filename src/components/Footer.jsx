@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="footer-text">
             <p>Agartala, Tripura</p>
             <p>799001</p>
-            <a href="https://maps.app.goo.gl/ij38iuNN8hMKx2Ab9" target="_blank" rel="noreferrer" className="footer-link-text">Get Directions</a>
+            <a href="https://maps.app.goo.gl/2zTDTt4Qt6dXQEAL6" target="_blank" rel="noreferrer" className="footer-link-text">Get Directions</a>
           </div>
         </div>
 
@@ -78,7 +78,7 @@ const Footer = () => {
         <div className="footer-contact-col no-border">
           <Star className="footer-icon" />
           <div className="footer-text">
-            <a href="https://maps.app.goo.gl/ij38iuNN8hMKx2Ab9" target="_blank" rel="noreferrer" className="footer-link-text review-us-link">
+            <a href="https://maps.app.goo.gl/2zTDTt4Qt6dXQEAL6" target="_blank" rel="noreferrer" className="footer-link-text review-us-link">
               Review Us
             </a>
           </div>

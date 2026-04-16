@@ -1,5 +1,5 @@
 // Treatment data for all dental services
-const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/vYRxei6adkCdmwYH6';
+const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/2zTDTt4Qt6dXQEAL6';
 
 export const treatments = {
   'tooth-filling': {

@@ -136,7 +136,7 @@ const Header = () => {
                 {/* Map styling matching the reference */}
                 <div className="mega-map-placeholder">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7186178792014!2d91.27855367610667!3d23.83441588628929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f412c125749f%3A0x6bba843a85b991cf!2s32%20Signature%20Smilez%20Multispeciality%20Dental%20Clinic%20%26%20Implant%20Center!5e0!3m2!1sen!2sin!4v1711993414842!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.72!2d91.2744754!3d23.8341628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f4140e2416c9%3A0x2c4112fa2b131ab3!2s32%20Signature%20Smilez%20Multispecialty%20Dental%20Cliniq%20%26%20Implant%20Centre!5e0!3m2!1sen!2sin!4v1711993414842!5m2!1sen!2sin" 
                     width="100%" 
                     height="200" 
                     style={{ border: 0, borderRadius: '4px' }} 
@@ -154,7 +154,7 @@ const Header = () => {
                     <div>
                       <p>Thakur Pally Rd, opposite satsangha ashram,</p>
                       <p>Krishna Nagar, Agartala, Tripura 799001</p>
-                      <a href="https://maps.app.goo.gl/vYRxei6adkCdmwYH6" target="_blank" rel="noreferrer" className="get-directions">Get Directions</a>
+                      <a href="https://maps.app.goo.gl/2zTDTt4Qt6dXQEAL6" target="_blank" rel="noreferrer" className="get-directions">Get Directions</a>
                     </div>
                   </li>
                   <li>

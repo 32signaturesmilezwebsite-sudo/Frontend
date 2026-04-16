@@ -71,7 +71,6 @@ const AdminBlogList = () => {
         <div className="ag-nav">
           <Link to="/admin/dashboard" className="ag-btn ag-btn-outline">Appointments</Link>
           <Link to="/admin/gallery" className="ag-btn ag-btn-outline">Gallery</Link>
-          <Link to="/admin/reviews" className="ag-btn ag-btn-outline">Reviews</Link>
           <button onClick={logout} className="ag-btn ag-btn-outline" style={{ color: '#ef4444' }}>
             <LogOut size={16} /> Logout
           </button>

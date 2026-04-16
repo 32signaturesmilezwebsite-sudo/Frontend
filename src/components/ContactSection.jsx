@@ -36,7 +36,7 @@ const ContactSection = () => {
 
                   {/* ✅ GOOGLE MAPS LINK */}
                   <a 
-                    href="https://maps.app.goo.gl/ij38iuNN8hMKx2Ab9" 
+                    href="https://maps.app.goo.gl/2zTDTt4Qt6dXQEAL6" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="contact-link"

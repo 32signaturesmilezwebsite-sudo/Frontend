@@ -2,6 +2,7 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { LogOut, ArrowLeft, Image as ImageIcon, Send, FileText, X, Plus } from 'lucide-react';
 import JoditEditor from 'jodit-react';
+import ManageCategoriesModal from '../components/ManageCategoriesModal';
 import './AdminGalleryNew.css';
 
 const AdminBlogCreate = () => {
@@ -19,6 +20,7 @@ const AdminBlogCreate = () => {
   // Dynamic categories
   const [categories, setCategories] = useState([]);
   const [showNewCat, setShowNewCat] = useState(false);
+  const [showManageCat, setShowManageCat] = useState(false);
   const [newCatName, setNewCatName] = useState('');
   const [catCreating, setCatCreating] = useState(false);
 
@@ -81,8 +83,8 @@ const AdminBlogCreate = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title || !content) {
-      setError('Title and Content are required.');
+    if (!title || !content || !category) {
+      setError('Title, Category, and Content are required.');
       return;
     }
 
@@ -95,8 +97,8 @@ const AdminBlogCreate = () => {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('content', content);
+    formData.append('category', category); // category is required now
     if (excerpt) formData.append('excerpt', excerpt);
-    if (category) formData.append('category', category);
     if (publishDate) formData.append('publishDate', publishDate);
     if (thumbnail) formData.append('thumbnail', thumbnail);
 
@@ -229,7 +231,6 @@ const AdminBlogCreate = () => {
             <ArrowLeft size={16} /> Back to Blogs
           </Link>
           <Link to="/admin/gallery" className="ag-btn ag-btn-outline">Gallery</Link>
-          <Link to="/admin/reviews" className="ag-btn ag-btn-outline">Reviews</Link>
           <button onClick={logout} className="ag-btn ag-btn-outline" style={{ color: '#ef4444' }}>
             <LogOut size={16} /> Logout
           </button>
@@ -275,13 +276,18 @@ const AdminBlogCreate = () => {
               </div>
               <div className="ag-form-group" style={{ margin: 0, minWidth: '180px' }}>
                 <label className="ag-label" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <span>Category</span>
-                  <button type="button" onClick={() => setShowNewCat(v => !v)} style={{ display: 'flex', alignItems: 'center', gap: '3px', background: 'none', border: 'none', color: '#c57b43', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer', padding: 0 }}>
-                    <Plus size={13} /> New
-                  </button>
+                  <span>Category *</span>
+                  <div style={{ display: 'flex', gap: '8px' }}>
+                    <button type="button" onClick={() => setShowManageCat(true)} style={{ display: 'flex', alignItems: 'center', gap: '3px', background: 'none', border: 'none', color: '#c57b43', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer', padding: 0 }}>
+                      Manage
+                    </button>
+                    <button type="button" onClick={() => setShowNewCat(v => !v)} style={{ display: 'flex', alignItems: 'center', gap: '3px', background: 'none', border: 'none', color: '#c57b43', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer', padding: 0 }}>
+                      <Plus size={13} /> New
+                    </button>
+                  </div>
                 </label>
                 {!showNewCat ? (
-                  <select value={category} onChange={e => setCategory(e.target.value)} className="ag-input" style={{ background: 'white' }}>
+                  <select value={category} onChange={e => setCategory(e.target.value)} className="ag-input" style={{ background: 'white' }} required>
                     <option value="">Select category…</option>
                     {categories.map(c => <option key={c._id} value={c.name}>{c.name}</option>)}
                   </select>
@@ -397,6 +403,12 @@ const AdminBlogCreate = () => {
           </form>
         </div>
       </div>
+
+      <ManageCategoriesModal
+        isOpen={showManageCat}
+        onClose={() => setShowManageCat(false)}
+        onCategoriesUpdated={fetchCategories}
+      />
     </div>
   );
 };
