@@ -64,7 +64,7 @@ const IntroSection = () => {
             {!isPlaying ? (
               <>
                 <img 
-                  src="/After-Hero-image.png" 
+                  src="/ChatGPT Image Apr 3, 2026, 12_09_13 PM.png" 
                   alt="A fresh take on dentistry at 32 Signature Smilez" 
                   className="intro-video-thumbnail" 
                 />
@@ -77,10 +77,10 @@ const IntroSection = () => {
             ) : (
                 <iframe
                   className="intro-video-iframe"
-                  src="https://www.youtube.com/embed/PDdf5Rjj5cc?autoplay=1"
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1291687531325661&show_text=false&autoplay=true"
                   title="32 Signature Smilez Video"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
             )}
