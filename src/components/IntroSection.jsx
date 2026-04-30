@@ -64,7 +64,7 @@ const IntroSection = () => {
             {!isPlaying ? (
               <>
                 <img 
-                  src="/ChatGPT Image Apr 3, 2026, 12_09_13 PM.png" 
+                  src="/Gemini_Generated_Image_x82uuox82uuox82u.png" 
                   alt="A fresh take on dentistry at 32 Signature Smilez" 
                   className="intro-video-thumbnail" 
                 />
